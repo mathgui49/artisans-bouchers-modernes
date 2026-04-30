@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { business } from "@/lib/business";
+import { CartProvider } from "@/lib/cart";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -132,7 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Drive — Colis et pièces en gros",
-      url: business.cta.drive,
+      url: `${SITE_URL}/boutique`,
     },
   };
 
@@ -148,7 +149,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
           }}
         />
-        {children}
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );

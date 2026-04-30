@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { business } from "@/lib/business";
 
 export function Hero() {
@@ -44,10 +45,10 @@ export function Hero() {
             </span>
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a href={business.cta.drive} target="_blank" rel="noopener" className="btn-primary !bg-[color:var(--color-cream)] !text-[color:var(--color-ink)] hover:!bg-[color:var(--color-gold)]">
-              Commander au Drive
+            <Link href="/boutique" className="btn-primary !bg-[color:var(--color-cream)] !text-[color:var(--color-ink)] hover:!bg-[color:var(--color-gold)]">
+              Commander en ligne
               <span aria-hidden>→</span>
-            </a>
+            </Link>
             <a href="#metiers" className="btn-ghost text-[color:var(--color-cream)] hover:!bg-[color:var(--color-cream)]/10">
               Découvrir nos rayons
             </a>

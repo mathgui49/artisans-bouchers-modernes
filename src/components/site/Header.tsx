@@ -4,14 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { business } from "@/lib/business";
+import { CartButton } from "@/components/shop/CartButton";
 
 const links = [
-  { href: "#metiers", label: "Nos métiers" },
-  { href: "#engagements", label: "Engagements" },
-  { href: "#drive", label: "Drive" },
-  { href: "#plateaux", label: "Plateaux" },
-  { href: "#galerie", label: "Galerie" },
-  { href: "#infos", label: "Infos" },
+  { href: "/#metiers", label: "Nos métiers" },
+  { href: "/#engagements", label: "Engagements" },
+  { href: "/boutique", label: "Boutique" },
+  { href: "/#plateaux", label: "Plateaux" },
+  { href: "/#galerie", label: "Galerie" },
+  { href: "/#infos", label: "Infos" },
 ];
 
 export function Header() {
@@ -78,23 +79,27 @@ export function Header() {
           <a href={`tel:${business.phoneIntl}`} className="text-sm font-medium text-[color:var(--color-stone)] hover:text-[color:var(--color-ink)] transition-colors">
             {business.phone}
           </a>
-          <a href={business.cta.drive} target="_blank" rel="noopener" className="btn-primary !py-2.5 !px-5 text-sm">
-            Commander au Drive
+          <Link href="/boutique" className="btn-primary !py-2.5 !px-5 text-sm">
+            Boutique
             <span aria-hidden>→</span>
-          </a>
+          </Link>
+          <CartButton />
         </div>
 
-        <button
-          type="button"
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={open}
-          className="lg:hidden h-11 w-11 flex flex-col items-center justify-center gap-1.5 rounded-full hover:bg-[color:var(--color-cream-deep)] transition-colors"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span className={`block h-[2px] w-6 bg-[color:var(--color-ink)] transition-transform duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-          <span className={`block h-[2px] w-6 bg-[color:var(--color-ink)] transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`} />
-          <span className={`block h-[2px] w-6 bg-[color:var(--color-ink)] transition-transform duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
-        </button>
+        <div className="lg:hidden flex items-center gap-1">
+          <CartButton compact />
+          <button
+            type="button"
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={open}
+            className="h-11 w-11 flex flex-col items-center justify-center gap-1.5 rounded-full hover:bg-[color:var(--color-cream-deep)] transition-colors"
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span className={`block h-[2px] w-6 bg-[color:var(--color-ink)] transition-transform duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+            <span className={`block h-[2px] w-6 bg-[color:var(--color-ink)] transition-opacity duration-300 ${open ? "opacity-0" : "opacity-100"}`} />
+            <span className={`block h-[2px] w-6 bg-[color:var(--color-ink)] transition-transform duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+          </button>
+        </div>
       </div>
 
       <div
@@ -122,15 +127,13 @@ export function Header() {
           <a href={`tel:${business.phoneIntl}`} className="mt-6 text-lg font-medium text-[color:var(--color-stone)]">
             ☏ {business.phone}
           </a>
-          <a
-            href={business.cta.drive}
-            target="_blank"
-            rel="noopener"
+          <Link
+            href="/boutique"
             className="btn-primary mt-4 w-full"
             onClick={() => setOpen(false)}
           >
-            Commander au Drive →
-          </a>
+            Voir la boutique →
+          </Link>
         </nav>
       </div>
     </header>

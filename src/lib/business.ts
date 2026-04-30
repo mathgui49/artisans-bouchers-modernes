@@ -40,8 +40,8 @@ export const business = {
     youtube: "https://www.youtube.com/@artisansmodernes35470",
   },
   cta: {
-    drive: "https://www.lesartisansmodernes.fr/catalogue-drive/colis-et-pieces-en-gros/#consulter",
-    booking: "https://www.lesartisansmodernes.fr/catalogue-drive/colis-et-pieces-en-gros/#consulter",
+    drive: "#drive",
+    booking: "#plateaux",
   },
 } as const;
 
@@ -109,6 +109,7 @@ export const engagements = [
 
 export const colisEte = [
   {
+    id: "colis-barbeuc",
     name: "BARBEUC'",
     price: 59,
     oldPrice: 90,
@@ -121,6 +122,7 @@ export const colisEte = [
     ],
   },
   {
+    id: "colis-terrasse",
     name: "TERRASSE",
     price: 67,
     oldPrice: 95,
@@ -133,6 +135,7 @@ export const colisEte = [
     ],
   },
   {
+    id: "colis-soleil",
     name: "SOLEIL",
     price: 55,
     oldPrice: 78,
@@ -145,6 +148,7 @@ export const colisEte = [
     ],
   },
   {
+    id: "colis-saucisses",
     name: "SAUCISSES",
     price: 49,
     oldPrice: 76,
@@ -158,6 +162,7 @@ export const colisEte = [
     ],
   },
   {
+    id: "colis-plancha",
     name: "PLANCHA",
     price: 71,
     oldPrice: 101,
@@ -172,21 +177,23 @@ export const colisEte = [
 ] as const;
 
 export const plateaux: ReadonlyArray<{
+  id: string;
   name: string;
   servings: string;
   price: number;
   suffix?: string;
+  perPerson?: boolean;
 }> = [
-  { name: "Planche apéro", servings: "4 à 6 personnes", price: 18 },
-  { name: "Pierrade nature", servings: "à partir de 4 parts", price: 6.5, suffix: " /pers." },
-  { name: "Pierrade marinée", servings: "à partir de 4 parts", price: 6.5, suffix: " /pers." },
-  { name: "Planche fromage", servings: "4 personnes", price: 30 },
-  { name: "Plateau fromage 100% local", servings: "6 personnes", price: 25 },
+  { id: "plateau-apero", name: "Planche apéro", servings: "4 à 6 personnes", price: 18 },
+  { id: "pierrade-nature", name: "Pierrade nature", servings: "à partir de 4 parts", price: 6.5, suffix: " /pers.", perPerson: true },
+  { id: "pierrade-marinee", name: "Pierrade marinée", servings: "à partir de 4 parts", price: 6.5, suffix: " /pers.", perPerson: true },
+  { id: "planche-fromage", name: "Planche fromage", servings: "4 personnes", price: 30 },
+  { id: "plateau-fromage-local", name: "Plateau fromage 100% local", servings: "6 personnes", price: 25 },
 ];
 
 export const piecesEnGros = [
-  { name: "Demi cochon", weight: "≈ 45 kg brut", perKg: 3.8 },
-  { name: "Demi cuisse de bœuf", weight: "≈ 25 kg brut", perKg: 9.5 },
-  { name: "Cuisse de bœuf entière", weight: "≈ 50 kg brut", perKg: 9.9 },
-  { name: "Agneau entier", weight: "≈ 20 kg brut", perKg: 13.9 },
+  { id: "piece-demi-cochon", name: "Demi cochon", weight: "≈ 45 kg brut", perKg: 3.8, estimated: 171 },
+  { id: "piece-demi-cuisse-boeuf", name: "Demi cuisse de bœuf", weight: "≈ 25 kg brut", perKg: 9.5, estimated: 237.5 },
+  { id: "piece-cuisse-boeuf", name: "Cuisse de bœuf entière", weight: "≈ 50 kg brut", perKg: 9.9, estimated: 495 },
+  { id: "piece-agneau", name: "Agneau entier", weight: "≈ 20 kg brut", perKg: 13.9, estimated: 278 },
 ] as const;

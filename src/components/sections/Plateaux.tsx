@@ -1,7 +1,28 @@
+"use client";
+
 import Image from "next/image";
-import { business, plateaux } from "@/lib/business";
+import { useState } from "react";
+import { business } from "@/lib/business";
+import { products } from "@/lib/products";
+import { useCart } from "@/lib/cart";
+
+function formatPrice(n: number) {
+  return n
+    .toLocaleString("fr-FR", { minimumFractionDigits: n % 1 === 0 ? 0 : 2 })
+    .replace(/,00$/, "");
+}
 
 export function Plateaux() {
+  const plateauProducts = products.filter((p) => p.category === "plateau");
+  const { add } = useCart();
+  const [addedId, setAddedId] = useState<string | null>(null);
+
+  function handleAdd(productId: string) {
+    add(productId, 1);
+    setAddedId(productId);
+    window.setTimeout(() => setAddedId(null), 1500);
+  }
+
   return (
     <section id="plateaux" className="relative py-24 md:py-32 bg-[color:var(--color-cream)]">
       <div className="container-x">
@@ -37,7 +58,7 @@ export function Plateaux() {
             </div>
           </div>
 
-          {/* Copy */}
+          {/* Copy + plateaux list */}
           <div className="lg:col-span-6">
             <div className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
@@ -54,32 +75,48 @@ export function Plateaux() {
             <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl">
               Apéro entre amis, repas de famille, brunch dominical ou comité d&apos;entreprise :
               nos plateaux sont composés sur place, à la commande, avec ce que la maison fait de mieux.
-              Et toujours la possibilité d&apos;ajouter pierrade, raclette, choucroute ou fondue
-              pour vos soirées d&apos;hiver.
             </p>
 
             <ul className="mt-10 divide-y divide-[color:var(--color-line)] border-y border-[color:var(--color-line)]">
-              {plateaux.map((p) => (
+              {plateauProducts.map((p) => (
                 <li
-                  key={p.name}
-                  className="flex items-baseline justify-between gap-4 py-4 group"
+                  key={p.id}
+                  className="flex items-center justify-between gap-4 py-4"
                 >
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <div className="font-display text-xl md:text-2xl">{p.name}</div>
                     <div className="text-sm text-[color:var(--color-stone-soft)]">
                       {p.servings}
                     </div>
                   </div>
-                  <div className="font-display text-2xl md:text-3xl text-[color:var(--color-bordeaux)] tabular-nums">
-                    {p.price}€{p.suffix ?? ""}
+                  <div className="font-display text-xl md:text-2xl text-[color:var(--color-bordeaux)] tabular-nums shrink-0">
+                    {formatPrice(p.price)}€{p.unitSuffix ?? ""}
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => handleAdd(p.id)}
+                    aria-label={`Ajouter ${p.name} au panier`}
+                    className={`shrink-0 inline-flex items-center justify-center h-10 w-10 rounded-full transition-colors ${
+                      addedId === p.id
+                        ? "bg-[color:var(--color-bordeaux)] text-[color:var(--color-cream)]"
+                        : "bg-[color:var(--color-ink)] text-[color:var(--color-cream)] hover:bg-[color:var(--color-bordeaux)]"
+                    }`}
+                  >
+                    {addedId === p.id ? (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    ) : (
+                      <span className="text-xl leading-none">+</span>
+                    )}
+                  </button>
                 </li>
               ))}
             </ul>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <a href={business.cta.drive} target="_blank" rel="noopener" className="btn-primary">
-                Réserver un plateau
+              <a href="/panier" className="btn-primary">
+                Voir mon panier
                 <span aria-hidden>→</span>
               </a>
               <a

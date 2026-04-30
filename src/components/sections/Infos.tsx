@@ -58,12 +58,10 @@ export function Infos() {
                 <span aria-hidden>→</span>
               </a>
               <a
-                href={business.cta.drive}
-                target="_blank"
-                rel="noopener"
+                href="/boutique"
                 className="btn-ghost text-[color:var(--color-ink)]"
               >
-                Commander au Drive
+                Voir la boutique
               </a>
             </div>
           </div>
