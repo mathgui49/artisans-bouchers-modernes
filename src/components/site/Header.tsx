@@ -98,10 +98,14 @@ export function Header() {
       </div>
 
       <div
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 transition-transform duration-300 z-40 ${
+        className={`lg:hidden fixed left-0 right-0 transition-transform duration-300 z-40 overflow-y-auto ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
-        style={{ backgroundColor: "#faf6ef" }}
+        style={{
+          backgroundColor: "#faf6ef",
+          top: "68px",
+          height: "calc(100vh - 68px)",
+        }}
         aria-hidden={!open}
       >
         <nav className="container-x py-8 flex flex-col gap-1">
