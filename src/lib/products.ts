@@ -44,7 +44,7 @@ export const products: ReadonlyArray<Product> = [
     ],
     shortDescription:
       "Le colis grillade pour une tablée joyeuse — 4 viandes marinées prêtes à griller.",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
     notice: "Préparé à la commande · confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -65,7 +65,7 @@ export const products: ReadonlyArray<Product> = [
     ],
     shortDescription:
       "Sélection raffinée pour soirées d'été — pavé de bœuf, sucettes d'agneau et compagnie.",
-    image: "/images/photo-21.jpg",
+    image: "/images/photo-21.webp",
     notice: "Préparé à la commande · confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -86,7 +86,7 @@ export const products: ReadonlyArray<Product> = [
     ],
     shortDescription:
       "Le colis lumineux : brochettes, veau, porc — tout ce qu'il faut pour la plancha.",
-    image: "/images/photo-23.jpg",
+    image: "/images/photo-23.webp",
     notice: "Préparé à la commande · confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -108,7 +108,7 @@ export const products: ReadonlyArray<Product> = [
     ],
     shortDescription:
       "Le grand assortiment de saucisses maison — pour barbecues sans fin.",
-    image: "/images/photo-26.jpg",
+    image: "/images/photo-26.webp",
     notice: "Préparé à la commande · confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -129,7 +129,7 @@ export const products: ReadonlyArray<Product> = [
     ],
     shortDescription:
       "Le colis premium plancha : pavé, mélange espagnol, aiguillettes de canard.",
-    image: "/images/photo-27.jpg",
+    image: "/images/photo-27.webp",
     notice: "Préparé à la commande · confirmation par mail sous 48h ouvrées.",
   },
 
@@ -144,7 +144,7 @@ export const products: ReadonlyArray<Product> = [
     servings: "4 à 6 personnes",
     shortDescription:
       "Charcuterie maison, fromages, condiments — tout ce qu'il faut pour bien commencer.",
-    image: "/images/photo-13.jpg",
+    image: "/images/photo-13.webp",
     notice: "Préparé sur place le jour J — à commander 48h à l'avance.",
   },
   {
@@ -158,7 +158,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " /pers.",
     shortDescription:
       "Sélection de viandes nature pour pierrade — bœuf, volaille, porc.",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
     notice: "Tarif par personne · 4 parts minimum.",
   },
   {
@@ -172,7 +172,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " /pers.",
     shortDescription:
       "Pierrade signature — viandes marinées maison, herbes et épices fraîches.",
-    image: "/images/photo-21.jpg",
+    image: "/images/photo-21.webp",
     notice: "Tarif par personne · 4 parts minimum.",
   },
   {
@@ -185,7 +185,7 @@ export const products: ReadonlyArray<Product> = [
     servings: "4 personnes",
     shortDescription:
       "Sélection de 6 à 8 fromages affinés — vache, chèvre, brebis, condiments.",
-    image: "/images/photo-16.jpg",
+    image: "/images/photo-16.webp",
     notice: "Préparé sur place le jour J — à commander 48h à l'avance.",
   },
   {
@@ -198,7 +198,7 @@ export const products: ReadonlyArray<Product> = [
     servings: "6 personnes",
     shortDescription:
       "Le plateau de la maison — uniquement des fromages de producteurs locaux d'Ille-et-Vilaine.",
-    image: "/images/photo-15.jpg",
+    image: "/images/photo-15.webp",
     notice: "Préparé sur place le jour J — à commander 48h à l'avance.",
   },
 
@@ -215,7 +215,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Demi-cochon entier découpé selon vos préférences — pour congeler, fumer, conserver.",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
     notice: "Prix selon poids exact (3,80 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -230,7 +230,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Demi-cuisse de bœuf — race à viande française, découpée par nos bouchers.",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
     notice: "Prix selon poids exact (9,50 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -245,7 +245,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Pièce entière — race à viande, découpe sur mesure (steaks, rôtis, bourguignon, hachée).",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
     notice: "Prix selon poids exact (9,90 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -260,7 +260,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Agneau entier français — découpé selon vos envies pour vos congélations.",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
     notice: "Prix selon poids exact (13,90 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
 ];

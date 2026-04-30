@@ -53,12 +53,12 @@ export function Footer() {
             <h3 className="font-display text-lg text-[color:var(--color-cream)] mb-5">Naviguer</h3>
             <ul className="space-y-2.5 text-[color:var(--color-cream)]/70">
               {[
-                ["#metiers", "Nos métiers"],
-                ["#engagements", "Engagements"],
-                ["#drive", "Drive"],
-                ["#plateaux", "Plateaux"],
-                ["#galerie", "Galerie"],
-                ["#infos", "Infos & horaires"],
+                ["/#metiers", "Nos métiers"],
+                ["/equipe", "L'équipe"],
+                ["/partenaires", "Partenaires"],
+                ["/boutique", "Boutique"],
+                ["/#plateaux", "Plateaux"],
+                ["/#infos", "Infos & horaires"],
               ].map(([h, l]) => (
                 <li key={h}>
                   <Link href={h} className="hover:text-[color:var(--color-gold)] transition-colors">

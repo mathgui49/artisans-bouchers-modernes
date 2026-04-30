@@ -42,7 +42,7 @@ export function Producteurs() {
             <div className="grid grid-cols-2 gap-3 md:gap-5">
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden mt-12">
                 <Image
-                  src="/images/photo-22.jpg"
+                  src="/images/photo-22.webp"
                   alt="Étal primeur — fruits et légumes de saison de producteurs locaux"
                   fill
                   sizes="(max-width: 1024px) 50vw, 33vw"
@@ -51,7 +51,7 @@ export function Producteurs() {
               </div>
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden">
                 <Image
-                  src="/images/fromage-comte.jpg"
+                  src="/images/fromage-comte.webp"
                   alt="Fromages affinés sélectionnés par la maison"
                   fill
                   sizes="(max-width: 1024px) 50vw, 33vw"

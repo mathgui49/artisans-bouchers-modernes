@@ -8,10 +8,10 @@ import { CartButton } from "@/components/shop/CartButton";
 
 const links = [
   { href: "/#metiers", label: "Nos métiers" },
-  { href: "/#engagements", label: "Engagements" },
+  { href: "/equipe", label: "L'équipe" },
+  { href: "/partenaires", label: "Partenaires" },
   { href: "/boutique", label: "Boutique" },
   { href: "/#plateaux", label: "Plateaux" },
-  { href: "/#galerie", label: "Galerie" },
   { href: "/#infos", label: "Infos" },
 ];
 
@@ -46,7 +46,7 @@ export function Header() {
           : undefined
       }
     >
-      <div className="container-x flex items-center justify-between py-4 md:py-5">
+      <div className="container-x flex items-center justify-between py-1.5 md:py-2">
         <Link
           href="/"
           aria-label={`${business.name} — accueil`}
@@ -56,10 +56,10 @@ export function Header() {
           <Image
             src="/logo.png"
             alt={business.name}
-            width={260}
-            height={104}
+            width={520}
+            height={208}
             priority
-            className="h-10 md:h-12 w-auto"
+            className="h-16 md:h-20 w-auto"
           />
         </Link>
 
@@ -108,8 +108,8 @@ export function Header() {
         }`}
         style={{
           backgroundColor: "#faf6ef",
-          top: "68px",
-          height: "calc(100vh - 68px)",
+          top: "84px",
+          height: "calc(100vh - 84px)",
         }}
         aria-hidden={!open}
       >

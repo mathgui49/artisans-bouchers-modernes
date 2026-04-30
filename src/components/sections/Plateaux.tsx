@@ -31,7 +31,7 @@ export function Plateaux() {
           <div className="lg:col-span-6 relative">
             <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden">
               <Image
-                src="/images/photo-13.jpg"
+                src="/images/photo-13.webp"
                 alt="Plateau apéro charcuterie & fromage Artisans Bouchers Modernes"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -40,7 +40,7 @@ export function Plateaux() {
             </div>
             <div className="hidden md:block absolute -bottom-8 -right-6 w-44 lg:w-56 aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden border-8 border-[color:var(--color-cream)] shadow-[var(--shadow-lift)]">
               <Image
-                src="/images/photo-15.jpg"
+                src="/images/photo-15.webp"
                 alt="Plateau fromage maison"
                 fill
                 sizes="240px"
@@ -49,7 +49,7 @@ export function Plateaux() {
             </div>
             <div className="hidden md:block absolute -top-8 -left-6 w-32 lg:w-40 aspect-square rounded-full overflow-hidden border-8 border-[color:var(--color-cream)] shadow-[var(--shadow-lift)]">
               <Image
-                src="/images/photo-14.jpg"
+                src="/images/photo-14.webp"
                 alt="Carpaccio revisité"
                 fill
                 sizes="180px"

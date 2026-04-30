@@ -12,7 +12,7 @@ export function Hero() {
         loop
         muted
         playsInline
-        poster="/images/plateau-charcuterie.jpg"
+        poster="/images/plateau-charcuterie.webp"
         preload="metadata"
         aria-hidden="true"
       >
@@ -73,7 +73,7 @@ export function Hero() {
 
       {/* Hidden image fallback for accessibility */}
       <Image
-        src="/images/plateau-charcuterie.jpg"
+        src="/images/plateau-charcuterie.webp"
         alt="Plateau charcuterie maison Artisans Bouchers Modernes"
         fill
         priority

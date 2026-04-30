@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description: business.shortDescription,
     images: [
       {
-        url: "/images/plateau-charcuterie.jpg",
+        url: "/images/plateau-charcuterie.webp",
         width: 1200,
         height: 630,
         alt: `${business.name} — plateau charcuterie maison`,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: business.name,
     description: business.shortDescription,
-    images: ["/images/plateau-charcuterie.jpg"],
+    images: ["/images/plateau-charcuterie.webp"],
   },
   robots: { index: true, follow: true },
   icons: {
@@ -89,9 +89,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     telephone: business.phoneIntl,
     email: business.email,
     image: [
-      `${SITE_URL}/images/facade.jpg`,
-      `${SITE_URL}/images/interieur.jpg`,
-      `${SITE_URL}/images/plateau-charcuterie.jpg`,
+      `${SITE_URL}/images/facade.webp`,
+      `${SITE_URL}/images/interieur.webp`,
+      `${SITE_URL}/images/plateau-charcuterie.webp`,
     ],
     logo: `${SITE_URL}/logo.png`,
     priceRange: "€€",

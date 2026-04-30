@@ -52,7 +52,7 @@ export const departements = [
     accroche: "Viande française, race à viande, locale autant que possible.",
     description:
       "Une viande responsable, issue d'une agriculture raisonnée. Race à viande, origine France garantie, partenariats avec des éleveurs au plus près de Bain de Bretagne. Maturation respectée, découpes réalisées par nos bouchers formés au quotidien.",
-    image: "/images/photo-19.jpg",
+    image: "/images/photo-19.webp",
   },
   {
     id: "charcuterie",
@@ -60,7 +60,7 @@ export const departements = [
     accroche: "Faite maison, sans colorant ni conservateur.",
     description:
       "Pâtés, terrines, saucisses, rillettes, jambons : nos charcutiers cuisinent eux-mêmes la quasi-totalité de la gamme. Pas d'additifs douteux, des matières premières que nous choisissons et des recettes qui respectent les saisons.",
-    image: "/images/plateau-charcuterie.jpg",
+    image: "/images/plateau-charcuterie.webp",
   },
   {
     id: "fromagerie",
@@ -68,7 +68,7 @@ export const departements = [
     accroche: "Fromages généreux, sélectionnés pour leur origine.",
     description:
       "Une cave à fromages affinée pour vous : artisans fromagers, producteurs locaux, AOP françaises. Du chèvre frais des fermes voisines au comté longuement affiné, en passant par la tomme bretonne — nos coups de cœur du moment.",
-    image: "/images/fromage-comte.jpg",
+    image: "/images/fromage-comte.webp",
   },
   {
     id: "primeur",
@@ -76,7 +76,7 @@ export const departements = [
     accroche: "Saisons respectées, valeurs environnementales en tête.",
     description:
       "Fruits et légumes de saison, choisis chaque semaine en respectant la production française et locale. Nous travaillons main dans la main avec des producteurs voisins, ce que vous voyez sur l'étal a souvent voyagé moins de 50 km.",
-    image: "/images/photo-22.jpg",
+    image: "/images/photo-22.webp",
   },
   {
     id: "epicerie-cave",
@@ -84,7 +84,7 @@ export const departements = [
     accroche: "Pour accompagner, sublimer, partager.",
     description:
       "Épicerie fine, conserves de petits producteurs, condiments, accords vins et bières. Une cave pensée pour matcher avec votre côte de bœuf du week-end ou votre plateau de fromages, conseillée par l'équipe.",
-    image: "/images/photo-25.jpg",
+    image: "/images/photo-25.webp",
   },
 ] as const;
 

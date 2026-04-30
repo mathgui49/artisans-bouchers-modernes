@@ -106,7 +106,7 @@ export function Infos() {
 
             <div className="card overflow-hidden relative aspect-[16/10]">
               <Image
-                src="/images/facade.jpg"
+                src="/images/facade.webp"
                 alt="Façade du magasin Artisans Bouchers Modernes — Bain de Bretagne"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
