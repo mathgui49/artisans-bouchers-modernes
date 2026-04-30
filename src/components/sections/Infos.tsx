@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { business } from "@/lib/business";
 
 export function Infos() {
@@ -104,15 +105,38 @@ export function Infos() {
               </ul>
             </div>
 
-            <div className="card overflow-hidden relative aspect-[16/10]">
+            <Link
+              href="/visite-virtuelle"
+              className="card overflow-hidden relative aspect-[16/10] block group"
+            >
               <Image
                 src="/images/facade.webp"
                 alt="Façade du magasin Artisans Bouchers Modernes — Bain de Bretagne"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-black/30" />
+
+              <div className="absolute top-5 left-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[color:var(--color-cream)]/95 backdrop-blur-sm text-[0.7rem] tracking-[0.18em] uppercase font-semibold text-[color:var(--color-bordeaux)]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-bordeaux)] animate-pulse" />
+                  Visite virtuelle 360°
+                </span>
+              </div>
+
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-[color:var(--color-cream)]/90 backdrop-blur-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[color:var(--color-ink)]">
+                    <path d="M12 2a10 10 0 1 0 10 10" />
+                    <path d="M12 2a10 10 0 0 1 10 10c0 5-4 8-10 8" />
+                    <path d="M2 12c0-5 4-8 10-8" />
+                    <path d="M2 12c0 5 4 8 10 8" />
+                    <ellipse cx="12" cy="12" rx="10" ry="4" />
+                  </svg>
+                </span>
+              </div>
+
               <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-end justify-between gap-3 text-[color:var(--color-cream)]">
                 <div>
                   <div className="text-xs uppercase tracking-[0.18em] opacity-80">Notre magasin</div>
@@ -120,16 +144,11 @@ export function Infos() {
                     {business.address.street.split(",")[0]}
                   </div>
                 </div>
-                <a
-                  href="https://share.google/MMLKFxjNzb1DDdbhC"
-                  target="_blank"
-                  rel="noopener"
-                  className="text-xs uppercase tracking-[0.18em] underline underline-offset-4 hover:text-[color:var(--color-gold)]"
-                >
-                  Voir sur Google
-                </a>
+                <span className="text-xs uppercase tracking-[0.18em] underline underline-offset-4 group-hover:text-[color:var(--color-gold)] transition-colors">
+                  Visiter en 360° →
+                </span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ const links = [
   { href: "/equipe", label: "L'équipe" },
   { href: "/partenaires", label: "Partenaires" },
   { href: "/boutique", label: "Boutique" },
-  { href: "/visite-virtuelle", label: "Visite 360°" },
+  { href: "/#plateaux", label: "Plateaux" },
   { href: "/#infos", label: "Infos" },
 ];
 

@@ -58,6 +58,7 @@ export function Footer() {
                 ["/partenaires", "Partenaires"],
                 ["/boutique", "Boutique"],
                 ["/visite-virtuelle", "Visite 360°"],
+                ["/#plateaux", "Plateaux"],
                 ["/#infos", "Infos & horaires"],
               ].map(([h, l]) => (
                 <li key={h}>
