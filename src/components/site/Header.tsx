@@ -35,10 +35,15 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-[backdrop-filter,background] duration-300 ${
-        scrolled
-          ? "bg-[color:var(--color-cream)]/85 backdrop-blur-md border-b border-[color:var(--color-line)]"
+        scrolled || open
+          ? "bg-[color:var(--color-cream)]/95 backdrop-blur-md border-b border-[color:var(--color-line)]"
           : "bg-transparent"
       }`}
+      style={
+        scrolled || open
+          ? { backgroundColor: "rgba(250, 246, 239, 0.95)" }
+          : undefined
+      }
     >
       <div className="container-x flex items-center justify-between py-4 md:py-5">
         <Link
@@ -93,9 +98,10 @@ export function Header() {
       </div>
 
       <div
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 bg-[color:var(--color-cream)] transition-transform duration-300 ${
+        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 transition-transform duration-300 z-40 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ backgroundColor: "#faf6ef" }}
         aria-hidden={!open}
       >
         <nav className="container-x py-8 flex flex-col gap-1">
