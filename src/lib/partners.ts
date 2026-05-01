@@ -13,21 +13,24 @@ export const partners: ReadonlyArray<Partner> = [
     name: "Viandes Clermont",
     category: "viande",
     categoryLabel: "Porc",
-    description: "Notre partenaire pour le porc — élevage rigoureux, alimentation maîtrisée.",
+    description:
+      "Notre partenaire pour le porc. Élevage rigoureux, alimentation maîtrisée, traçabilité de bout en bout.",
     image: "/images/partners/clermont.webp",
   },
   {
     name: "Tendriade",
     category: "viande",
     categoryLabel: "Veau",
-    description: "Veau français, élevé sous la mère, qualité reconnue.",
+    description:
+      "Veau français élevé sous la mère, qualité reconnue, savoir-faire d'éleveurs passionnés.",
     image: "/images/partners/tendriade.webp",
   },
   {
     name: "Les Fermes de Janzé",
     category: "viande",
     categoryLabel: "Volaille fermière",
-    description: "Volailles fermières label rouge, élevées en plein air à Janzé (35).",
+    description:
+      "Volailles fermières label rouge, élevées en plein air dans le pays de Janzé.",
     location: "Janzé · 35",
     image: "/images/partners/janze.webp",
   },
@@ -35,7 +38,8 @@ export const partners: ReadonlyArray<Partner> = [
     name: "Les Fermiers d'Ancenis",
     category: "viande",
     categoryLabel: "Volaille",
-    description: "Coopérative d'éleveurs de volailles — Ancenis, Loire-Atlantique.",
+    description:
+      "Coopérative d'éleveurs de volailles installée à Ancenis, en Loire-Atlantique.",
     location: "Ancenis · 44",
     image: "/images/partners/ancenis.webp",
   },
@@ -44,7 +48,7 @@ export const partners: ReadonlyArray<Partner> = [
     category: "viande",
     categoryLabel: "Bœuf · Race à viande",
     description:
-      "Charolais, Limousin, Blonde d'Aquitaine — bêtes nées, élevées et abattues dans le Grand Ouest.",
+      "Uniquement de la race à viande, née élevée et abattue dans le grand Ouest. Charolaise, Limousine, Blonde d'Aquitaine, Rouge des Prés. Transparence et traçabilité en magasin.",
     image: "/images/partners/vbf.webp",
   },
 
@@ -61,7 +65,7 @@ export const partners: ReadonlyArray<Partner> = [
     name: "Les Chèvres du P'tit Bout",
     category: "fromage",
     categoryLabel: "Chèvre",
-    description: "Crottins, frais aux herbes, bûches affinées — fromages de chèvre fermiers.",
+    description: "Crottins, frais aux herbes, bûches affinées. Fromages de chèvre fermiers.",
     location: "Saint-Malo-de-Phily · 35",
     image: "/images/partners/ptibout.webp",
   },
@@ -79,7 +83,8 @@ export const partners: ReadonlyArray<Partner> = [
     name: "Subery Claude & Fils",
     category: "primeur",
     categoryLabel: "Fruits & légumes",
-    description: "Grossiste rennais, sélection française et locale, saisons respectées.",
+    description:
+      "Notre partenaire primeur. Sélection française et locale en priorité, saisons respectées. Pour les envies d'évasion, nous étendons nos approvisionnements tout en maintenant notre engagement local.",
     location: "Rennes · 35",
     image: "/images/partners/subery.webp",
   },
@@ -89,7 +94,7 @@ export const partners: ReadonlyArray<Partner> = [
     name: "Miellerie des Vallons",
     category: "epicerie",
     categoryLabel: "Miels artisanaux",
-    description: "Miels de fleurs, châtaignier, acacia — apiculteurs des Vallons de Vilaine.",
+    description: "Miels de fleurs, châtaignier, acacia. Apiculteurs des Vallons de Vilaine.",
     image: "/images/partners/ruche.webp",
   },
   {
@@ -103,7 +108,7 @@ export const partners: ReadonlyArray<Partner> = [
     name: "Les Vergers de la Ferme",
     category: "epicerie",
     categoryLabel: "Cidre",
-    description: "Cidre fermier de Bain-de-Bretagne — pommes du verger, fermentation lente.",
+    description: "Cidre fermier de Bain-de-Bretagne, pommes du verger, fermentation lente.",
     location: "Bain-de-Bretagne · 35",
     image: "/images/partners/cidre.webp",
   },
@@ -124,8 +129,28 @@ export const partners: ReadonlyArray<Partner> = [
 ];
 
 export const partnerCategories = [
-  { id: "viande", label: "Bouchers & éleveurs", description: "Race à viande française, partenaires sélectionnés pour la qualité de leurs élevages." },
-  { id: "fromage", label: "Fromagers locaux", description: "Producteurs d'Ille-et-Vilaine et Loire-Atlantique — affinage au plus près." },
-  { id: "primeur", label: "Primeur", description: "Pour des fruits et légumes français, de saison." },
-  { id: "epicerie", label: "Épicerie & cave", description: "Petits producteurs qui composent notre rayon épicerie fine et nos accords cave." },
+  {
+    id: "viande",
+    label: "Nos Viandes",
+    description:
+      "Porc, veau, volaille, bœuf. Race à viande française, partenaires sélectionnés pour la qualité de leurs élevages, dans le respect d'une agriculture raisonnée.",
+  },
+  {
+    id: "fromage",
+    label: "Fromagerie",
+    description:
+      "Producteurs d'Ille-et-Vilaine et Loire-Atlantique. Fromages fermiers, affinage au plus près, transparence totale sur l'origine.",
+  },
+  {
+    id: "primeur",
+    label: "Primeur",
+    description:
+      "Pour des fruits et légumes français de saison, qui respectent l'environnement.",
+  },
+  {
+    id: "epicerie",
+    label: "Épicerie & Cave",
+    description:
+      "Miel, conserves, cidre, bière, vin. Petits producteurs qui composent notre rayon épicerie fine et nos accords cave.",
+  },
 ] as const;

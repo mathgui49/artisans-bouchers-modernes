@@ -3,9 +3,9 @@ import { Footer } from "@/components/site/Footer";
 import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
-const TITLE = "Visite virtuelle 360° — Le magasin en immersion";
+const TITLE = "Visite virtuelle 360° · Le magasin en immersion";
 const DESCRIPTION =
-  "Visitez en 360° le magasin des Artisans Bouchers Modernes à Bain de Bretagne : façade, comptoir boucherie, entrée et primeur. 4 panoramas immersifs, comme si vous y étiez.";
+  "Visitez en 360° le magasin des Les Artisans Modernes à Bain de Bretagne : façade, comptoir boucherie, entrée et primeur. 4 panoramas immersifs, comme si vous y étiez.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords: [
     "visite virtuelle 360 boucherie",
     "tour 360 magasin Bain de Bretagne",
-    "visite immersive Artisans Bouchers Modernes",
+    "visite immersive Les Artisans Modernes",
   ],
   openGraph: {
     type: "website",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/images/facade.webp",
         width: 1200,
         height: 630,
-        alt: "Façade du magasin Artisans Bouchers Modernes — Bain de Bretagne",
+        alt: "Façade du magasin Les Artisans Modernes, Bain de Bretagne",
       },
     ],
   },
@@ -86,7 +86,7 @@ export default function VisiteVirtuellePage() {
               <div className="relative w-full aspect-[16/10] md:aspect-[16/9]">
                 <iframe
                   src={TOUR_URL}
-                  title="Visite virtuelle 360° — Artisans Bouchers Modernes Bain de Bretagne"
+                  title="Visite virtuelle 360° · Les Artisans Modernes Bain de Bretagne"
                   loading="lazy"
                   allow="fullscreen; accelerometer; gyroscope; magnetometer; xr-spatial-tracking"
                   allowFullScreen

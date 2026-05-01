@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mon panier",
   description:
-    "Récapitulatif de votre panier — finalisez votre commande pour retrait en magasin à Bain de Bretagne.",
+    "Récapitulatif de votre panier. Finalisez votre commande pour retrait en magasin à Bain de Bretagne.",
   alternates: { canonical: "/panier" },
   robots: { index: false, follow: false },
 };

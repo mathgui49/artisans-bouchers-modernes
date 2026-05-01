@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 const SITE_URL = `https://${business.domain}`;
-const TITLE = `${business.name} — Boucherie · Charcuterie · Fromagerie · Primeur · ${business.address.city}`;
+const TITLE = `${business.name} · Boucherie · Charcuterie · Fromagerie · Primeur · ${business.address.city}`;
 const DESCRIPTION =
   "Boucherie-charcuterie artisanale, fromagerie et primeur à Bain de Bretagne (35). Viande française race à viande, charcuterie maison sans colorant ni conservateur, fromages fermiers locaux, drive et plateaux maison. Mardi au samedi.";
 
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "Ille-et-Vilaine",
     "Bretagne",
     "35470",
-    "Artisans Bouchers Modernes",
+    "Les Artisans Modernes",
   ],
   authors: [{ name: business.name, url: SITE_URL }],
   creator: business.name,
@@ -69,13 +69,13 @@ export const metadata: Metadata = {
         url: "/images/plateau-charcuterie.webp",
         width: 1200,
         height: 1100,
-        alt: `${business.name} — plateau charcuterie maison`,
+        alt: `${business.name}, plateau charcuterie maison`,
       },
       {
         url: "/images/facade.webp",
         width: 825,
         height: 578,
-        alt: `${business.name} — façade du magasin à ${business.address.city}`,
+        alt: `${business.name}, façade du magasin à ${business.address.city}`,
       },
     ],
   },
@@ -125,8 +125,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "Store", "FoodEstablishment"],
     "@id": `${SITE_URL}/#business`,
-    name: business.name,
-    alternateName: business.shortName,
+    name: business.legalName,
+    alternateName: [business.name, business.shortName],
+    legalName: business.legalName,
     description: business.description,
     slogan: business.tagline,
     url: SITE_URL,
@@ -195,7 +196,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Drive — Colis, plateaux et pièces en gros",
+      name: "Drive, Colis, plateaux et pièces en gros",
       url: `${SITE_URL}/boutique`,
     },
   };

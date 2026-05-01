@@ -6,7 +6,7 @@ import { business } from "@/lib/business";
 import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
-const TITLE = "Boutique en ligne — Drive · Colis, plateaux & pièces en gros";
+const TITLE = "Boutique en ligne · Drive · Colis, plateaux & pièces en gros";
 const DESCRIPTION =
   "Commandez en ligne nos colis de saison (barbeuc', terrasse, soleil, saucisses, plancha), nos plateaux maison apéro & fromage, et nos pièces en gros. Retrait au magasin à Bain de Bretagne, confirmation sous 48h ouvrées.";
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         url: "/images/photo-19.webp",
         width: 1200,
         height: 1100,
-        alt: "Côte de bœuf — boutique en ligne Artisans Bouchers Modernes",
+        alt: "Côte de bœuf, boutique en ligne Les Artisans Modernes",
       },
     ],
   },
@@ -57,7 +57,7 @@ export default function BoutiquePage() {
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Catalogue Drive — Artisans Bouchers Modernes",
+    name: "Catalogue Drive · Les Artisans Modernes",
     description: DESCRIPTION,
     numberOfItems: products.length,
     itemListElement: products.map((p, i) => ({

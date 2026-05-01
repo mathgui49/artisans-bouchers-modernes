@@ -6,9 +6,9 @@ import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import { business } from "@/lib/business";
 import type { Metadata } from "next";
 
-const TITLE = "L'équipe — Bouchers, charcutiers, primeur & vendeurs";
+const TITLE = "L'équipe · Bouchers, charcutiers, primeur, fromager & vendeurs";
 const DESCRIPTION =
-  "Découvrez les 10 artisans qui composent l'équipe des Artisans Bouchers Modernes à Bain de Bretagne : Dominique, Mélanie, Céline, Jimmy, Kyllian et toute la maison. Passion, savoir-faire et formation des apprentis.";
+  "L'équipe des Les Artisans Modernes à Bain de Bretagne. Bouchers, charcutiers, primeur-fromager, vendeurs et apprentis. Passion, savoir-faire, transmission.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     "artisan boucher Ille-et-Vilaine",
     "apprenti boucher 35",
     "savoir-faire boucherie",
+    "Les Artisans Modernes équipe",
   ],
   openGraph: {
     type: "profile",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
         url: "/images/team/bandeau.webp",
         width: 1200,
         height: 630,
-        alt: "L'équipe des Artisans Bouchers Modernes au comptoir",
+        alt: `L'équipe des ${business.legalName} au comptoir`,
       },
     ],
   },
@@ -53,7 +54,8 @@ export default function EquipePage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${SITE_URL}/#business`,
-    name: business.name,
+    name: business.legalName,
+    alternateName: business.name,
     url: SITE_URL,
     employee: team.map((m) => ({
       "@type": "Person",
@@ -74,7 +76,7 @@ export default function EquipePage() {
         <section className="relative isolate overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-cream)]">
           <Image
             src="/images/team/bandeau.webp"
-            alt="L'équipe des Artisans Bouchers Modernes au comptoir du magasin de Bain de Bretagne"
+            alt={`L'équipe des ${business.legalName} au comptoir du magasin de Bain de Bretagne`}
             fill
             priority
             sizes="100vw"
@@ -90,14 +92,50 @@ export default function EquipePage() {
                 </span>
               </p>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight">
-                Oui à la qualité,
+                OUI à la qualité,
                 <br />
                 <em className="not-italic font-normal text-[color:var(--color-gold)]">
-                  oui à la convivialité.
+                  OUI à la convivialité.
                 </em>
               </h1>
-              <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed">
-                Une équipe passionnée par son métier, fidèle au goût du travail bien fait — et
+              <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed text-justify">
+                L&apos;équipe d&apos;Les Artisans Modernes vous accueille à Bain de Bretagne.
+                Nous réalisons tous nos métiers par passion, et nous sommes fiers de
+                contribuer au «&nbsp;mangeons-mieux&nbsp;».
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Intro / philosophy */}
+        <section className="py-20 md:py-28" aria-labelledby="philosophy">
+          <div className="container-x grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-5">
+              <p className="eyebrow mb-4">
+                <span className="flag-bar"><span /><span /><span /></span>
+                Transmettre, former
+              </p>
+              <h2 id="philosophy" className="font-display text-3xl md:text-5xl tracking-tight">
+                Notre métier,
+                <br />
+                <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">
+                  notre passion
+                </em>.
+              </h2>
+            </div>
+            <div className="lg:col-span-7 space-y-5 text-[1.05rem] text-[color:var(--color-stone)] leading-[1.8] text-justify">
+              <p>
+                Dans le but de transmettre notre savoir aux futures générations, les bouchers
+                ont le plaisir de continuer à se former, et de former des apprentis au métier.
+              </p>
+              <p>
+                Retrouvez Kyllian, spécialisé sur la partie fromagerie et primeur, ainsi que
+                tous les artisans qui composent notre maison : bouchers, charcutiers, vendeuses,
+                préparatrices et personnel administratif. Chacun met son savoir-faire au
+                service de la qualité.
+              </p>
+              <p>
+                Une équipe passionnée par son métier, fidèle au goût du travail bien fait, et
                 attachée à transmettre le savoir-faire de la boucherie traditionnelle aux
                 générations qui viennent.
               </p>
@@ -105,7 +143,8 @@ export default function EquipePage() {
           </div>
         </section>
 
-        <section className="py-20 md:py-28" aria-labelledby="team-list">
+        {/* Team grid */}
+        <section className="pb-20 md:pb-28" aria-labelledby="team-list">
           <div className="container-x">
             <h2 id="team-list" className="sr-only">Liste des membres de l&apos;équipe</h2>
             <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 list-none">
@@ -114,7 +153,7 @@ export default function EquipePage() {
                   <div className="relative w-full aspect-[3/4] rounded-[var(--radius-lg)] overflow-hidden bg-[color:var(--color-cream-deep)]">
                     <Image
                       src={m.image}
-                      alt={`${m.name}, ${m.role} chez ${business.name}`}
+                      alt={`${m.name}, ${m.role} chez ${business.legalName}`}
                       fill
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -134,17 +173,16 @@ export default function EquipePage() {
           <div className="container-x text-center max-w-3xl mx-auto">
             <p className="eyebrow justify-center mb-4">
               <span className="flag-bar"><span /><span /><span /></span>
-              Transmettre, former
+              N&apos;attendons plus
             </p>
             <h2 id="releve" className="font-display text-3xl md:text-5xl tracking-tight">
-              Former la
-              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> relève</em>.
+              Mangeons-mieux,
+              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> ensemble</em>.
             </h2>
-            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
-              Chez Artisans Bouchers Modernes, nous accueillons des apprentis chaque année.
-              Parce qu&apos;un beau métier ne se transmet qu&apos;en se penchant sur l&apos;établi
-              ensemble — et qu&apos;une boucherie qui ne forme plus est une boucherie qui
-              s&apos;éteint.
+            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify">
+              Une boucherie qui ne forme plus est une boucherie qui s&apos;éteint. Chez Les
+              Artisans Modernes, nous accueillons des apprentis chaque année, parce qu&apos;un
+              beau métier ne se transmet qu&apos;en se penchant sur l&apos;établi ensemble.
             </p>
           </div>
         </section>

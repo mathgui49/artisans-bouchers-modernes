@@ -1,12 +1,13 @@
 export const business = {
-  name: "Artisans Bouchers Modernes",
+  name: "Les Artisans Modernes",
+  legalName: "Artisans Bouchers Modernes",
   shortName: "Les Artisans Modernes",
   tagline: "Privilégiez la qualité, et le plaisir.",
   rallyingCry: "Mangeons-mieux, ensemble.",
   description:
-    "Boucherie-charcuterie artisanale, fromagerie et primeur à Bain de Bretagne. Viande française issue d'une agriculture raisonnée, charcuterie maison sans colorant ni conservateur, fromages de producteurs locaux, fruits & légumes de saison, épicerie fine et cave.",
+    "Boucherie-charcuterie artisanale, fromagerie et primeur à Bain de Bretagne. Viande française issue d'une agriculture raisonnée, charcuterie maison sans colorant ni conservateur, fromages de producteurs locaux, fruits et légumes de saison, épicerie fine et cave.",
   shortDescription:
-    "Boucherie · Charcuterie · Fromagerie · Primeur · Épicerie & Cave — Bain de Bretagne (35).",
+    "Boucherie · Charcuterie · Fromagerie · Primeur · Épicerie & Cave à Bain de Bretagne (35).",
   address: {
     street: "2 rue de Seine, ZA Château Gaillard",
     postalCode: "35470",
@@ -67,7 +68,7 @@ export const departements = [
     name: "Fromagerie",
     accroche: "Fromages généreux, sélectionnés pour leur origine.",
     description:
-      "Une cave à fromages affinée pour vous : artisans fromagers, producteurs locaux, AOP françaises. Du chèvre frais des fermes voisines au comté longuement affiné, en passant par la tomme bretonne — nos coups de cœur du moment.",
+      "Une cave à fromages affinée pour vous : artisans fromagers, producteurs locaux, AOP françaises. Du chèvre frais des fermes voisines au comté longuement affiné, en passant par la tomme bretonne, nos coups de cœur du moment.",
     image: "/images/fromage-comte.webp",
   },
   {
@@ -99,11 +100,11 @@ export const engagements = [
   },
   {
     title: "Créons, innovons ensemble",
-    body: "Vos idées + notre savoir-faire. Pour vos repas conviviaux : plateaux fromage, charcuterie, pierrades, raclettes, choucroutes, fondues — sur mesure.",
+    body: "Vos idées + notre savoir-faire. Pour vos repas conviviaux : plateaux fromage, charcuterie, pierrades, raclettes, choucroutes, fondues, sur mesure.",
   },
   {
     title: "Bien manger sans se ruiner",
-    body: "Achats malins, colis saisonniers, promos hebdomadaires. La qualité ne doit pas être un luxe — elle doit être un choix accessible.",
+    body: "Achats malins, colis saisonniers, promos hebdomadaires. La qualité ne doit pas être un luxe, elle doit être un choix accessible.",
   },
 ] as const;
 

@@ -35,7 +35,7 @@ export function CartView() {
         </div>
         <h2 className="font-display text-3xl">Votre panier est vide</h2>
         <p className="mt-3 text-[color:var(--color-stone)] max-w-md mx-auto">
-          Découvrez nos colis de saison, plateaux maison et pièces en gros — préparés à la commande
+          Découvrez nos colis de saison, plateaux maison et pièces en gros : préparé à la commande
           avec confirmation par mail sous 48h.
         </p>
         <Link href="/boutique" className="btn-primary mt-7 inline-flex">
@@ -64,7 +64,7 @@ export function CartView() {
       `Je souhaite passer la commande suivante :`,
       ``,
       ...resolved.map((it) =>
-        `- ${it.quantity} × ${it.product.name} — ${formatPrice(it.lineTotal)}€`,
+        `- ${it.quantity} × ${it.product.name}, ${formatPrice(it.lineTotal)}€`,
       ),
       ``,
       `TOTAL ESTIMÉ : ${formatPrice(total)}€`,
@@ -82,7 +82,7 @@ export function CartView() {
       name,
     ];
 
-    const subject = `Commande Drive — ${name}`;
+    const subject = `Commande Drive, ${name}`;
     const body = lines.filter(Boolean).join("\n");
 
     const mailto = `mailto:${business.email}?subject=${encodeURIComponent(
@@ -181,7 +181,7 @@ export function CartView() {
             </span>
           </div>
           <p className="mt-4 text-xs text-[color:var(--color-stone-soft)] italic">
-            Les prix s&apos;entendent <strong>indicatifs</strong> — certains produits sont vendus
+            Les prix s&apos;entendent <strong>indicatifs</strong> : certains produits sont vendus
             au poids, le total final vous sera confirmé par mail sous 48h ouvrées.
           </p>
 
@@ -214,7 +214,7 @@ export function CartView() {
               <span aria-hidden>→</span>
             </button>
             <p className="text-xs text-[color:var(--color-stone-soft)] text-center">
-              Votre messagerie va s&apos;ouvrir avec le récap pré-rempli — il ne vous reste qu&apos;à envoyer.
+              Votre messagerie va s&apos;ouvrir avec le récap pré-rempli. Il ne vous reste qu&apos;à envoyer.
               <br />
               Vous pouvez aussi nous appeler au{" "}
               <a href={`tel:${business.phoneIntl}`} className="underline hover:text-[color:var(--color-bordeaux)]">

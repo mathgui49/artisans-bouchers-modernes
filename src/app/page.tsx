@@ -16,7 +16,7 @@ export default function Home() {
     "@type": "WebPage",
     "@id": `${SITE_URL}/#webpage`,
     url: SITE_URL,
-    name: "Accueil — Artisans Bouchers Modernes",
+    name: "Accueil · Les Artisans Modernes",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#business` },
     primaryImageOfPage: `${SITE_URL}/images/plateau-charcuterie.webp`,

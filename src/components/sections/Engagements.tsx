@@ -47,7 +47,7 @@ export function Engagements() {
           </h2>
           <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
             Une boucherie moderne, c&apos;est une boucherie qui n&apos;oublie pas pourquoi elle existe :
-            nourrir bien, sourcer juste, créer ensemble — sans se perdre en chemin.
+            nourrir bien, sourcer juste, créer ensemble, sans se perdre en chemin.
           </p>
         </header>
 

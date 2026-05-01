@@ -32,7 +32,7 @@ export function Plateaux() {
             <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden">
               <Image
                 src="/images/photo-13.webp"
-                alt="Plateau apéro charcuterie & fromage Artisans Bouchers Modernes"
+                alt="Plateau apéro charcuterie & fromage Les Artisans Modernes"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

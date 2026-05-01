@@ -3,11 +3,12 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { partners, partnerCategories } from "@/lib/partners";
 import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
+import { business } from "@/lib/business";
 import type { Metadata } from "next";
 
-const TITLE = "Nos partenaires — Producteurs locaux & filières françaises";
+const TITLE = "Nos partenaires · Producteurs locaux & filières françaises";
 const DESCRIPTION =
-  "Nos producteurs partenaires : Tendriade, Janzé, Ancenis, Viandes Clermont, La Ferme du Claray, Les Chèvres du P'tit Bout, Milky Breizh, Subery, Vergers de la Ferme, Draenek, UBY. Race à viande française, fromages fermiers d'Ille-et-Vilaine, cidre breton.";
+  "Découvrez les partenaires de votre artisan boucher à Bain de Bretagne. Race à viande française, fromages fermiers d'Ille-et-Vilaine, primeur de saison, miel, cidre breton, bières et vins.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "fromage Ille-et-Vilaine",
     "cidre Bain de Bretagne",
     "circuit court boucherie",
+    "Les Artisans Modernes partenaires",
   ],
   openGraph: {
     type: "website",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
         url: "/images/partners/producteurs.webp",
         width: 1200,
         height: 630,
-        alt: "Producteurs partenaires des Artisans Bouchers Modernes",
+        alt: `Producteurs partenaires des ${business.legalName}`,
       },
     ],
   },
@@ -53,7 +55,7 @@ export default function PartenairesPage() {
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Producteurs partenaires des Artisans Bouchers Modernes",
+    name: `Producteurs partenaires des ${business.legalName}`,
     numberOfItems: partners.length,
     itemListElement: partners.map((p, i) => ({
       "@type": "ListItem",
@@ -78,7 +80,7 @@ export default function PartenairesPage() {
         <section className="relative isolate overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-cream)]">
           <Image
             src="/images/partners/producteurs.webp"
-            alt="Producteurs partenaires des Artisans Bouchers Modernes — race à viande, fromages fermiers, primeur"
+            alt={`Producteurs partenaires des ${business.legalName} : race à viande, fromages fermiers, primeur`}
             fill
             priority
             sizes="100vw"
@@ -94,17 +96,19 @@ export default function PartenairesPage() {
                 </span>
               </p>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight">
-                Une chaîne courte,
+                Découvrez les partenaires
                 <br />
                 <em className="not-italic font-normal text-[color:var(--color-gold)]">
-                  des noms, des fermes
+                  de votre artisan boucher
                 </em>
                 .
               </h1>
-              <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed">
-                Voici les producteurs et artisans avec qui nous travaillons. Race à viande
-                française, fromages fermiers d&apos;Ille-et-Vilaine, fruits et légumes de
-                saison, miels, cidre, bières et vins choisis pour leur exigence.
+              <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed text-justify">
+                Nous proposons de la viande élevée sur une agriculture raisonnée en gage de
+                qualité&nbsp;: race à viande, d&apos;origine française et au maximum locale,
+                respect des temps de maturation, bouchers formés. Nos fabrications artisanales
+                sont sans colorant, ni conservateur. Découvrez ci-dessous nos partenaires
+                français et essentiellement locaux.
               </p>
             </div>
           </div>
@@ -121,7 +125,7 @@ export default function PartenairesPage() {
             >
               <div className="container-x">
                 <header className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
-                  <div>
+                  <div className="max-w-xl">
                     <p className="eyebrow mb-3">
                       <span className="flag-bar"><span /><span /><span /></span>
                       {cat.label}
@@ -130,7 +134,7 @@ export default function PartenairesPage() {
                       {cat.label}
                     </h2>
                   </div>
-                  <p className="md:max-w-md text-[color:var(--color-stone)] leading-relaxed">
+                  <p className="md:max-w-md text-[color:var(--color-stone)] leading-relaxed text-justify">
                     {cat.description}
                   </p>
                 </header>
@@ -141,7 +145,7 @@ export default function PartenairesPage() {
                       <div className="relative aspect-[5/3] bg-[color:var(--color-cream-deep)] flex items-center justify-center p-6">
                         <Image
                           src={p.image}
-                          alt={`Logo ${p.name} — ${p.categoryLabel}`}
+                          alt={`Logo ${p.name}, ${p.categoryLabel}`}
                           fill
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-contain p-8"
@@ -155,7 +159,7 @@ export default function PartenairesPage() {
                         {p.location && (
                           <p className="text-sm text-[color:var(--color-stone-soft)]">☉ {p.location}</p>
                         )}
-                        <p className="mt-2 text-[color:var(--color-stone)] leading-relaxed text-[0.95rem]">
+                        <p className="mt-2 text-[color:var(--color-stone)] leading-relaxed text-[0.95rem] text-justify">
                           {p.description}
                         </p>
                       </div>
@@ -177,9 +181,10 @@ export default function PartenairesPage() {
               Vous voulez en savoir plus
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> sur un produit</em> ?
             </h2>
-            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
-              Demandez-nous en magasin : nous vous racontons d&apos;où ça vient, qui l&apos;a
-              produit, et comment c&apos;est fabriqué. La traçabilité, c&apos;est la base.
+            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify">
+              Demandez-nous en magasin&nbsp;: nous vous racontons d&apos;où ça vient, qui
+              l&apos;a produit, et comment c&apos;est fabriqué. La traçabilité, c&apos;est la
+              base.
             </p>
           </div>
         </section>

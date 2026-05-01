@@ -49,7 +49,7 @@ export function Header() {
       <div className="container-x flex items-center justify-between py-1.5 md:py-2">
         <Link
           href="/"
-          aria-label={`${business.name} — accueil`}
+          aria-label={`${business.name}, accueil`}
           className="flex items-center gap-3 shrink-0"
           onClick={() => setOpen(false)}
         >

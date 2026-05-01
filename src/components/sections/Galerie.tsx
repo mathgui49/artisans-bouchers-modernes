@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 const photos = [
-  { src: "/images/roti-beurre-aux-herbes.webp", alt: "Rôti de bœuf farci au beurre d'herbes — fait maison", aspect: "tall" },
+  { src: "/images/roti-beurre-aux-herbes.webp", alt: "Rôti de bœuf farci au beurre d'herbes (fait maison)", aspect: "tall" },
   { src: "/images/photo-19.webp", alt: "Côte de bœuf décorée", aspect: "tall" },
-  { src: "/images/photo-14.webp", alt: "Carpaccio revisité — recette signature", aspect: "tall" },
+  { src: "/images/photo-14.webp", alt: "Carpaccio revisité, recette signature", aspect: "tall" },
   { src: "/images/photo-18.webp", alt: "Tartare et accompagnement maison", aspect: "wide" },
-  { src: "/images/photo-17.webp", alt: "Plat cuisiné maison — tajine de saison", aspect: "wide" },
+  { src: "/images/photo-17.webp", alt: "Plat cuisiné maison (tajine de saison)", aspect: "wide" },
   { src: "/images/photo-13.webp", alt: "Plateau apéro charcuterie et fromage", aspect: "tall" },
-  { src: "/images/plateau-charcuterie.webp", alt: "Plateau charcuterie maison Artisans Bouchers Modernes", aspect: "tall" },
-  { src: "/images/photo-16.webp", alt: "Plateau fromages — sélection de la maison", aspect: "wide" },
+  { src: "/images/plateau-charcuterie.webp", alt: "Plateau charcuterie maison Les Artisans Modernes", aspect: "tall" },
+  { src: "/images/photo-16.webp", alt: "Plateau fromages, sélection de la maison", aspect: "wide" },
   { src: "/images/photo-15.webp", alt: "Plateau fromage 100% local", aspect: "wide" },
   { src: "/images/fromage-comte.webp", alt: "Comté affiné et fromage de montagne", aspect: "wide" },
   { src: "/images/photo-20.webp", alt: "Spécialité boucherie", aspect: "wide" },

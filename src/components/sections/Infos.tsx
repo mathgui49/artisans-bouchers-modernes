@@ -25,7 +25,7 @@ export function Infos() {
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
               Notre magasin se trouve au cœur de la ZA Château Gaillard, parking gratuit devant la porte.
-              N&apos;hésitez pas à passer ou à appeler — nous sommes là pour conseiller, conseiller, et conseiller encore.
+              N&apos;hésitez pas à passer ou à appeler, nous sommes là pour conseiller, conseiller, et conseiller encore.
             </p>
 
             <dl className="mt-10 space-y-6">
@@ -111,7 +111,7 @@ export function Infos() {
             >
               <Image
                 src="/images/facade.webp"
-                alt="Façade du magasin Artisans Bouchers Modernes — Bain de Bretagne"
+                alt="Façade du magasin Les Artisans Modernes, Bain de Bretagne"
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

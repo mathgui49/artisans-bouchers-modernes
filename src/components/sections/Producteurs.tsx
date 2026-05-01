@@ -19,7 +19,7 @@ export function Producteurs() {
             <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl">
               Élevage, maraîchage, fromages, conserves : nous travaillons avec des producteurs
               de Bain de Bretagne et d&apos;Ille-et-Vilaine que nous connaissons par leur prénom.
-              Chaque produit a une histoire, chaque histoire a un nom — et c&apos;est nous qui
+              Chaque produit a une histoire, chaque histoire a un nom, et c&apos;est nous qui
               faisons le lien jusqu&apos;à votre table.
             </p>
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-[color:var(--color-ink)] font-medium">
@@ -48,7 +48,7 @@ export function Producteurs() {
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden mt-12">
                 <Image
                   src="/images/photo-22.webp"
-                  alt="Étal primeur — fruits et légumes de saison de producteurs locaux"
+                  alt="Étal primeur : fruits et légumes de saison de producteurs locaux"
                   fill
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover"

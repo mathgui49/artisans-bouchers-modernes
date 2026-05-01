@@ -74,7 +74,7 @@ export function Hero() {
       {/* Hidden image fallback for accessibility */}
       <Image
         src="/images/plateau-charcuterie.webp"
-        alt="Plateau charcuterie maison Artisans Bouchers Modernes"
+        alt="Plateau charcuterie maison Les Artisans Modernes"
         fill
         priority
         className="sr-only"

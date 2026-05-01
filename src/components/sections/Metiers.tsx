@@ -36,7 +36,7 @@ export function Metiers() {
                 <div className={`relative w-full overflow-hidden ${isFeatured ? "aspect-[4/5] lg:aspect-[4/6]" : "aspect-[5/4]"}`}>
                   <Image
                     src={d.image}
-                    alt={`Rayon ${d.name} — ${d.accroche}`}
+                    alt={`Rayon ${d.name}, ${d.accroche}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 hover:scale-105"

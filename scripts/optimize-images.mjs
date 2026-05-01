@@ -26,7 +26,8 @@ const SUFFIX = /\.(jpe?g|png)$/i;
 
 async function processFile(file) {
   const rel = path.relative(ROOT, file);
-  if (rel === "logo.png") return null; // keep transparency
+  // Skip files at /public root (logo, favicons, og-logo, apple-touch-icon, etc.)
+  if (!rel.includes(path.sep) && !rel.includes("/")) return null;
   if (rel.startsWith("video")) return null;
 
   const buf = await readFile(file);
