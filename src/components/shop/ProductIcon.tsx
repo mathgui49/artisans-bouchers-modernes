@@ -1,159 +1,152 @@
 /**
- * SVG silhouettes minimalistes pour les pièces en gros
- * (cochon, bœuf, agneau). Style ligne, couleur bordeaux.
+ * Médaillons typographiques pour les pièces en gros.
+ * Style sceau de boucher : cercle + texte + accent tricolore.
  */
 
 type IconKey = "pig" | "beef" | "beef-leg" | "lamb";
 
-const COMMON = {
-  fill: "currentColor",
-  stroke: "currentColor",
-  strokeLinejoin: "round" as const,
-  strokeLinecap: "round" as const,
+interface MedallionConfig {
+  label: string;
+  sub: string;
+  origin: string;
+  ornament: "star" | "flame" | "leaf" | "wheat";
+}
+
+const CONFIG: Record<IconKey, MedallionConfig> = {
+  pig: {
+    label: "Porc",
+    sub: "Demi cochon",
+    origin: "Élevage français",
+    ornament: "leaf",
+  },
+  "beef-leg": {
+    label: "Bœuf",
+    sub: "½ Cuisse",
+    origin: "Race à viande",
+    ornament: "star",
+  },
+  beef: {
+    label: "Bœuf",
+    sub: "Cuisse entière",
+    origin: "Race à viande",
+    ornament: "star",
+  },
+  lamb: {
+    label: "Agneau",
+    sub: "Pièce entière",
+    origin: "Origine France",
+    ornament: "wheat",
+  },
 };
 
-function PigSilhouette() {
-  return (
-    <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" {...COMMON} aria-hidden>
-      {/* Tail curl */}
-      <path
-        d="M52 102 q-14 -2 -14 -14 q0 -10 10 -10 q8 0 8 8"
-        fill="none"
-        strokeWidth="5"
-      />
-      {/* Body */}
-      <path d="M50 110 q0 -50 60 -55 l70 0 q22 0 32 -14 q4 -6 11 -6 l13 0 q6 0 4 7 l-4 13 q-2 6 -8 6 l-3 0 q4 14 4 30 l0 28 q0 18 -16 18 l-22 0 l-2 -8 l-32 0 l-2 8 l-30 0 l-2 -8 l-32 0 l-2 8 l-22 0 q-17 0 -17 -17 z" />
-      {/* Eye */}
-      <circle cx="225" cy="65" r="3.5" fill="white" />
-      {/* Ear */}
-      <path
-        d="M205 50 q-2 -18 12 -22 q12 -3 12 14 q0 8 -6 14"
-        fill="white"
-        fillOpacity="0.15"
-        strokeWidth="3.5"
-      />
-      {/* Nostrils */}
-      <circle cx="247" cy="70" r="2" fill="white" />
-      <circle cx="253" cy="70" r="2" fill="white" />
-    </svg>
-  );
+function Ornament({ kind }: { kind: MedallionConfig["ornament"] }) {
+  switch (kind) {
+    case "star":
+      return (
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
+          <path d="M12 2 L13.7 8.5 L20 9 L15 13 L16.5 19.5 L12 16 L7.5 19.5 L9 13 L4 9 L10.3 8.5 Z" />
+        </svg>
+      );
+    case "leaf":
+      return (
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
+          <path d="M21 3 C12 3 6 8 5 14 C5 18 7 21 11 21 C17 21 21 14 21 5 Z" opacity="0.9" />
+          <path d="M5 14 L19 4" stroke="white" strokeWidth="1" fill="none" opacity="0.45" />
+        </svg>
+      );
+    case "wheat":
+      return (
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" aria-hidden>
+          <path d="M12 22 L12 4" />
+          <path d="M12 8 L8 5 M12 8 L16 5" />
+          <path d="M12 12 L8 9 M12 12 L16 9" />
+          <path d="M12 16 L8 13 M12 16 L16 13" />
+          <path d="M12 20 L8 17 M12 20 L16 17" />
+        </svg>
+      );
+    case "flame":
+      return (
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
+          <path d="M12 2 C13 6 16 8 16 13 C16 17 14 20 12 20 C10 20 8 17 8 13 C8 11 9 9 10 8 C10 10 11 11 12 11 C12 8 11 5 12 2 Z" />
+        </svg>
+      );
+  }
 }
-
-function BeefLegSilhouette() {
-  return (
-    <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" {...COMMON} aria-hidden>
-      {/* Bone tip on left */}
-      <ellipse cx="40" cy="100" rx="22" ry="14" fill="white" stroke="currentColor" strokeWidth="4" />
-      <ellipse cx="38" cy="100" rx="6" ry="3.5" fill="currentColor" opacity="0.4" />
-      {/* Meat shape (rounded ham/leg silhouette) */}
-      <path d="M55 95 q5 -32 38 -38 q36 -7 70 -2 q40 6 70 30 q24 19 18 32 q-6 13 -32 18 q-26 5 -56 5 q-30 0 -55 -2 q-22 -2 -38 -8 q-20 -8 -22 -22 q-1 -7 7 -13 z" />
-      {/* Marbling lines (white) */}
-      <path
-        d="M100 78 q14 -4 28 0 M120 100 q18 -3 36 0 M140 122 q14 -2 28 0 M170 95 q16 -4 30 0"
-        stroke="white"
-        strokeWidth="2.5"
-        fill="none"
-        opacity="0.35"
-      />
-      {/* Butcher string */}
-      <path
-        d="M75 88 q-4 14 0 28 M85 80 q-3 22 0 38 M95 76 q-2 26 0 44"
-        stroke="white"
-        strokeWidth="2"
-        fill="none"
-        opacity="0.55"
-      />
-    </svg>
-  );
-}
-
-function BeefSilhouette() {
-  return (
-    <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" {...COMMON} aria-hidden>
-      {/* Tail */}
-      <path
-        d="M30 80 q-10 -2 -12 -12 q-2 -10 6 -12"
-        fill="none"
-        strokeWidth="5"
-      />
-      {/* Body */}
-      <path d="M30 90 q4 -42 60 -45 l85 0 q22 0 30 -10 q8 -10 28 -10 l8 0 q5 0 3 6 l-2 8 q-2 5 -7 5 l-2 0 q5 12 5 26 l0 32 q0 18 -16 18 l-24 0 l-2 -8 l-30 0 l-2 8 l-30 0 l-2 -8 l-32 0 l-2 8 l-22 0 q-17 0 -17 -17 z" />
-      {/* Horns */}
-      <path
-        d="M225 38 q-4 -16 4 -22 M250 36 q5 -16 -2 -22"
-        fill="none"
-        strokeWidth="5"
-      />
-      {/* Eye */}
-      <circle cx="240" cy="60" r="3.5" fill="white" />
-      {/* Nostril */}
-      <circle cx="263" cy="78" r="2" fill="white" />
-      {/* Spots (decorative) */}
-      <ellipse cx="90" cy="105" rx="14" ry="9" fill="white" opacity="0.18" />
-      <ellipse cx="140" cy="125" rx="10" ry="6" fill="white" opacity="0.18" />
-      <ellipse cx="175" cy="100" rx="12" ry="7" fill="white" opacity="0.18" />
-    </svg>
-  );
-}
-
-function LambSilhouette() {
-  return (
-    <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" {...COMMON} aria-hidden>
-      {/* Wool body : cloud shape */}
-      <path d="M50 130 q-18 0 -18 -20 q0 -16 14 -20 q2 -18 22 -18 q10 0 16 6 q8 -14 26 -14 q16 0 24 12 q10 -10 26 -10 q18 0 26 14 q12 -8 26 -2 q14 6 12 22 q14 4 14 18 q0 18 -18 18 z" />
-      {/* Body underline */}
-      <path d="M50 130 l190 0 q14 0 14 14 l0 8 q0 8 -8 8 l-180 0 q-16 0 -16 -16 z" />
-      {/* Head */}
-      <ellipse cx="245" cy="100" rx="22" ry="20" />
-      {/* Snout */}
-      <ellipse cx="263" cy="108" rx="9" ry="7" fill="white" stroke="currentColor" strokeWidth="3" />
-      {/* Ear */}
-      <ellipse cx="234" cy="78" rx="7" ry="11" fill="white" stroke="currentColor" strokeWidth="3" transform="rotate(-30 234 78)" />
-      {/* Eye */}
-      <circle cx="252" cy="95" r="2.5" fill="white" />
-      {/* Legs */}
-      <rect x="80" y="160" width="8" height="22" rx="3" />
-      <rect x="120" y="160" width="8" height="22" rx="3" />
-      <rect x="180" y="160" width="8" height="22" rx="3" />
-      <rect x="220" y="160" width="8" height="22" rx="3" />
-    </svg>
-  );
-}
-
-const REGISTRY: Record<IconKey, () => React.JSX.Element> = {
-  pig: PigSilhouette,
-  beef: BeefSilhouette,
-  "beef-leg": BeefLegSilhouette,
-  lamb: LambSilhouette,
-};
 
 export function ProductIcon({ name, label }: { name: IconKey; label: string }) {
-  const Icon = REGISTRY[name];
+  const cfg = CONFIG[name];
   return (
-    <div className="absolute inset-0 flex items-center justify-center bg-[color:var(--color-cream-deep)]" role="img" aria-label={label}>
-      {/* Decorative ribbon */}
+    <div
+      className="absolute inset-0 flex items-center justify-center bg-[color:var(--color-cream-deep)] overflow-hidden"
+      role="img"
+      aria-label={label}
+    >
+      {/* Top tricolor strip */}
       <div
-        className="absolute inset-x-0 top-0 h-[3px] opacity-70"
+        className="absolute inset-x-0 top-0 h-[3px]"
         style={{
           background:
             "linear-gradient(to right, #1d3a8a 0%, #1d3a8a 33.333%, #faf6ef 33.333%, #faf6ef 66.666%, var(--color-bordeaux) 66.666%, var(--color-bordeaux) 100%)",
         }}
         aria-hidden
       />
-      {/* Subtle dot grid background */}
+
+      {/* Soft radial dot pattern (subtle) */}
       <div
-        className="absolute inset-0 opacity-[0.07]"
+        className="absolute inset-0 opacity-[0.06]"
         style={{
-          backgroundImage:
-            "radial-gradient(currentColor 1px, transparent 1px)",
-          backgroundSize: "12px 12px",
+          backgroundImage: "radial-gradient(currentColor 1px, transparent 1px)",
+          backgroundSize: "14px 14px",
           color: "var(--color-bordeaux)",
         }}
         aria-hidden
       />
-      <div className="relative w-[68%] h-[68%] flex items-center justify-center text-[color:var(--color-bordeaux)]">
-        <Icon />
+
+      {/* Decorative circular frame */}
+      <svg
+        className="absolute inset-0 w-full h-full text-[color:var(--color-bordeaux)] opacity-[0.18]"
+        viewBox="0 0 400 300"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden
+      >
+        <circle cx="200" cy="150" r="112" fill="none" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="200" cy="150" r="118" fill="none" stroke="currentColor" strokeWidth="0.5" strokeDasharray="2 4" />
+      </svg>
+
+      {/* Center content */}
+      <div className="relative flex flex-col items-center text-center px-4 text-[color:var(--color-bordeaux)]">
+        {/* Top ornament */}
+        <div className="flex items-center gap-2 mb-2 opacity-90">
+          <span className="h-px w-6 bg-current opacity-50" />
+          <Ornament kind={cfg.ornament} />
+          <span className="h-px w-6 bg-current opacity-50" />
+        </div>
+
+        {/* Big label */}
+        <div className="font-display tracking-tight leading-none text-[2.6rem] sm:text-[2.8rem] lg:text-[3.2rem]">
+          {cfg.label}
+        </div>
+
+        {/* Sub */}
+        <div
+          className="font-display italic font-light text-[color:var(--color-bordeaux)]/85 text-base sm:text-lg leading-tight mt-1"
+        >
+          {cfg.sub}
+        </div>
+
+        {/* Origin tag */}
+        <div className="mt-2 text-[0.6rem] tracking-[0.22em] uppercase font-semibold text-[color:var(--color-bordeaux)]/70">
+          {cfg.origin}
+        </div>
       </div>
+
+      {/* Decorative corner numbers (butcher stamp style) */}
+      <span className="absolute bottom-3 left-3 text-[0.6rem] font-mono tracking-widest text-[color:var(--color-bordeaux)]/40">
+        FR · 35
+      </span>
+      <span className="absolute bottom-3 right-3 text-[0.6rem] font-mono tracking-widest text-[color:var(--color-bordeaux)]/40">
+        N°{name === "pig" ? "01" : name === "beef-leg" ? "02" : name === "beef" ? "03" : "04"}
+      </span>
     </div>
   );
 }
