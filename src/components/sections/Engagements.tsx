@@ -45,7 +45,7 @@ export function Engagements() {
           <h2 id="engagements-title" className="font-display text-4xl sm:text-5xl md:text-6xl text-[color:var(--color-ink)] tracking-tight">
             Quatre promesses, <em className="text-[color:var(--color-bordeaux)] not-italic font-normal">tenues chaque jour</em>.
           </h2>
-          <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
+          <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify hyphens-auto">
             Une boucherie moderne, c&apos;est une boucherie qui n&apos;oublie pas pourquoi elle existe :
             nourrir bien, sourcer juste, créer ensemble, sans se perdre en chemin.
           </p>
@@ -65,7 +65,7 @@ export function Engagements() {
                   {e.title}
                 </h3>
               </div>
-              <p className="text-[color:var(--color-stone)] text-[1.05rem] leading-relaxed pl-[4.6rem]">{e.body}</p>
+              <p className="text-[color:var(--color-stone)] text-[1.05rem] leading-relaxed pl-[4.6rem] text-justify hyphens-auto">{e.body}</p>
             </article>
           ))}
         </div>

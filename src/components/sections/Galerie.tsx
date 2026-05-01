@@ -34,8 +34,8 @@ export function Galerie() {
             La maison
             <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> en images</em>.
           </h2>
-          <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
-            Quelques pièces signature, plats cuisinés, plateaux et coups de cœur du moment —
+          <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify hyphens-auto">
+            Quelques pièces signature, plats cuisinés, plateaux et coups de cœur du moment,
             telles qu&apos;elles sortent du laboratoire, telles qu&apos;elles arrivent sur l&apos;étal.
           </p>
         </header>

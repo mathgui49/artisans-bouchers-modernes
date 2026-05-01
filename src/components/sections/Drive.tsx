@@ -42,7 +42,7 @@ export function Drive() {
               </em>
               .
             </h2>
-            <p className="mt-6 text-[color:var(--color-cream)]/75 text-lg leading-relaxed">
+            <p className="mt-6 text-[color:var(--color-cream)]/75 text-lg leading-relaxed text-justify hyphens-auto">
               Ajoutez vos colis et pièces au panier, validez votre commande, recevez votre
               confirmation par mail sous 48h ouvrées.
             </p>

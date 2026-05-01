@@ -34,13 +34,13 @@ export function Hero() {
             <br />
             <em className="not-italic font-light italic-fraunces">Et tout ce qu&apos;il faut autour.</em>
           </h1>
-          <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed">
-            <span className="block mb-3 text-[color:var(--color-gold-soft)] font-medium">
+          <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed text-justify hyphens-auto">
+            <span className="block mb-3 text-[color:var(--color-gold-soft)] font-medium text-left">
               {business.tagline}
             </span>
             Une viande française issue d&apos;une agriculture raisonnée, une charcuterie maison
             sans colorant ni conservateur, des fromages et primeurs de producteurs locaux.
-            <span className="block mt-3 text-[color:var(--color-gold)] italic font-display text-2xl md:text-3xl">
+            <span className="block mt-3 text-[color:var(--color-gold)] italic font-display text-2xl md:text-3xl text-left">
               Mangeons-mieux, ensemble.
             </span>
           </p>

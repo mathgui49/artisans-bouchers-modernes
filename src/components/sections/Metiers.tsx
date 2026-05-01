@@ -17,7 +17,7 @@ export function Metiers() {
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">notre savoir-faire</em>.
             </h2>
           </div>
-          <p className="md:max-w-md text-[color:var(--color-stone)] text-lg leading-relaxed">
+          <p className="md:max-w-md text-[color:var(--color-stone)] text-lg leading-relaxed text-justify hyphens-auto">
             Sous le même toit : la boucherie, la charcuterie maison, la fromagerie, le primeur
             et l&apos;épicerie-cave. Une équipe, une exigence, mille produits.
           </p>
@@ -50,7 +50,7 @@ export function Metiers() {
                   <p className="text-[color:var(--color-bordeaux)] font-medium text-[0.95rem]">
                     {d.accroche}
                   </p>
-                  <p className="text-[color:var(--color-stone)] leading-relaxed">{d.description}</p>
+                  <p className="text-[color:var(--color-stone)] leading-relaxed text-justify hyphens-auto">{d.description}</p>
                 </div>
               </article>
             );

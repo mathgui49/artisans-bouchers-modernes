@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { business } from "@/lib/business";
+import { ProductIcon } from "@/components/shop/ProductIcon";
 
 function formatPrice(n: number) {
   return n
@@ -103,13 +104,17 @@ export function CartView() {
             className="card flex items-stretch overflow-hidden"
           >
             <div className="relative w-28 sm:w-36 shrink-0 bg-[color:var(--color-cream-deep)]">
-              <Image
-                src={it.product.image}
-                alt={it.product.name}
-                fill
-                sizes="160px"
-                className="object-cover"
-              />
+              {it.product.icon ? (
+                <ProductIcon name={it.product.icon} label={it.product.name} />
+              ) : it.product.image ? (
+                <Image
+                  src={it.product.image}
+                  alt={it.product.name}
+                  fill
+                  sizes="160px"
+                  className="object-cover"
+                />
+              ) : null}
             </div>
             <div className="flex-1 p-4 sm:p-5 flex flex-col gap-2">
               <div className="flex items-start justify-between gap-3">

@@ -16,7 +16,7 @@ export function Producteurs() {
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> partenaires</em>,
               vos voisins.
             </h2>
-            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl">
+            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl text-justify hyphens-auto">
               Élevage, maraîchage, fromages, conserves : nous travaillons avec des producteurs
               de Bain de Bretagne et d&apos;Ille-et-Vilaine que nous connaissons par leur prénom.
               Chaque produit a une histoire, chaque histoire a un nom, et c&apos;est nous qui

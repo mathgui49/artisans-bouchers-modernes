@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/products";
+import { ProductIcon } from "@/components/shop/ProductIcon";
 
 function formatPrice(n: number) {
   return n
@@ -29,13 +30,17 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="card flex flex-col h-full overflow-hidden group">
       <div className="relative aspect-[4/3] overflow-hidden">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        {product.icon ? (
+          <ProductIcon name={product.icon} label={product.name} />
+        ) : product.image ? (
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : null}
         <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[color:var(--color-cream)]/95 backdrop-blur-sm text-[0.68rem] font-medium tracking-[0.16em] uppercase text-[color:var(--color-bordeaux)]">
           {product.categoryLabel}
         </div>

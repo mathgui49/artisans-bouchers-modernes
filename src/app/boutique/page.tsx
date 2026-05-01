@@ -111,7 +111,7 @@ export default function BoutiquePage() {
               </h1>
               <p className="mt-6 text-lg md:text-xl text-[color:var(--color-cream)]/80 max-w-2xl leading-relaxed">
                 Tous nos colis de saison, nos plateaux maison et nos pièces en gros,
-                disponibles à la commande. Confirmation par mail sous 48h ouvrées —
+                disponibles à la commande. Confirmation par mail sous 48h ouvrées,
                 retrait au {business.address.street.split(",")[0]}.
               </p>
             </div>

@@ -1,5 +1,7 @@
 export type ProductCategory = "colis" | "plateau" | "piece";
 
+export type ProductIconKey = "pig" | "beef" | "beef-leg" | "lamb";
+
 export interface Product {
   id: string;
   slug: string;
@@ -17,7 +19,9 @@ export interface Product {
   /** Composition (pour les colis et plateaux). */
   items?: ReadonlyArray<string>;
   shortDescription: string;
-  image: string;
+  /** Photo produit OU clé d'icône SVG (mutuellement exclusifs en pratique). */
+  image?: string;
+  icon?: ProductIconKey;
   /** Suffixe affiché à droite du prix (ex. " /kg", " /pers."). */
   unitSuffix?: string;
   /** Texte additionnel (ex. délai). */
@@ -215,7 +219,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Demi-cochon entier découpé selon vos préférences : à congeler, à fumer, à conserver.",
-    image: "/images/products/demi-cochon.webp",
+    icon: "pig",
     notice: "Prix selon poids exact (3,80 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -230,7 +234,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Demi-cuisse de bœuf race à viande française, découpée par nos bouchers.",
-    image: "/images/products/demi-cochon.webp",
+    icon: "beef-leg",
     notice: "Prix selon poids exact (9,50 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -245,7 +249,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Pièce entière, race à viande française. Découpe sur mesure (steaks, rôtis, bourguignon, hachée).",
-    image: "/images/products/demi-cochon.webp",
+    icon: "beef",
     notice: "Prix selon poids exact (9,90 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
   {
@@ -260,7 +264,7 @@ export const products: ReadonlyArray<Product> = [
     unitSuffix: " indicatif",
     shortDescription:
       "Agneau entier français, découpé selon vos envies pour vos congélations.",
-    image: "/images/products/agneau-entier.webp",
+    icon: "lamb",
     notice: "Prix selon poids exact (13,90 €/kg). Confirmation par mail sous 48h ouvrées.",
   },
 ];

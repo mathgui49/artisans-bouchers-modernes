@@ -72,7 +72,7 @@ export function Plateaux() {
               </em>
               .
             </h2>
-            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl">
+            <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl text-justify hyphens-auto">
               Apéro entre amis, repas de famille, brunch dominical ou comité d&apos;entreprise :
               nos plateaux sont composés sur place, à la commande, avec ce que la maison fait de mieux.
             </p>
