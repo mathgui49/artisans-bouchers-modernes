@@ -117,6 +117,23 @@ h1 { font-weight: 400; }
 .flag-bar > :nth-child(2) { background: #faf6ef; }
 .flag-bar > :nth-child(3) { background: var(--color-bordeaux); }
 
+/* Thin French flag strip at the very top of every page */
+.tricolor {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #1d3a8a 0%,
+    #1d3a8a 33.333%,
+    #faf6ef 33.333%,
+    #faf6ef 66.666%,
+    var(--color-bordeaux) 66.666%,
+    var(--color-bordeaux) 100%
+  );
+  position: relative;
+  z-index: 60;
+}
+
 /* Section eyebrow label */
 .eyebrow {
   display: inline-flex;
