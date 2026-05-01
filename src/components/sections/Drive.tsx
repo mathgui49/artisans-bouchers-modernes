@@ -17,6 +17,7 @@ export function Drive() {
   return (
     <section
       id="drive"
+      aria-labelledby="drive-title"
       className="relative py-24 md:py-32 bg-[color:var(--color-ink)] text-[color:var(--color-cream)] overflow-hidden"
     >
       <div
@@ -29,11 +30,11 @@ export function Drive() {
       <div className="container-x relative">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-14 md:mb-20">
           <div className="max-w-2xl">
-            <div className="eyebrow mb-5 !text-[color:var(--color-gold)]">
+            <p className="eyebrow mb-5 !text-[color:var(--color-gold)]">
               <span className="flag-bar"><span /><span /><span /></span>
               Boutique en ligne · Drive
-            </div>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
+            </p>
+            <h2 id="drive-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
               Commandez en ligne,
               <br />
               <em className="not-italic font-normal text-[color:var(--color-gold)]">
@@ -56,12 +57,12 @@ export function Drive() {
         </div>
 
         {/* Colis cards */}
-        <div className="mb-20">
+        <div className="mb-20" role="region" aria-labelledby="drive-colis">
           <div className="flex items-baseline justify-between mb-8">
-            <h3 className="font-display text-2xl md:text-3xl">Les colis de la saison</h3>
-            <div className="hidden sm:block text-sm text-[color:var(--color-cream)]/60 italic">
+            <h3 id="drive-colis" className="font-display text-2xl md:text-3xl">Les colis de la saison</h3>
+            <p className="hidden sm:block text-sm text-[color:var(--color-cream)]/60 italic">
               Prix indicatifs · ajustés au poids exact
-            </div>
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {colis.map((p) => (
@@ -71,9 +72,9 @@ export function Drive() {
         </div>
 
         {/* Pièces */}
-        <div>
+        <div role="region" aria-labelledby="drive-pieces">
           <div className="flex items-baseline justify-between mb-8">
-            <h3 className="font-display text-2xl md:text-3xl">Pièces entières</h3>
+            <h3 id="drive-pieces" className="font-display text-2xl md:text-3xl">Pièces entières</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {pieces.map((p) => (
@@ -101,12 +102,12 @@ function ColisCard({ product }: { product: typeof products[number] }) {
     <article className="relative rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] hover:border-[color:var(--color-gold)]/40 transition-all p-7 flex flex-col gap-5">
       <div className="flex items-start justify-between gap-3">
         <div>
-          <div className="text-xs tracking-[0.2em] uppercase text-[color:var(--color-cream)]/50 mb-2">
+          <p className="text-xs tracking-[0.2em] uppercase text-[color:var(--color-cream)]/50 mb-2">
             {product.weight ?? "Colis"}
-          </div>
-          <div className="font-display text-3xl text-[color:var(--color-cream)]">
+          </p>
+          <h4 className="font-display text-3xl text-[color:var(--color-cream)]">
             {product.name.replace(/^Colis /, "")}
-          </div>
+          </h4>
         </div>
         {discount > 0 && (
           <span className="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full bg-[color:var(--color-bordeaux)] text-[color:var(--color-cream)] text-xs font-semibold">
@@ -159,14 +160,14 @@ function ColisCard({ product }: { product: typeof products[number] }) {
 function PieceCard({ product }: { product: typeof products[number] }) {
   const { add } = useCart();
   return (
-    <div className="rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] p-6 flex flex-col gap-2 hover:border-[color:var(--color-gold)]/40 transition-colors">
-      <div className="text-xs uppercase tracking-[0.2em] text-[color:var(--color-cream)]/50">
+    <article className="rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] p-6 flex flex-col gap-2 hover:border-[color:var(--color-gold)]/40 transition-colors">
+      <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--color-cream)]/50">
         {product.weight}
-      </div>
-      <div className="font-display text-xl md:text-2xl">{product.name}</div>
-      <div className="mt-3 text-[color:var(--color-gold)] font-display text-2xl">
+      </p>
+      <h4 className="font-display text-xl md:text-2xl">{product.name}</h4>
+      <p className="mt-3 text-[color:var(--color-gold)] font-display text-2xl">
         {formatPrice(product.perKg ?? 0)}€<span className="text-sm text-[color:var(--color-cream)]/60 font-body ml-1">/kg</span>
-      </div>
+      </p>
       <button
         type="button"
         onClick={() => add(product.id, 1)}
@@ -174,6 +175,6 @@ function PieceCard({ product }: { product: typeof products[number] }) {
       >
         + Au panier
       </button>
-    </div>
+    </article>
   );
 }

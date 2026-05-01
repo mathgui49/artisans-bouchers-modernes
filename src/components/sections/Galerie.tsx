@@ -23,14 +23,14 @@ const photos = [
 
 export function Galerie() {
   return (
-    <section id="galerie" className="relative py-24 md:py-32 bg-[color:var(--color-paper)]">
+    <section id="galerie" aria-labelledby="galerie-title" className="relative py-24 md:py-32 bg-[color:var(--color-paper)]">
       <div className="container-x">
-        <div className="max-w-3xl mb-12 md:mb-16">
-          <div className="eyebrow mb-5">
+        <header className="max-w-3xl mb-12 md:mb-16">
+          <p className="eyebrow mb-5">
             <span className="flag-bar"><span /><span /><span /></span>
             Galerie
-          </div>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
+          </p>
+          <h2 id="galerie-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
             La maison
             <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> en images</em>.
           </h2>
@@ -38,7 +38,7 @@ export function Galerie() {
             Quelques pièces signature, plats cuisinés, plateaux et coups de cœur du moment —
             telles qu&apos;elles sortent du laboratoire, telles qu&apos;elles arrivent sur l&apos;étal.
           </p>
-        </div>
+        </header>
 
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 lg:gap-6 [&>*]:mb-4 lg:[&>*]:mb-6">
           {photos.map((p, i) => (

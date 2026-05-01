@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Mon panier",
   description:
     "Récapitulatif de votre panier — finalisez votre commande pour retrait en magasin à Bain de Bretagne.",
+  alternates: { canonical: "/panier" },
   robots: { index: false, follow: false },
 };
 
@@ -18,10 +19,10 @@ export default function PanierPage() {
         <section className="pt-28 pb-16 md:pt-36 md:pb-24">
           <div className="container-x">
             <div className="max-w-2xl mb-10 md:mb-14">
-              <div className="eyebrow mb-4">
+              <p className="eyebrow mb-4">
                 <span className="flag-bar"><span /><span /><span /></span>
                 Votre commande
-              </div>
+              </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl tracking-tight">
                 Mon panier.
               </h1>
@@ -30,6 +31,7 @@ export default function PanierPage() {
                 souhaitée. Vous recevrez une confirmation par email sous 48h ouvrées.
               </p>
             </div>
+            <h2 className="sr-only">Articles du panier et formulaire de commande</h2>
             <CartView />
           </div>
         </section>

@@ -8,12 +8,31 @@ import { Plateaux } from "@/components/sections/Plateaux";
 import { Galerie } from "@/components/sections/Galerie";
 import { Producteurs } from "@/components/sections/Producteurs";
 import { Infos } from "@/components/sections/Infos";
+import { jsonLdScript, SITE_URL } from "@/lib/seo";
 
 export default function Home() {
+  const homepageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/#webpage`,
+    url: SITE_URL,
+    name: "Accueil — Artisans Bouchers Modernes",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#business` },
+    primaryImageOfPage: `${SITE_URL}/images/plateau-charcuterie.webp`,
+    inLanguage: "fr-FR",
+    description:
+      "Boucherie-charcuterie artisanale, fromagerie, primeur, épicerie & cave à Bain de Bretagne. Drive en ligne, plateaux maison, viande française race à viande, partenaires locaux.",
+  };
+
   return (
     <>
       <Header />
       <main className="flex-1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(homepageSchema)}
+        />
         <Hero />
         <Engagements />
         <Metiers />

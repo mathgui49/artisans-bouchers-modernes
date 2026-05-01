@@ -24,7 +24,7 @@ export function Plateaux() {
   }
 
   return (
-    <section id="plateaux" className="relative py-24 md:py-32 bg-[color:var(--color-cream)]">
+    <section id="plateaux" aria-labelledby="plateaux-title" className="relative py-24 md:py-32 bg-[color:var(--color-cream)]">
       <div className="container-x">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Visual */}
@@ -60,11 +60,11 @@ export function Plateaux() {
 
           {/* Copy + plateaux list */}
           <div className="lg:col-span-6">
-            <div className="eyebrow mb-5">
+            <p className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
               Plateaux maison à emporter
-            </div>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
+            </p>
+            <h2 id="plateaux-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
               Pour les moments
               <br />
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">
@@ -84,14 +84,14 @@ export function Plateaux() {
                   className="flex items-center justify-between gap-4 py-4"
                 >
                   <div className="flex-1 min-w-0">
-                    <div className="font-display text-xl md:text-2xl">{p.name}</div>
-                    <div className="text-sm text-[color:var(--color-stone-soft)]">
+                    <h3 className="font-display text-xl md:text-2xl">{p.name}</h3>
+                    <p className="text-sm text-[color:var(--color-stone-soft)]">
                       {p.servings}
-                    </div>
+                    </p>
                   </div>
-                  <div className="font-display text-xl md:text-2xl text-[color:var(--color-bordeaux)] tabular-nums shrink-0">
+                  <p className="font-display text-xl md:text-2xl text-[color:var(--color-bordeaux)] tabular-nums shrink-0">
                     {formatPrice(p.price)}€{p.unitSuffix ?? ""}
-                  </div>
+                  </p>
                   <button
                     type="button"
                     onClick={() => handleAdd(p.id)}

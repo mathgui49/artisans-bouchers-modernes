@@ -6,16 +6,16 @@ export function Infos() {
   const todayIdx = (new Date().getDay() + 6) % 7; // 0 = Monday
 
   return (
-    <section id="infos" className="relative py-24 md:py-32 bg-[color:var(--color-cream)]">
+    <section id="infos" aria-labelledby="infos-title" className="relative py-24 md:py-32 bg-[color:var(--color-cream)]">
       <div className="container-x">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
           {/* Left: copy + facts */}
           <div className="lg:col-span-5">
-            <div className="eyebrow mb-5">
+            <p className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
               Infos pratiques
-            </div>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
+            </p>
+            <h2 id="infos-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
               Venir nous voir
               <br />
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">

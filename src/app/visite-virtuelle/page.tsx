@@ -1,30 +1,67 @@
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
+const TITLE = "Visite virtuelle 360° — Le magasin en immersion";
+const DESCRIPTION =
+  "Visitez en 360° le magasin des Artisans Bouchers Modernes à Bain de Bretagne : façade, comptoir boucherie, entrée et primeur. 4 panoramas immersifs, comme si vous y étiez.";
+
 export const metadata: Metadata = {
-  title: "Visite virtuelle 360° — Le magasin en immersion",
-  description:
-    "Visitez en 360° le magasin des Artisans Bouchers Modernes à Bain de Bretagne — extérieur, comptoir boucherie, entrée et primeur. Comme si vous y étiez.",
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: "/visite-virtuelle" },
+  keywords: [
+    "visite virtuelle 360 boucherie",
+    "tour 360 magasin Bain de Bretagne",
+    "visite immersive Artisans Bouchers Modernes",
+  ],
+  openGraph: {
+    type: "website",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: `${SITE_URL}/visite-virtuelle`,
+    images: [
+      {
+        url: "/images/facade.webp",
+        width: 1200,
+        height: 630,
+        alt: "Façade du magasin Artisans Bouchers Modernes — Bain de Bretagne",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/images/facade.webp"],
+  },
 };
 
 const TOUR_URL =
   "https://www.lesartisansmodernes.fr/360%20lesartisansmodernes/arisanmoderne.html";
 
 export default function VisiteVirtuellePage() {
+  const breadcrumbs = breadcrumbsJsonLd([
+    { name: "Accueil", path: "/" },
+    { name: "Visite virtuelle 360°", path: "/visite-virtuelle" },
+  ]);
+
   return (
     <>
       <Header />
       <main className="flex-1 bg-[color:var(--color-cream)]">
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(breadcrumbs)} />
+
         <section className="bg-[color:var(--color-ink)] text-[color:var(--color-cream)] pt-28 md:pt-36 pb-12 md:pb-16">
           <div className="container-x">
             <div className="max-w-3xl">
-              <div className="flex items-center gap-3 mb-5">
+              <p className="flex items-center gap-3 mb-5">
                 <span className="flag-bar"><span /><span /><span /></span>
                 <span className="text-[0.78rem] tracking-[0.2em] uppercase font-semibold text-[color:var(--color-gold)]">
                   Visite virtuelle 360°
                 </span>
-              </div>
+              </p>
               <h1 className="font-display text-4xl md:text-6xl lg:text-7xl tracking-tight">
                 Le magasin
                 <br />
@@ -42,13 +79,14 @@ export default function VisiteVirtuellePage() {
           </div>
         </section>
 
-        <section className="py-10 md:py-16">
+        <section className="py-10 md:py-16" aria-labelledby="tour-frame">
           <div className="container-x">
+            <h2 id="tour-frame" className="sr-only">Lecteur de la visite virtuelle 360°</h2>
             <div className="rounded-[var(--radius-lg)] overflow-hidden border border-[color:var(--color-line)] shadow-[var(--shadow-lift)] bg-[color:var(--color-ink)]">
               <div className="relative w-full aspect-[16/10] md:aspect-[16/9]">
                 <iframe
                   src={TOUR_URL}
-                  title="Visite virtuelle 360° — Artisans Bouchers Modernes"
+                  title="Visite virtuelle 360° — Artisans Bouchers Modernes Bain de Bretagne"
                   loading="lazy"
                   allow="fullscreen; accelerometer; gyroscope; magnetometer; xr-spatial-tracking"
                   allowFullScreen
@@ -57,39 +95,37 @@ export default function VisiteVirtuellePage() {
               </div>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl">
+            <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl list-none">
               {[
                 { title: "Extérieur", body: "La façade et le parking." },
                 { title: "Boucherie", body: "Le comptoir et l'étal du jour." },
                 { title: "Entrée", body: "L'accueil et l'épicerie fine." },
                 { title: "Primeur", body: "Le rayon fruits & légumes." },
               ].map((s) => (
-                <div
+                <li
                   key={s.title}
                   className="rounded-[var(--radius)] border border-[color:var(--color-line)] bg-[color:var(--color-paper)] p-4"
                 >
-                  <div className="font-display text-lg">{s.title}</div>
-                  <div className="text-sm text-[color:var(--color-stone)] mt-0.5">
-                    {s.body}
-                  </div>
-                </div>
+                  <h3 className="font-display text-lg">{s.title}</h3>
+                  <p className="text-sm text-[color:var(--color-stone)] mt-0.5">{s.body}</p>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-[color:var(--color-cream-deep)]">
+        <section className="py-16 md:py-24 bg-[color:var(--color-cream-deep)]" aria-labelledby="visite-cta">
           <div className="container-x text-center max-w-2xl mx-auto">
-            <div className="eyebrow justify-center mb-4">
+            <p className="eyebrow justify-center mb-4">
               <span className="flag-bar"><span /><span /><span /></span>
               Envie de venir en vrai ?
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl tracking-tight">
+            </p>
+            <h2 id="visite-cta" className="font-display text-3xl md:text-4xl tracking-tight">
               Le 360° c&apos;est bien,
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> le comptoir c&apos;est mieux</em>.
             </h2>
             <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
-              <a href="/#infos" className="btn-primary">Voir horaires & accès</a>
+              <a href="/#infos" className="btn-primary">Voir horaires &amp; accès</a>
               <a href="/boutique" className="btn-ghost text-[color:var(--color-ink)]">
                 Commander en ligne
               </a>

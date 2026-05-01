@@ -35,21 +35,21 @@ const icons = [
 
 export function Engagements() {
   return (
-    <section id="engagements" className="relative py-24 md:py-32 bg-[color:var(--color-cream)] bg-grain">
+    <section id="engagements" aria-labelledby="engagements-title" className="relative py-24 md:py-32 bg-[color:var(--color-cream)] bg-grain">
       <div className="container-x">
-        <div className="max-w-3xl mb-14 md:mb-20">
-          <div className="eyebrow mb-5">
+        <header className="max-w-3xl mb-14 md:mb-20">
+          <p className="eyebrow mb-5">
             <span className="flag-bar"><span /><span /><span /></span>
             Nos engagements
-          </div>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-[color:var(--color-ink)] tracking-tight">
+          </p>
+          <h2 id="engagements-title" className="font-display text-4xl sm:text-5xl md:text-6xl text-[color:var(--color-ink)] tracking-tight">
             Quatre promesses, <em className="text-[color:var(--color-bordeaux)] not-italic font-normal">tenues chaque jour</em>.
           </h2>
           <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
             Une boucherie moderne, c&apos;est une boucherie qui n&apos;oublie pas pourquoi elle existe :
             nourrir bien, sourcer juste, créer ensemble — sans se perdre en chemin.
           </p>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[color:var(--color-line)] border border-[color:var(--color-line)] rounded-[var(--radius-lg)] overflow-hidden">
           {engagements.map((e, i) => (
@@ -61,9 +61,9 @@ export function Engagements() {
                 <div className="h-14 w-14 rounded-full border border-[color:var(--color-bordeaux)]/30 flex items-center justify-center text-[color:var(--color-bordeaux)] group-hover:bg-[color:var(--color-bordeaux)] group-hover:text-[color:var(--color-cream)] transition-colors">
                   <span className="h-6 w-6">{icons[i]}</span>
                 </div>
-                <div className="font-display text-3xl md:text-4xl text-[color:var(--color-ink)]">
+                <h3 className="font-display text-3xl md:text-4xl text-[color:var(--color-ink)]">
                   {e.title}
-                </div>
+                </h3>
               </div>
               <p className="text-[color:var(--color-stone)] text-[1.05rem] leading-relaxed pl-[4.6rem]">{e.body}</p>
             </article>

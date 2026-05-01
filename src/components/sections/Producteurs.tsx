@@ -1,16 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function Producteurs() {
   return (
-    <section className="relative py-24 md:py-32 bg-[color:var(--color-cream-deep)] overflow-hidden">
+    <section id="producteurs" aria-labelledby="producteurs-title" className="relative py-24 md:py-32 bg-[color:var(--color-cream-deep)] overflow-hidden">
       <div className="container-x">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="eyebrow mb-5">
+            <p className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
               Producteurs locaux
-            </div>
-            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
+            </p>
+            <h2 id="producteurs-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
               Nos
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> partenaires</em>,
               vos voisins.
@@ -31,11 +32,15 @@ export function Producteurs() {
                 "Découpes minute",
               ].map((tag) => (
                 <li key={tag} className="flex items-center gap-2.5">
-                  <span className="h-2 w-2 rotate-45 bg-[color:var(--color-bordeaux)]" />
+                  <span className="h-2 w-2 rotate-45 bg-[color:var(--color-bordeaux)]" aria-hidden />
                   <span>{tag}</span>
                 </li>
               ))}
             </ul>
+            <Link href="/partenaires" className="mt-8 inline-flex items-center gap-2 text-[color:var(--color-bordeaux)] font-medium hover:underline underline-offset-4">
+              Découvrir tous nos partenaires
+              <span aria-hidden>→</span>
+            </Link>
           </div>
 
           <div className="lg:col-span-7 order-1 lg:order-2 relative">
