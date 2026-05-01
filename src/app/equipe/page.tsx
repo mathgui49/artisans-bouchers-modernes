@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 const TITLE = "L'équipe · Bouchers, charcutiers, primeur, fromager & vendeurs";
 const DESCRIPTION =
-  "L'équipe des Les Artisans Modernes à Bain de Bretagne. Bouchers, charcutiers, primeur-fromager, vendeurs et apprentis. Passion, savoir-faire, transmission.";
+  "L'équipe des Artisans Modernes à Bain de Bretagne. Bouchers, charcutiers, primeur-fromager, vendeurs et apprentis. Passion, savoir-faire, transmission.";
 
 export const metadata: Metadata = {
   title: TITLE,

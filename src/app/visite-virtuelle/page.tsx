@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 
 const TITLE = "Visite virtuelle 360° · Le magasin en immersion";
 const DESCRIPTION =
-  "Visitez en 360° le magasin des Les Artisans Modernes à Bain de Bretagne : façade, comptoir boucherie, entrée et primeur. 4 panoramas immersifs, comme si vous y étiez.";
+  "Visitez en 360° le magasin des Artisans Modernes à Bain de Bretagne : façade, comptoir boucherie, entrée et primeur. 4 panoramas immersifs, comme si vous y étiez.";
 
 export const metadata: Metadata = {
   title: TITLE,
