@@ -5,7 +5,7 @@ export interface TeamMember {
 }
 
 export const team: ReadonlyArray<TeamMember> = [
-  { name: "Dominique", role: "Boucher dirigeant", image: "/images/team/dominique.webp" },
+  { name: "Dominique", role: "Boucher dirigeant · Maître Artisan", image: "/images/team/dominique.webp" },
   { name: "Mélanie", role: "Directrice générale", image: "/images/team/melanie.webp" },
   { name: "Céline", role: "Bouchère · Responsable magasin", image: "/images/team/celine.webp" },
   { name: "Christèle", role: "Vendeuse · Préparatrice", image: "/images/team/christele.webp" },
