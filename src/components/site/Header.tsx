@@ -11,7 +11,6 @@ const links = [
   { href: "/maitre-artisan", label: "Maître Artisan" },
   { href: "/equipe", label: "L'équipe" },
   { href: "/partenaires", label: "Partenaires" },
-  { href: "/boutique", label: "Boutique" },
   { href: "/#plateaux", label: "Plateaux" },
   { href: "/#infos", label: "Infos" },
 ];

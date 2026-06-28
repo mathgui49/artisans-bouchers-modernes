@@ -48,10 +48,10 @@ export const metadata: Metadata = {
 };
 
 const photos = [
-  { src: "/images/dominique-comptoir.webp", alt: `${ma.name}, ${ma.title}, au comptoir de la boucherie à ${business.address.city}` },
-  { src: "/images/dominique-brochettes.webp", alt: "Brochettes et grillades préparées maison par l'équipe" },
-  { src: "/images/dominique-charcuterie.webp", alt: "Charcuterie artisanale et saucissons secs de la maison" },
-  { src: "/images/dominique-cave.webp", alt: "Sélection de la cave, accords avec la côte de bœuf" },
+  { src: "/images/dominique-comptoir.webp", alt: `${ma.name}, ${ma.title}, au comptoir de la boucherie à ${business.address.city}`, pos: "object-[70%_center]" },
+  { src: "/images/dominique-cave.webp", alt: "Sélection de la cave, accords avec la côte de bœuf", pos: "object-center" },
+  { src: "/images/dominique-charcuterie.webp", alt: "Charcuterie artisanale et saucissons secs de la maison", pos: "object-center" },
+  { src: "/images/dominique-brochettes.webp", alt: `${ma.name} et ses brochettes maison, ${ma.title}`, pos: "object-right" },
 ];
 
 export default function MaitreArtisanPage() {
@@ -241,7 +241,7 @@ export default function MaitreArtisanPage() {
                     alt={p.alt}
                     fill
                     sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="object-cover"
+                    className={`object-cover ${p.pos}`}
                   />
                 </div>
               ))}
