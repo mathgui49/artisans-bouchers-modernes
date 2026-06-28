@@ -58,10 +58,14 @@ export function MaitreArtisan() {
 
             <div className="mt-7 space-y-5 text-lg text-[color:var(--color-cream)]/85 leading-relaxed text-justify hyphens-auto">
               <p>
-                Dominique vient de recevoir le titre de Maître Artisan, remis en main propre
-                par Michel Aoustin, président Bretagne de la Chambre de Métiers et de
-                l&apos;Artisanat. Une reconnaissance qui récompense l&apos;engagement, la
-                transmission du savoir-faire et des années d&apos;expérience sur le terrain.
+                <strong className="text-[color:var(--color-cream)] font-medium">
+                  Dominique Drouadaine
+                </strong>{" "}
+                vient de recevoir le titre de <strong className="text-[color:var(--color-cream)] font-medium">Maître Artisan Boucher</strong>,
+                remis en main propre par Michel Aoustin, président Bretagne de la Chambre de
+                Métiers et de l&apos;Artisanat. Une reconnaissance qui récompense
+                l&apos;engagement, la transmission du savoir-faire et des années
+                d&apos;expérience sur le terrain, ici à Bain de Bretagne.
               </p>
               <p>
                 C&apos;est lui qui dirige notre commerce au quotidien, avec cette rigueur et

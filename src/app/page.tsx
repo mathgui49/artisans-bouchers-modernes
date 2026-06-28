@@ -7,6 +7,7 @@ import { MaitreArtisan } from "@/components/sections/MaitreArtisan";
 import { Drive } from "@/components/sections/Drive";
 import { Plateaux } from "@/components/sections/Plateaux";
 import { Galerie } from "@/components/sections/Galerie";
+import { SignatureBand } from "@/components/sections/SignatureBand";
 import { Producteurs } from "@/components/sections/Producteurs";
 import { Infos } from "@/components/sections/Infos";
 import { jsonLdScript, SITE_URL } from "@/lib/seo";
@@ -42,6 +43,7 @@ export default function Home() {
         <Plateaux />
         <Producteurs />
         <Galerie />
+        <SignatureBand />
         <Infos />
       </main>
       <Footer />

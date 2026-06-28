@@ -20,7 +20,7 @@ const inter = Inter({
 const SITE_URL = `https://${business.domain}`;
 const TITLE = `${business.name} · Boucherie · Charcuterie · Fromagerie · Primeur · ${business.address.city}`;
 const DESCRIPTION =
-  "Boucherie-charcuterie artisanale, fromagerie et primeur à Bain de Bretagne (35). Viande française race à viande, charcuterie maison sans colorant ni conservateur, fromages fermiers locaux, drive et plateaux maison. Mardi au samedi.";
+  "Boucherie-charcuterie artisanale Maître Artisan Boucher à Bain de Bretagne (35). Viande française race à viande, charcuterie maison sans colorant ni conservateur, fromagerie et primeur locaux, drive et plateaux maison. Mardi au samedi.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,6 +32,10 @@ export const metadata: Metadata = {
   applicationName: business.name,
   keywords: [
     "boucherie Bain de Bretagne",
+    "meilleure boucherie Bain de Bretagne",
+    "meilleure boucherie Ille-et-Vilaine",
+    "Maître Artisan Boucher",
+    "Maître Artisan Boucher Bretagne",
     "boucher artisan Bain de Bretagne",
     "charcuterie Bain de Bretagne",
     "charcuterie maison",
@@ -70,6 +74,12 @@ export const metadata: Metadata = {
         width: 1200,
         height: 1100,
         alt: `${business.name}, plateau charcuterie maison`,
+      },
+      {
+        url: "/images/maitre-artisan-remise.webp",
+        width: 1600,
+        height: 900,
+        alt: `Dominique Drouadaine reçoit le titre de Maître Artisan Boucher chez ${business.name} à ${business.address.city}`,
       },
       {
         url: "/images/facade.webp",
@@ -137,7 +147,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       `${SITE_URL}/images/facade.webp`,
       `${SITE_URL}/images/interieur.webp`,
       `${SITE_URL}/images/plateau-charcuterie.webp`,
-      `${SITE_URL}/images/photo-19.webp`,
+      `${SITE_URL}/images/dominique-comptoir.webp`,
+      `${SITE_URL}/images/cote-de-boeuf-maturation.webp`,
+      `${SITE_URL}/images/maitre-artisan.webp`,
     ],
     logo: {
       "@type": "ImageObject",
@@ -180,8 +192,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       closes: s.close,
     })),
     sameAs: [business.socials.facebook, business.socials.instagram, business.socials.youtube],
+    award: `${business.maitreArtisan.title} (${business.maitreArtisan.awardedBy}, ${business.maitreArtisan.year})`,
+    founder: {
+      "@type": "Person",
+      name: business.maitreArtisan.name,
+      jobTitle: business.maitreArtisan.title,
+      worksFor: { "@id": `${SITE_URL}/#business` },
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: business.maitreArtisan.title,
+        credentialCategory: "Titre de Maître Artisan",
+        dateCreated: business.maitreArtisan.date,
+        recognizedBy: {
+          "@type": "GovernmentOrganization",
+          name: business.maitreArtisan.awardedBy,
+        },
+      },
+    },
     areaServed: [
       { "@type": "City", name: business.address.city },
+      ...business.nearbyTowns.map((name) => ({ "@type": "City", name })),
       { "@type": "AdministrativeArea", name: "Ille-et-Vilaine" },
       { "@type": "AdministrativeArea", name: "Bretagne" },
     ],

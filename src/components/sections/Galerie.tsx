@@ -4,6 +4,7 @@ const photos = [
   { src: "/images/roti-beurre-aux-herbes.webp", alt: "Rôti de bœuf farci au beurre d'herbes (fait maison)", aspect: "tall" },
   { src: "/images/photo-19.webp", alt: "Côte de bœuf décorée", aspect: "tall" },
   { src: "/images/photo-14.webp", alt: "Carpaccio revisité, recette signature", aspect: "tall" },
+  { src: "/images/decoupe-cote-boeuf.webp", alt: "Découpe d'une côte de bœuf maturée par notre Maître Artisan Boucher", aspect: "tall" },
   { src: "/images/photo-18.webp", alt: "Tartare et accompagnement maison", aspect: "wide" },
   { src: "/images/photo-17.webp", alt: "Plat cuisiné maison (tajine de saison)", aspect: "wide" },
   { src: "/images/photo-13.webp", alt: "Plateau apéro charcuterie et fromage", aspect: "tall" },
@@ -19,6 +20,11 @@ const photos = [
   { src: "/images/photo-26.webp", alt: "Création de l'équipe Artisans Modernes", aspect: "wide" },
   { src: "/images/photo-27.webp", alt: "Charcuterie artisanale", aspect: "wide" },
   { src: "/images/photo-22.webp", alt: "Étal primeur, fruits et légumes de saison", aspect: "wide" },
+  { src: "/images/dominique-comptoir.webp", alt: "Dominique Drouadaine, Maître Artisan Boucher, au comptoir de la boucherie", aspect: "wide" },
+  { src: "/images/dominique-charcuterie.webp", alt: "Saucissons secs et charcuterie artisanale de la maison", aspect: "tall" },
+  { src: "/images/dominique-epicerie.webp", alt: "Rayon épicerie fine, apéro et produits du moment", aspect: "tall" },
+  { src: "/images/dominique-cave.webp", alt: "Accord côte de bœuf et sélection de la cave", aspect: "tall" },
+  { src: "/images/dominique-brochettes.webp", alt: "Brochettes et grillades préparées maison", aspect: "wide" },
 ] as const;
 
 export function Galerie() {
