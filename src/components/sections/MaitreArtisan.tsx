@@ -14,11 +14,11 @@ export function MaitreArtisan() {
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden bg-[color:var(--color-ink-soft)]">
                 <Image
-                  src="/images/team/dominique.webp"
-                  alt="Dominique, boucher dirigeant et Maître Artisan, Les Artisans Modernes"
+                  src="/images/maitre-artisan.webp"
+                  alt="Dominique reçoit le titre de Maître Artisan des mains de Michel Aoustin, président Bretagne de la Chambre de Métiers et de l'Artisanat, aux Artisans Modernes"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               {/* Seal */}
