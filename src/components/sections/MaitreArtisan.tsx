@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function MaitreArtisan() {
   return (
@@ -85,6 +86,16 @@ export function MaitreArtisan() {
               « Tu aimes travailler dans l&apos;ombre, mais aujourd&apos;hui ce titre te
               récompense, et toute l&apos;équipe te félicite. »
             </p>
+
+            <div className="mt-9">
+              <Link
+                href="/maitre-artisan"
+                className="btn-primary !bg-[color:var(--color-gold)] !text-[color:var(--color-ink)] hover:!bg-[color:var(--color-cream)]"
+              >
+                Découvrir la distinction
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import { CartButton } from "@/components/shop/CartButton";
 
 const links = [
   { href: "/#metiers", label: "Nos métiers" },
+  { href: "/maitre-artisan", label: "Maître Artisan" },
   { href: "/equipe", label: "L'équipe" },
   { href: "/partenaires", label: "Partenaires" },
   { href: "/boutique", label: "Boutique" },
@@ -68,7 +69,7 @@ export function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="px-3.5 py-2 text-[0.92rem] font-medium text-[color:var(--color-ink)] hover:text-[color:var(--color-bordeaux)] transition-colors"
+              className="px-3 py-2 text-[0.9rem] font-medium text-[color:var(--color-ink)] hover:text-[color:var(--color-bordeaux)] transition-colors whitespace-nowrap"
             >
               {l.label}
             </Link>
