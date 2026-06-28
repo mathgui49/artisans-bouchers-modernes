@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative isolate overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-cream)]">
       {/* Background video, fallback to image */}
       <video
-        className="absolute inset-0 h-full w-full object-cover opacity-35"
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
         autoPlay
         loop
         muted
@@ -18,7 +18,7 @@ export function Hero() {
       >
         <source src="/video/presentation.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--color-ink)]/75 via-[color:var(--color-ink)]/65 to-[color:var(--color-ink)]/95" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--color-ink)]/55 via-[color:var(--color-ink)]/45 to-[color:var(--color-ink)]/85" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[color:var(--color-cream)]/0 via-[color:var(--color-ink)]/30 to-transparent" />
 
       <div className="container-x relative pt-24 md:pt-36 pb-28 md:pb-40">

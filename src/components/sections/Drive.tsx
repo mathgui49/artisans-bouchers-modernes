@@ -64,9 +64,14 @@ export function Drive() {
               Prix indicatifs · ajustés au poids exact
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {colis.map((p) => (
-              <ColisCard key={p.id} product={p} />
+              <div
+                key={p.id}
+                className="w-full md:w-[calc((100%-1.25rem)/2)] lg:w-[calc((100%-2.5rem)/3)]"
+              >
+                <ColisCard product={p} />
+              </div>
             ))}
           </div>
         </div>
@@ -99,7 +104,7 @@ function ColisCard({ product }: { product: typeof products[number] }) {
       : 0;
 
   return (
-    <article className="relative rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] hover:border-[color:var(--color-gold)]/40 transition-all p-7 flex flex-col gap-5">
+    <article className="relative h-full rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] hover:border-[color:var(--color-gold)]/40 transition-all p-7 flex flex-col gap-5">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-xs tracking-[0.2em] uppercase text-[color:var(--color-cream)]/50 mb-2">

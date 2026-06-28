@@ -21,6 +21,31 @@ export const business = {
   website: "https://www.lesartisansmodernes.fr",
   domain: "lesartisansmodernes.fr",
   geo: { lat: 47.83815, lng: -1.68265 }, // Bain de Bretagne (approx ZA Château Gaillard)
+  // Maître Artisan Boucher — titre décerné par la Chambre de Métiers et de l'Artisanat (2026)
+  maitreArtisan: {
+    name: "Dominique Drouadaine",
+    title: "Maître Artisan Boucher",
+    awardedBy: "Chambre de Métiers et de l'Artisanat de Bretagne",
+    year: "2026",
+    date: "2026-06-26",
+  },
+  // Communes desservies autour de Bain de Bretagne (zone de chalandise) — SEO local
+  nearbyTowns: [
+    "Le Sel-de-Bretagne",
+    "Crevin",
+    "Pléchâtel",
+    "Poligné",
+    "Lalleu",
+    "La Noë-Blanche",
+    "Saulnières",
+    "Bourg-des-Comptes",
+    "Grand-Fougeray",
+    "Guipry-Messac",
+    "Ercé-en-Lamée",
+    "Pancé",
+    "Teillay",
+    "Tresbœuf",
+  ],
   hours: [
     { day: "Lundi", value: "Fermé", closed: true },
     { day: "Mardi", value: "9h00 – 12h30 · 14h30 – 19h00", closed: false },

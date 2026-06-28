@@ -4,6 +4,7 @@ const photos = [
   { src: "/images/roti-beurre-aux-herbes.webp", alt: "Rôti de bœuf farci au beurre d'herbes (fait maison)", aspect: "tall" },
   { src: "/images/photo-19.webp", alt: "Côte de bœuf décorée", aspect: "tall" },
   { src: "/images/photo-14.webp", alt: "Carpaccio revisité, recette signature", aspect: "tall" },
+  { src: "/images/decoupe-cote-boeuf.webp", alt: "Découpe d'une côte de bœuf maturée par notre Maître Artisan Boucher", aspect: "tall" },
   { src: "/images/photo-18.webp", alt: "Tartare et accompagnement maison", aspect: "wide" },
   { src: "/images/photo-17.webp", alt: "Plat cuisiné maison (tajine de saison)", aspect: "wide" },
   { src: "/images/photo-13.webp", alt: "Plateau apéro charcuterie et fromage", aspect: "tall" },
@@ -19,6 +20,11 @@ const photos = [
   { src: "/images/photo-26.webp", alt: "Création de l'équipe Artisans Modernes", aspect: "wide" },
   { src: "/images/photo-27.webp", alt: "Charcuterie artisanale", aspect: "wide" },
   { src: "/images/photo-22.webp", alt: "Étal primeur, fruits et légumes de saison", aspect: "wide" },
+  { src: "/images/dominique-comptoir.webp", alt: "Dominique Drouadaine, Maître Artisan Boucher, au comptoir de la boucherie", aspect: "wide" },
+  { src: "/images/dominique-charcuterie.webp", alt: "Saucissons secs et charcuterie artisanale de la maison", aspect: "tall" },
+  { src: "/images/dominique-epicerie.webp", alt: "Rayon épicerie fine, apéro et produits du moment", aspect: "tall" },
+  { src: "/images/dominique-cave.webp", alt: "Accord côte de bœuf et sélection de la cave", aspect: "tall" },
+  { src: "/images/dominique-brochettes.webp", alt: "Brochettes et grillades préparées maison", aspect: "wide" },
 ] as const;
 
 export function Galerie() {
@@ -40,11 +46,11 @@ export function Galerie() {
           </p>
         </header>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 lg:gap-6 [&>*]:mb-4 lg:[&>*]:mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
           {photos.map((p, i) => (
             <figure
               key={p.src}
-              className={`break-inside-avoid relative overflow-hidden rounded-[var(--radius-lg)] bg-[color:var(--color-cream-deep)] group`}
+              className={`relative aspect-[4/3] overflow-hidden rounded-[var(--radius-lg)] bg-[color:var(--color-cream-deep)] group`}
             >
               <Image
                 src={p.src}
@@ -52,7 +58,7 @@ export function Galerie() {
                 width={p.aspect === "tall" ? 800 : 1000}
                 height={p.aspect === "tall" ? 1100 : 800}
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 loading={i < 3 ? "eager" : "lazy"}
               />
               <figcaption className="absolute inset-x-0 bottom-0 p-4 text-sm text-[color:var(--color-cream)] bg-gradient-to-t from-black/70 via-black/30 to-transparent translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
