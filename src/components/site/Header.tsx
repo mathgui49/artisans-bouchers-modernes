@@ -41,7 +41,7 @@ export function Header() {
           : undefined
       }
     >
-      <div className="container-x flex items-center justify-between py-1.5 md:py-2">
+      <div className="container-x flex flex-wrap items-center justify-between gap-y-2 py-1.5 md:py-2">
         <Link
           href="/"
           aria-label={`${business.name}, accueil`}
@@ -58,23 +58,23 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex min-w-0 flex-wrap items-center gap-1">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="px-3 py-2 text-[0.9rem] font-medium text-[color:var(--color-ink)] hover:text-[color:var(--color-bordeaux)] transition-colors whitespace-nowrap"
+              className="min-w-0 px-3 py-2 text-[0.9rem] font-medium text-[color:var(--color-ink)] hover:text-[color:var(--color-bordeaux)] transition-colors"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a href={`tel:${business.phoneIntl}`} className="text-sm font-medium text-[color:var(--color-stone)] hover:text-[color:var(--color-ink)] transition-colors">
+        <div className="hidden lg:flex min-w-0 items-center gap-3">
+          <a href={`tel:${business.phoneIntl}`} className="min-w-0 text-sm font-medium text-[color:var(--color-stone)] hover:text-[color:var(--color-ink)] transition-colors">
             {business.phone}
           </a>
-          <Link href={nav.cta.href} className="btn-primary !py-2.5 !px-5 text-sm">
+          <Link href={nav.cta.href} className="btn-primary min-w-0 !py-2.5 !px-5 text-sm">
             {nav.cta.label}
             <span aria-hidden>→</span>
           </Link>
@@ -108,13 +108,13 @@ export function Header() {
         }}
         aria-hidden={!open}
       >
-        <nav className="container-x py-8 flex flex-col gap-1">
+        <nav className="container-x texte-secable py-8 flex flex-col gap-1">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="py-4 text-2xl font-display border-b border-[color:var(--color-line)]"
+              className="min-w-0 py-4 text-2xl font-display border-b border-[color:var(--color-line)]"
             >
               {l.label}
             </Link>

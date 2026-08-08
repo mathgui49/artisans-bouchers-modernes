@@ -91,7 +91,7 @@ export function Plateaux() {
                       {p.servings}
                     </p>
                   </div>
-                  <p className="font-display text-xl md:text-2xl text-[color:var(--color-bordeaux)] tabular-nums shrink-0">
+                  <p className="font-display text-xl md:text-2xl text-[color:var(--color-bordeaux)] tabular-nums">
                     {formatPrice(p.price)}€{p.unitSuffix ?? ""}
                   </p>
                   <button

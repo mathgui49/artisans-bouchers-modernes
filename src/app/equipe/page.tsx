@@ -129,7 +129,7 @@ export default function EquipePage() {
             <h2 id="team-list" className="sr-only">{page.listTitle}</h2>
             <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 list-none">
               {team.map((m) => (
-                <li key={m.name} className="flex flex-col items-center text-center group">
+                <li key={m.name} className="texte-secable flex flex-col items-center text-center group">
                   <div className="relative w-full aspect-[3/4] rounded-[var(--radius-lg)] overflow-hidden bg-[color:var(--color-cream-deep)]">
                     <Image
                       src={m.image}

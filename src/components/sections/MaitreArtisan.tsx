@@ -27,7 +27,7 @@ export function MaitreArtisan() {
               </div>
               {/* Seal */}
               <div className="absolute -bottom-6 -right-4 sm:right-6 h-32 w-32 lg:h-36 lg:w-36 rounded-full border border-[color:var(--color-gold)]/50 flex items-center justify-center text-center bg-[color:var(--color-ink)]/85 backdrop-blur-sm rotate-[-8deg]">
-                <div>
+                <div className="texte-secable max-w-full">
                   <div className="font-display text-lg lg:text-xl text-[color:var(--color-gold)] leading-tight">
                     {section.seal.line1}
                     <br />

@@ -105,7 +105,7 @@ function ColisCard({ product }: { product: typeof products[number] }) {
       : 0;
 
   return (
-    <article className="relative h-full rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] hover:border-[color:var(--color-gold)]/40 transition-all p-7 flex flex-col gap-5">
+    <article className="texte-secable relative h-full rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] hover:border-[color:var(--color-gold)]/40 transition-all p-7 flex flex-col gap-5">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-xs tracking-[0.2em] uppercase text-[color:var(--color-cream)]/50 mb-2">
@@ -166,7 +166,7 @@ function ColisCard({ product }: { product: typeof products[number] }) {
 function PieceCard({ product }: { product: typeof products[number] }) {
   const { add } = useCart();
   return (
-    <article className="rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] p-6 flex flex-col gap-2 hover:border-[color:var(--color-gold)]/40 transition-colors">
+    <article className="texte-secable rounded-[var(--radius-lg)] border border-[color:var(--color-cream)]/12 bg-[color:var(--color-ink-soft)] p-6 flex flex-col gap-2 hover:border-[color:var(--color-gold)]/40 transition-colors">
       <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--color-cream)]/50">
         {product.weight}
       </p>

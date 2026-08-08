@@ -62,6 +62,29 @@
   text-rendering: optimizeLegibility;
 }
 
+/* ── Texte élastique ────────────────────────────────────────────────
+   Le contenu de ce site est modifiable par son propriétaire : un libellé peut
+   devenir trois fois plus long, et une adresse e-mail ou une URL collée dans un
+   paragraphe est un « mot » de 60 caractères. Sans point de coupure, ce mot
+   pousse sa colonne et fait apparaître une barre de défilement horizontale sur
+   mobile. `break-word` coupe ce mot au lieu de le laisser dépasser, sans
+   toucher aux largeurs minimales intrinsèques : les colonnes et les cartes
+   gardent exactement la taille qu'elles ont aujourd'hui. */
+body {
+  overflow-wrap: break-word;
+}
+
+/* Bloc de texte serré dans une colonne de grille ou dans une pastille posée
+   sur une image : il doit pouvoir se couper n'importe où pour tenir dans sa
+   place. Sans cela, un seul mot très long fixe sa largeur minimale, et le bloc
+   déborde sur la carte voisine au lieu de rétrécir. Réservé aux endroits où
+   c'est nécessaire : la coupure « n'importe où » abaisse la largeur minimale
+   intrinsèque, ce qui n'est souhaitable que là où la place est contrainte. */
+.texte-secable {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
 html {
   scroll-behavior: smooth;
   background: var(--color-cream);
@@ -145,6 +168,7 @@ h1 { font-weight: 400; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-bordeaux);
+  max-width: 100%;
 }
 
 /* Subtle grain texture for backgrounds */
@@ -176,6 +200,7 @@ h1 { font-weight: 400; }
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   border-radius: 999px;
+  max-width: 100%;
   transition: transform 200ms ease, background 200ms ease, box-shadow 200ms ease;
   box-shadow: var(--shadow-soft);
 }
@@ -196,6 +221,7 @@ h1 { font-weight: 400; }
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   border-radius: 999px;
+  max-width: 100%;
   transition: background 200ms ease, color 200ms ease;
 }
 .btn-ghost:hover {

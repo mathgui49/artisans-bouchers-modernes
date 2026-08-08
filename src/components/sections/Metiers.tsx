@@ -46,7 +46,7 @@ export function Metiers() {
                   {/* Numéro et nom du rayon dans un seul nœud de texte : sinon le
                       nom apparaît deux fois dans la page et l'éditeur ne sait plus
                       quelle carte on désigne. */}
-                  <p className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[color:var(--color-cream)]/95 backdrop-blur-sm text-xs font-medium tracking-[0.18em] uppercase text-[color:var(--color-bordeaux)]">
+                  <p className="texte-secable absolute top-4 left-4 px-3 py-1 rounded-full bg-[color:var(--color-cream)]/95 backdrop-blur-sm text-xs font-medium tracking-[0.18em] uppercase text-[color:var(--color-bordeaux)]">
                     {`${String(i + 1).padStart(2, "0")} · ${d.name}`}
                   </p>
                 </div>

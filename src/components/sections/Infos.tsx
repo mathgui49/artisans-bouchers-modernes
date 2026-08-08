@@ -73,8 +73,8 @@ export function Infos() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="card p-7 md:p-9">
               <div className="flex items-center justify-between mb-5">
-                <h3 className="font-display text-2xl md:text-3xl">{section.hoursTitle}</h3>
-                <span className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-stone-soft)]">
+                <h3 className="texte-secable font-display text-2xl md:text-3xl">{section.hoursTitle}</h3>
+                <span className="texte-secable text-xs uppercase tracking-[0.18em] text-[color:var(--color-stone-soft)]">
                   {section.hoursNote}
                 </span>
               </div>

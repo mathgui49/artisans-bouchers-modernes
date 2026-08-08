@@ -117,7 +117,7 @@ export default function BoutiquePage() {
             >
               <div className="container-x">
                 <header className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
-                  <div>
+                  <div className="min-w-0">
                     <p className="eyebrow mb-3">
                       <span className="flag-bar"><span /><span /><span /></span>
                       {cat.label}
@@ -126,7 +126,7 @@ export default function BoutiquePage() {
                       {cat.label}
                     </h2>
                   </div>
-                  <p className="md:max-w-md text-[color:var(--color-stone)] leading-relaxed">
+                  <p className="texte-secable md:max-w-md text-[color:var(--color-stone)] leading-relaxed">
                     {cat.description}
                   </p>
                 </header>

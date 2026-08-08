@@ -28,15 +28,15 @@ export function Footer() {
     <footer className="relative bg-[color:var(--color-ink)] text-[color:var(--color-cream)]/85 pt-20 pb-10">
       <div className="container-x">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 pb-14 border-b border-[color:var(--color-cream)]/10">
-          <div className="md:col-span-5">
-            <div className="inline-flex items-center gap-3">
-              <span className="font-display text-2xl tracking-tight text-[color:var(--color-cream)]">
+          <div className="md:col-span-5 min-w-0">
+            <div className="inline-flex max-w-full items-center gap-3">
+              <span className="texte-secable font-display text-2xl tracking-tight text-[color:var(--color-cream)]">
                 {footer.logo.line1}
                 <em className="block not-italic font-light italic-fraunces text-[color:var(--color-gold)]">
                   {footer.logo.line2}
                 </em>
               </span>
-              <span className="flag-bar"><span /><span /><span /></span>
+              <span className="flag-bar shrink-0"><span /><span /><span /></span>
             </div>
             <p className="mt-6 max-w-md text-[color:var(--color-cream)]/65 leading-relaxed">
               {business.shortDescription}
@@ -52,7 +52,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 min-w-0">
             <h3 className="font-display text-lg text-[color:var(--color-cream)] mb-5">{footer.shopTitle}</h3>
             <address className="not-italic text-[color:var(--color-cream)]/70 leading-relaxed">
               {business.address.street}
@@ -65,7 +65,7 @@ export function Footer() {
             </address>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 min-w-0">
             <h3 className="font-display text-lg text-[color:var(--color-cream)] mb-5">{footer.navTitle}</h3>
             <ul className="space-y-2.5 text-[color:var(--color-cream)]/70">
               {footer.navItems.map((item) => (
@@ -78,7 +78,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 min-w-0">
             <h3 className="font-display text-lg text-[color:var(--color-cream)] mb-5">{footer.hoursTitle}</h3>
             <ul className="text-sm space-y-1 text-[color:var(--color-cream)]/65">
               {footer.hoursLines.map((line) => (

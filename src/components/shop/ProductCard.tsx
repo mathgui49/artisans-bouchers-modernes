@@ -31,7 +31,7 @@ export function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <article className="card flex flex-col h-full overflow-hidden group">
+    <article className="card texte-secable flex flex-col h-full overflow-hidden group">
       <div className="relative aspect-[4/3] overflow-hidden">
         {product.icon ? (
           <ProductIcon name={product.icon} label={product.name} />
@@ -77,7 +77,7 @@ export function ProductCard({ product }: { product: Product }) {
           </ul>
         )}
         <div className="mt-auto pt-4 flex items-end justify-between gap-3">
-          <div>
+          <div className="min-w-0">
             <div className="flex items-baseline gap-2">
               <div className="font-display text-3xl text-[color:var(--color-bordeaux)]">
                 {formatPrice(product.price)}€{product.unitSuffix ?? ""}
@@ -98,7 +98,7 @@ export function ProductCard({ product }: { product: Product }) {
             type="button"
             onClick={handleAdd}
             aria-label={`Ajouter ${product.name} au panier`}
-            className={`shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-medium transition-all ${
+            className={`min-w-fit inline-flex items-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-medium transition-all ${
               added
                 ? "bg-[color:var(--color-bordeaux)] text-[color:var(--color-cream)]"
                 : "bg-[color:var(--color-ink)] text-[color:var(--color-cream)] hover:bg-[color:var(--color-bordeaux)]"

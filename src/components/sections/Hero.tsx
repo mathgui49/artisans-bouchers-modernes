@@ -65,7 +65,7 @@ export function Hero() {
 
       {/* Floating quality badge */}
       <div className="hidden md:flex absolute right-8 top-28 lg:right-16 lg:top-36 h-36 w-36 lg:h-44 lg:w-44 rounded-full border border-[color:var(--color-gold)]/40 items-center justify-center text-center bg-[color:var(--color-ink-soft)]/40 backdrop-blur-sm rotate-[-8deg] reveal">
-        <div>
+        <div className="texte-secable max-w-full">
           <div className="font-display text-3xl lg:text-4xl text-[color:var(--color-gold)]">{hero.badge.value}</div>
           <div className="text-xs lg:text-sm tracking-[0.25em] uppercase text-[color:var(--color-cream)]/85 mt-1">{hero.badge.label}</div>
         </div>
