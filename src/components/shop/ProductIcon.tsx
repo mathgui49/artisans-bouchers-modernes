@@ -1,45 +1,21 @@
 /**
  * Médaillons typographiques pour les pièces en gros.
  * Style sceau de boucher : cercle + texte + accent tricolore.
+ *
+ * Les libellés (« Porc », « ½ Cuisse », « Race à viande », le numéro de
+ * sceau) viennent de `src/content.json` — seuls les tracés décoratifs
+ * restent dans le code.
  */
+
+import { content } from "@/lib/content";
 
 type IconKey = "pig" | "beef" | "beef-leg" | "lamb";
 
-interface MedallionConfig {
-  label: string;
-  sub: string;
-  origin: string;
-  ornament: "star" | "flame" | "leaf" | "wheat";
-}
+type Ornement = "star" | "flame" | "leaf" | "wheat";
 
-const CONFIG: Record<IconKey, MedallionConfig> = {
-  pig: {
-    label: "Porc",
-    sub: "Demi cochon",
-    origin: "Élevage français",
-    ornament: "leaf",
-  },
-  "beef-leg": {
-    label: "Bœuf",
-    sub: "½ Cuisse",
-    origin: "Race à viande",
-    ornament: "star",
-  },
-  beef: {
-    label: "Bœuf",
-    sub: "Cuisse entière",
-    origin: "Race à viande",
-    ornament: "star",
-  },
-  lamb: {
-    label: "Agneau",
-    sub: "Pièce entière",
-    origin: "Origine France",
-    ornament: "wheat",
-  },
-};
+const MEDAILLONS = content.catalogue.medaillons;
 
-function Ornament({ kind }: { kind: MedallionConfig["ornament"] }) {
+function Ornament({ kind }: { kind: Ornement }) {
   switch (kind) {
     case "star":
       return (
@@ -74,7 +50,7 @@ function Ornament({ kind }: { kind: MedallionConfig["ornament"] }) {
 }
 
 export function ProductIcon({ name, label }: { name: IconKey; label: string }) {
-  const cfg = CONFIG[name];
+  const cfg = MEDAILLONS.types[name];
   return (
     <div
       className="absolute inset-0 flex items-center justify-center bg-[color:var(--color-cream-deep)] overflow-hidden"
@@ -118,7 +94,7 @@ export function ProductIcon({ name, label }: { name: IconKey; label: string }) {
         {/* Top ornament */}
         <div className="flex items-center gap-2 mb-2 opacity-90">
           <span className="h-px w-6 bg-current opacity-50" />
-          <Ornament kind={cfg.ornament} />
+          <Ornament kind={cfg.ornament as Ornement} />
           <span className="h-px w-6 bg-current opacity-50" />
         </div>
 
@@ -142,10 +118,10 @@ export function ProductIcon({ name, label }: { name: IconKey; label: string }) {
 
       {/* Decorative corner numbers (butcher stamp style) */}
       <span className="absolute bottom-3 left-3 text-[0.6rem] font-mono tracking-widest text-[color:var(--color-bordeaux)]/40">
-        FR · 35
+        {MEDAILLONS.stamp}
       </span>
       <span className="absolute bottom-3 right-3 text-[0.6rem] font-mono tracking-widest text-[color:var(--color-bordeaux)]/40">
-        N°{name === "pig" ? "01" : name === "beef-leg" ? "02" : name === "beef" ? "03" : "04"}
+        N°{cfg.number}
       </span>
     </div>
   );

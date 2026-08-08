@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { departements } from "@/lib/business";
+import { content } from "@/lib/content";
+
+const section = content.metiers;
 
 export function Metiers() {
   return (
@@ -9,17 +12,16 @@ export function Metiers() {
           <div className="max-w-2xl">
             <p className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
-              Cinq rayons, un seul lieu
+              {section.eyebrow}
             </p>
             <h2 id="metiers-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
-              Nos métiers,
+              {section.title}
               <br />
-              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">notre savoir-faire</em>.
+              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">{section.titleAccent}</em>.
             </h2>
           </div>
           <p className="md:max-w-md text-[color:var(--color-stone)] text-lg leading-relaxed text-justify hyphens-auto">
-            Sous le même toit : la boucherie, la charcuterie maison, la fromagerie, le primeur
-            et l&apos;épicerie-cave. Une équipe, une exigence, mille produits.
+            {section.intro}
           </p>
         </header>
 
@@ -41,8 +43,11 @@ export function Metiers() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-700 hover:scale-105"
                   />
+                  {/* Numéro et nom du rayon dans un seul nœud de texte : sinon le
+                      nom apparaît deux fois dans la page et l'éditeur ne sait plus
+                      quelle carte on désigne. */}
                   <p className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[color:var(--color-cream)]/95 backdrop-blur-sm text-xs font-medium tracking-[0.18em] uppercase text-[color:var(--color-bordeaux)]">
-                    {String(i + 1).padStart(2, "0")} · {d.name}
+                    {`${String(i + 1).padStart(2, "0")} · ${d.name}`}
                   </p>
                 </div>
                 <div className="p-6 md:p-8 flex flex-col gap-3 flex-1">

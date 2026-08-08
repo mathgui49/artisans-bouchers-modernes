@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { content } from "@/lib/content";
+
+const section = content.distinction;
 
 export function MaitreArtisan() {
   return (
@@ -15,8 +18,8 @@ export function MaitreArtisan() {
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden bg-[color:var(--color-ink-soft)]">
                 <Image
-                  src="/images/maitre-artisan.webp"
-                  alt="Dominique reçoit le titre de Maître Artisan des mains de Michel Aoustin, président Bretagne de la Chambre de Métiers et de l'Artisanat, aux Artisans Modernes"
+                  src={section.image.src}
+                  alt={section.image.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-top"
@@ -26,12 +29,12 @@ export function MaitreArtisan() {
               <div className="absolute -bottom-6 -right-4 sm:right-6 h-32 w-32 lg:h-36 lg:w-36 rounded-full border border-[color:var(--color-gold)]/50 flex items-center justify-center text-center bg-[color:var(--color-ink)]/85 backdrop-blur-sm rotate-[-8deg]">
                 <div>
                   <div className="font-display text-lg lg:text-xl text-[color:var(--color-gold)] leading-tight">
-                    Maître
+                    {section.seal.line1}
                     <br />
-                    Artisan
+                    {section.seal.line2}
                   </div>
                   <div className="text-[0.6rem] tracking-[0.25em] uppercase text-[color:var(--color-cream)]/70 mt-1">
-                    2026
+                    {section.seal.year}
                   </div>
                 </div>
               </div>
@@ -43,56 +46,43 @@ export function MaitreArtisan() {
             <p className="flex items-center gap-3 mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
               <span className="text-[0.78rem] tracking-[0.2em] uppercase font-semibold text-[color:var(--color-gold)]">
-                Distinction · 26 juin 2026
+                {section.eyebrow}
               </span>
             </p>
             <h2
               id="maitre-artisan-title"
               className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight leading-[1.05]"
             >
-              Dominique,
+              {section.title}
               <br />
               <em className="not-italic font-normal text-[color:var(--color-gold)]">
-                Maître Artisan
+                {section.titleAccent}
               </em>.
             </h2>
 
             <div className="mt-7 space-y-5 text-lg text-[color:var(--color-cream)]/85 leading-relaxed text-justify hyphens-auto">
               <p>
                 <strong className="text-[color:var(--color-cream)] font-medium">
-                  Dominique Drouadaine
-                </strong>{" "}
-                vient de recevoir le titre de <strong className="text-[color:var(--color-cream)] font-medium">Maître Artisan Boucher</strong>,
-                remis en main propre par Michel Aoustin, président Bretagne de la Chambre de
-                Métiers et de l&apos;Artisanat. Une reconnaissance qui récompense
-                l&apos;engagement, la transmission du savoir-faire et des années
-                d&apos;expérience sur le terrain, ici à Bain de Bretagne.
+                  {section.lead.name}
+                </strong>
+                {section.lead.beforeTitle}
+                <strong className="text-[color:var(--color-cream)] font-medium">{section.lead.title}</strong>
+                {section.lead.after}
               </p>
-              <p>
-                C&apos;est lui qui dirige notre commerce au quotidien, avec cette rigueur et
-                cette passion qu&apos;on retrouve dans chaque produit qui sort de nos mains.
-                Ceux qui le connaissent le savent&nbsp;: il a toujours travaillé dans
-                l&apos;ombre, à l&apos;atelier comme derrière le comptoir, à former les uns et
-                les autres sans jamais demander qu&apos;on en parle.
-              </p>
-              <p className="text-[color:var(--color-gold-soft)]">
-                Ce titre, c&apos;est un peu le sien, mais c&apos;est aussi celui de toute
-                l&apos;équipe qui avance avec lui. Bravo Dominique, et merci de nous
-                transmettre tout ça chaque jour.
-              </p>
+              <p>{section.body}</p>
+              <p className="text-[color:var(--color-gold-soft)]">{section.outro}</p>
             </div>
 
             <p className="mt-8 pl-5 border-l-2 border-[color:var(--color-gold)]/50 font-display text-xl md:text-2xl italic text-[color:var(--color-cream)]/90">
-              « Tu aimes travailler dans l&apos;ombre, mais aujourd&apos;hui ce titre te
-              récompense, et toute l&apos;équipe te félicite. »
+              {section.quote}
             </p>
 
             <div className="mt-9">
               <Link
-                href="/maitre-artisan"
+                href={section.cta.href}
                 className="btn-primary !bg-[color:var(--color-gold)] !text-[color:var(--color-ink)] hover:!bg-[color:var(--color-cream)]"
               >
-                Découvrir la distinction
+                {section.cta.label}
                 <span aria-hidden>→</span>
               </Link>
             </div>

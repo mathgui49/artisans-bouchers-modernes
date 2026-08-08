@@ -3,27 +3,18 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { partners, partnerCategories } from "@/lib/partners";
 import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
-import { business } from "@/lib/business";
+import { content } from "@/lib/content";
 import type { Metadata } from "next";
 
-const TITLE = "Nos partenaires · Producteurs locaux & filières françaises";
-const DESCRIPTION =
-  "Découvrez les partenaires de votre artisan boucher à Bain de Bretagne. Race à viande française, fromages fermiers d'Ille-et-Vilaine, primeur de saison, miel, cidre breton, bières et vins.";
+const page = content.pages.partenaires;
+const TITLE = page.seo.title;
+const DESCRIPTION = page.seo.description;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/partenaires" },
-  keywords: [
-    "producteurs locaux Bain de Bretagne",
-    "viande race à viande française",
-    "Tendriade veau",
-    "Fermes de Janzé volaille",
-    "fromage Ille-et-Vilaine",
-    "cidre Bain de Bretagne",
-    "circuit court boucherie",
-    "Les Artisans Modernes partenaires",
-  ],
+  keywords: [...page.seo.keywords],
   openGraph: {
     type: "website",
     title: TITLE,
@@ -31,10 +22,10 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/partenaires`,
     images: [
       {
-        url: "/images/partners/producteurs.webp",
-        width: 1200,
-        height: 630,
-        alt: `Producteurs partenaires des ${business.legalName}`,
+        url: page.seo.image.src,
+        width: page.seo.image.width,
+        height: page.seo.image.height,
+        alt: page.seo.image.alt,
       },
     ],
   },
@@ -42,20 +33,20 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/partners/producteurs.webp"],
+    images: [page.seo.image.src],
   },
 };
 
 export default function PartenairesPage() {
   const breadcrumbs = breadcrumbsJsonLd([
     { name: "Accueil", path: "/" },
-    { name: "Partenaires", path: "/partenaires" },
+    { name: page.breadcrumb, path: "/partenaires" },
   ]);
 
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: `Producteurs partenaires des ${business.legalName}`,
+    name: page.listName,
     numberOfItems: partners.length,
     itemListElement: partners.map((p, i) => ({
       "@type": "ListItem",
@@ -79,8 +70,8 @@ export default function PartenairesPage() {
 
         <section className="relative isolate overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-cream)]">
           <Image
-            src="/images/partners/producteurs.webp"
-            alt={`Producteurs partenaires des ${business.legalName} : race à viande, fromages fermiers, primeur`}
+            src={page.image.src}
+            alt={page.image.alt}
             fill
             priority
             sizes="100vw"
@@ -92,23 +83,19 @@ export default function PartenairesPage() {
               <p className="flex items-center gap-3 mb-5">
                 <span className="flag-bar"><span /><span /><span /></span>
                 <span className="text-[0.78rem] tracking-[0.2em] uppercase font-semibold text-[color:var(--color-gold)]">
-                  Nos partenaires
+                  {page.eyebrow}
                 </span>
               </p>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight">
-                Découvrez les partenaires
+                {page.title}
                 <br />
                 <em className="not-italic font-normal text-[color:var(--color-gold)]">
-                  de votre artisan boucher
+                  {page.titleAccent}
                 </em>
                 .
               </h1>
               <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed text-justify">
-                Nous proposons de la viande élevée sur une agriculture raisonnée en gage de
-                qualité&nbsp;: race à viande, d&apos;origine française et au maximum locale,
-                respect des temps de maturation, bouchers formés. Nos fabrications artisanales
-                sont sans colorant, ni conservateur. Découvrez ci-dessous nos partenaires
-                français et essentiellement locaux.
+                {page.intro}
               </p>
             </div>
           </div>
@@ -175,16 +162,14 @@ export default function PartenairesPage() {
           <div className="container-x text-center max-w-3xl mx-auto">
             <p className="eyebrow justify-center mb-4">
               <span className="flag-bar"><span /><span /><span /></span>
-              Sourcing transparent
+              {page.outro.eyebrow}
             </p>
             <h2 id="sourcing-final" className="font-display text-3xl md:text-5xl tracking-tight">
-              Vous voulez en savoir plus
-              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> sur un produit</em> ?
+              {page.outro.title}{" "}
+              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">{page.outro.titleAccent}</em> ?
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify">
-              Demandez-nous en magasin&nbsp;: nous vous racontons d&apos;où ça vient, qui
-              l&apos;a produit, et comment c&apos;est fabriqué. La traçabilité, c&apos;est la
-              base.
+              {page.outro.body}
             </p>
           </div>
         </section>

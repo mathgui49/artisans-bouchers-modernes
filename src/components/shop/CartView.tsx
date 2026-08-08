@@ -5,7 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import { business } from "@/lib/business";
+import { content } from "@/lib/content";
 import { ProductIcon } from "@/components/shop/ProductIcon";
+
+const labels = content.pages.panier;
 
 function formatPrice(n: number) {
   return n
@@ -20,7 +23,7 @@ export function CartView() {
   if (!hydrated) {
     return (
       <div className="card p-10 text-center text-[color:var(--color-stone)]">
-        Chargement de votre panier…
+        {labels.loading}
       </div>
     );
   }
@@ -34,13 +37,12 @@ export function CartView() {
             <path d="M9 8V6a3 3 0 1 1 6 0v2" />
           </svg>
         </div>
-        <h2 className="font-display text-3xl">Votre panier est vide</h2>
+        <h2 className="font-display text-3xl">{labels.empty.title}</h2>
         <p className="mt-3 text-[color:var(--color-stone)] max-w-md mx-auto">
-          Découvrez nos colis de saison, plateaux maison et pièces en gros : préparé à la commande
-          avec confirmation par mail sous 48h.
+          {labels.empty.body}
         </p>
-        <Link href="/boutique" className="btn-primary mt-7 inline-flex">
-          Voir la boutique
+        <Link href={labels.empty.cta.href} className="btn-primary mt-7 inline-flex">
+          {labels.empty.cta.label}
           <span aria-hidden>→</span>
         </Link>
       </div>
@@ -169,44 +171,43 @@ export function CartView() {
           onClick={clear}
           className="self-start text-sm text-[color:var(--color-stone-soft)] hover:text-[color:var(--color-bordeaux)] transition-colors mt-2"
         >
-          ← Vider le panier
+          {labels.clearLabel}
         </button>
       </div>
 
       {/* Checkout */}
       <aside className="lg:col-span-5">
         <div className="card p-6 md:p-8 lg:sticky lg:top-28">
-          <h2 className="font-display text-2xl md:text-3xl">Récapitulatif</h2>
+          <h2 className="font-display text-2xl md:text-3xl">{labels.summaryTitle}</h2>
           <div className="mt-5 pb-5 border-b border-[color:var(--color-line)] flex items-baseline justify-between">
             <span className="text-[color:var(--color-stone)]">
-              Sous-total estimé
+              {labels.subtotalLabel}
             </span>
             <span className="font-display text-3xl text-[color:var(--color-bordeaux)] tabular-nums">
               {formatPrice(total)}€
             </span>
           </div>
           <p className="mt-4 text-xs text-[color:var(--color-stone-soft)] italic">
-            Les prix s&apos;entendent <strong>indicatifs</strong> : certains produits sont vendus
-            au poids, le total final vous sera confirmé par mail sous 48h ouvrées.
+            {labels.priceNoticeBefore}<strong>{labels.priceNoticeStrong}</strong>{labels.priceNoticeAfter}
           </p>
 
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
-            <Field label="Nom complet" name="name" type="text" required autoComplete="name" />
-            <Field label="Email" name="email" type="email" required autoComplete="email" />
-            <Field label="Téléphone" name="phone" type="tel" required autoComplete="tel" />
+            <Field label={labels.fields.name} name="name" type="text" required autoComplete="name" />
+            <Field label={labels.fields.email} name="email" type="email" required autoComplete="email" />
+            <Field label={labels.fields.phone} name="phone" type="tel" required autoComplete="tel" />
             <Field
-              label="Date de retrait souhaitée"
+              label={labels.fields.pickupDate}
               name="pickupDate"
               type="date"
-              hint="Sous 48h ouvrées · Mar-Sam selon horaires."
+              hint={labels.fields.pickupHint}
             />
             <label className="flex flex-col gap-1.5">
-              <span className="text-sm font-medium">Message (optionnel)</span>
+              <span className="text-sm font-medium">{labels.fields.message}</span>
               <textarea
                 name="message"
                 rows={3}
                 className="w-full rounded-[8px] border border-[color:var(--color-line)] bg-[color:var(--color-paper)] px-3.5 py-2.5 text-[0.95rem] focus:border-[color:var(--color-bordeaux)] focus:outline-none transition-colors resize-y"
-                placeholder="Précisions, allergies, découpes spécifiques…"
+                placeholder={labels.fields.messagePlaceholder}
               />
             </label>
 
@@ -215,13 +216,13 @@ export function CartView() {
               disabled={submitting}
               className="btn-primary w-full mt-2"
             >
-              {submitting ? "Préparation…" : "Envoyer ma commande"}
+              {submitting ? labels.submittingLabel : labels.submitLabel}
               <span aria-hidden>→</span>
             </button>
             <p className="text-xs text-[color:var(--color-stone-soft)] text-center">
-              Votre messagerie va s&apos;ouvrir avec le récap pré-rempli. Il ne vous reste qu&apos;à envoyer.
+              {labels.mailNoticeBefore}
               <br />
-              Vous pouvez aussi nous appeler au{" "}
+              {labels.mailNoticeAfter}
               <a href={`tel:${business.phoneIntl}`} className="underline hover:text-[color:var(--color-bordeaux)]">
                 {business.phone}
               </a>

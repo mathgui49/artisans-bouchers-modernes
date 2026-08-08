@@ -1,0 +1,1068 @@
+{
+  "version": "1",
+  "brand": {
+    "primary": "#a02828"
+  },
+  "business": {
+    "name": "Les Artisans Modernes",
+    "legalName": "Artisans Bouchers Modernes",
+    "shortName": "Les Artisans Modernes",
+    "tagline": "Privilégiez la qualité, et le plaisir.",
+    "description": "Boucherie-charcuterie artisanale, fromagerie et primeur à Bain de Bretagne. Viande française issue d'une agriculture raisonnée, charcuterie maison sans colorant ni conservateur, fromages de producteurs locaux, fruits et légumes de saison, épicerie fine et cave.",
+    "shortDescription": "Boucherie · Charcuterie · Fromagerie · Primeur · Épicerie & Cave à Bain de Bretagne (35).",
+    "address": {
+      "street": "2 rue de Seine, ZA Château Gaillard",
+      "shortStreet": "2 rue de Seine",
+      "postalCode": "35470",
+      "city": "Bain de Bretagne",
+      "country": "France",
+      "region": "Ille-et-Vilaine"
+    },
+    "phone": "02 23 31 00 79",
+    "phoneIntl": "+33223310079",
+    "email": "contact@lesartisansmodernes.fr",
+    "domain": "lesartisansmodernes.fr",
+    "geo": {
+      "lat": 47.83815,
+      "lng": -1.68265
+    },
+    "maitreArtisan": {
+      "name": "Dominique Drouadaine",
+      "title": "Maître Artisan Boucher",
+      "awardedBy": "Chambre de Métiers et de l'Artisanat de Bretagne",
+      "year": "2026",
+      "date": "2026-06-26"
+    },
+    "nearbyTowns": [
+      "Le Sel-de-Bretagne",
+      "Crevin",
+      "Pléchâtel",
+      "Poligné",
+      "Lalleu",
+      "La Noë-Blanche",
+      "Saulnières",
+      "Bourg-des-Comptes",
+      "Grand-Fougeray",
+      "Guipry-Messac",
+      "Ercé-en-Lamée",
+      "Pancé",
+      "Teillay",
+      "Tresbœuf"
+    ],
+    "hours": [
+      { "label": "Lundi", "value": "Fermé", "closed": true },
+      { "label": "Mardi", "value": "9h00 – 12h30 · 14h30 – 19h00", "closed": false },
+      { "label": "Mercredi", "value": "9h00 – 12h30 · 14h30 – 19h00", "closed": false },
+      { "label": "Jeudi", "value": "9h00 – 12h30 · 14h30 – 19h00", "closed": false },
+      { "label": "Vendredi", "value": "8h30 – 19h00 (en continu)", "closed": false },
+      { "label": "Samedi", "value": "8h30 – 19h00 (en continu)", "closed": false },
+      { "label": "Dimanche", "value": "Fermé", "closed": true }
+    ],
+    "hoursSchema": [
+      { "days": "Tu,We,Th", "open": "09:00", "close": "12:30" },
+      { "days": "Tu,We,Th", "open": "14:30", "close": "19:00" },
+      { "days": "Fr,Sa", "open": "08:30", "close": "19:00" }
+    ],
+    "socials": [
+      { "label": "Facebook", "icon": "facebook", "href": "https://www.facebook.com/Artisansbouchersmodernesbain" },
+      { "label": "Instagram", "icon": "instagram", "href": "https://www.instagram.com/artisans_bouchers_modernes" },
+      { "label": "YouTube", "icon": "youtube", "href": "https://www.youtube.com/@artisansmodernes35470" }
+    ]
+  },
+  "seo": {
+    "title": "Les Artisans Modernes · Boucherie · Charcuterie · Fromagerie · Primeur · Bain de Bretagne",
+    "titleTemplate": "%s · Les Artisans Modernes",
+    "description": "Boucherie-charcuterie artisanale Maître Artisan Boucher à Bain de Bretagne (35). Viande française race à viande, charcuterie maison sans colorant ni conservateur, fromagerie et primeur locaux, drive et plateaux maison. Mardi au samedi.",
+    "twitterCreator": "@artisans_bouchers_modernes",
+    "keywords": [
+      "boucherie Bain de Bretagne",
+      "meilleure boucherie Bain de Bretagne",
+      "meilleure boucherie Ille-et-Vilaine",
+      "Maître Artisan Boucher",
+      "Maître Artisan Boucher Bretagne",
+      "boucher artisan Bain de Bretagne",
+      "charcuterie Bain de Bretagne",
+      "charcuterie maison",
+      "fromagerie Bain de Bretagne",
+      "fromage producteur local",
+      "primeur Bain de Bretagne",
+      "viande française race à viande",
+      "colis de viande Bain de Bretagne",
+      "drive boucherie 35",
+      "plateau charcuterie",
+      "plateau fromage Ille-et-Vilaine",
+      "épicerie fine Bain de Bretagne",
+      "cave bière vin",
+      "Ille-et-Vilaine",
+      "Bretagne",
+      "35470",
+      "Les Artisans Modernes"
+    ],
+    "images": [
+      {
+        "src": "/images/plateau-charcuterie.webp",
+        "width": 1200,
+        "height": 1100,
+        "alt": "Les Artisans Modernes, plateau charcuterie maison"
+      },
+      {
+        "src": "/images/maitre-artisan-remise.webp",
+        "width": 1600,
+        "height": 900,
+        "alt": "Dominique Drouadaine reçoit le titre de Maître Artisan Boucher chez Les Artisans Modernes à Bain de Bretagne"
+      },
+      {
+        "src": "/images/facade.webp",
+        "width": 825,
+        "height": 578,
+        "alt": "Les Artisans Modernes, façade du magasin à Bain de Bretagne"
+      }
+    ],
+    "homeDescription": "Boucherie-charcuterie artisanale, fromagerie, primeur, épicerie & cave à Bain de Bretagne. Drive en ligne, plateaux maison, viande française race à viande, partenaires locaux."
+  },
+  "nav": {
+    "logo": {
+      "src": "/logo.png",
+      "alt": "Les Artisans Modernes"
+    },
+    "items": [
+      { "label": "Nos métiers", "href": "/#metiers" },
+      { "label": "Maître Artisan", "href": "/maitre-artisan" },
+      { "label": "L'équipe", "href": "/equipe" },
+      { "label": "Partenaires", "href": "/partenaires" },
+      { "label": "Plateaux", "href": "/#plateaux" },
+      { "label": "Infos", "href": "/#infos" }
+    ],
+    "cta": { "label": "Boutique", "href": "/boutique" },
+    "ctaMobile": { "label": "Voir la boutique →", "href": "/boutique" },
+    "openMenuLabel": "Ouvrir le menu",
+    "closeMenuLabel": "Fermer le menu"
+  },
+  "hero": {
+    "eyebrow": "Bain de Bretagne · Depuis chez nous, pour chez vous",
+    "title": "Boucherie, charcuterie",
+    "titleAccent": "Et tout ce qu'il faut autour.",
+    "tagline": "Privilégiez la qualité, et le plaisir.",
+    "intro": "Une viande française issue d'une agriculture raisonnée, une charcuterie maison sans colorant ni conservateur, des fromages et primeurs de producteurs locaux.",
+    "rallyingCry": "Mangeons-mieux, ensemble.",
+    "primaryCta": { "label": "Commander en ligne", "href": "/boutique" },
+    "secondaryCta": { "label": "Découvrir nos rayons", "href": "#metiers" },
+    "stats": [
+      { "label": "Rayons", "value": "5" },
+      { "label": "Producteurs locaux", "value": "20+" },
+      { "label": "Origine viande", "value": "🇫🇷 France" },
+      { "label": "Charcuterie maison", "value": "100%" }
+    ],
+    "badge": { "value": "100%", "label": "qualité" },
+    "video": { "src": "/video/presentation.mp4", "poster": "/images/plateau-charcuterie.webp" },
+    "image": {
+      "src": "/images/plateau-charcuterie.webp",
+      "alt": "Plateau charcuterie maison Les Artisans Modernes"
+    }
+  },
+  "engagements": {
+    "eyebrow": "Nos engagements",
+    "title": "Quatre promesses,",
+    "titleAccent": "tenues chaque jour",
+    "intro": "Une boucherie moderne, c'est une boucherie qui n'oublie pas pourquoi elle existe : nourrir bien, sourcer juste, créer ensemble, sans se perdre en chemin.",
+    "items": [
+      {
+        "title": "Être responsable",
+        "body": "Viande française, race à viande, agriculture raisonnée. Charcuterie maison sans colorant ni conservateur. Contrôles réguliers par un laboratoire indépendant.",
+        "icon": "leaf"
+      },
+      {
+        "title": "Variété et nouveauté",
+        "body": "Un étal généreux qui change avec les saisons. Plats du moment, idées du week-end, recettes signature de nos bouchers.",
+        "icon": "sparkle"
+      },
+      {
+        "title": "Créons, innovons ensemble",
+        "body": "Vos idées + notre savoir-faire. Pour vos repas conviviaux : plateaux fromage, charcuterie, pierrades, raclettes, choucroutes, fondues, sur mesure.",
+        "icon": "hands"
+      },
+      {
+        "title": "Bien manger sans se ruiner",
+        "body": "Achats malins, colis saisonniers, promos hebdomadaires. La qualité ne doit pas être un luxe, elle doit être un choix accessible.",
+        "icon": "coin"
+      }
+    ]
+  },
+  "metiers": {
+    "eyebrow": "Cinq rayons, un seul lieu",
+    "title": "Nos métiers,",
+    "titleAccent": "notre savoir-faire",
+    "intro": "Sous le même toit : la boucherie, la charcuterie maison, la fromagerie, le primeur et l'épicerie-cave. Une équipe, une exigence, mille produits.",
+    "items": [
+      {
+        "id": "boucherie",
+        "name": "Boucherie",
+        "accroche": "Viande française, race à viande, locale autant que possible.",
+        "description": "Une viande responsable, issue d'une agriculture raisonnée. Race à viande, origine France garantie, partenariats avec des éleveurs au plus près de Bain de Bretagne. Maturation respectée, découpes réalisées par nos bouchers formés au quotidien.",
+        "image": "/images/photo-19.webp"
+      },
+      {
+        "id": "charcuterie",
+        "name": "Charcuterie",
+        "accroche": "Faite maison, sans colorant ni conservateur.",
+        "description": "Pâtés, terrines, saucisses, rillettes, jambons : nos charcutiers cuisinent eux-mêmes la quasi-totalité de la gamme. Pas d'additifs douteux, des matières premières que nous choisissons et des recettes qui respectent les saisons.",
+        "image": "/images/plateau-charcuterie.webp"
+      },
+      {
+        "id": "fromagerie",
+        "name": "Fromagerie",
+        "accroche": "Fromages généreux, sélectionnés pour leur origine.",
+        "description": "Une cave à fromages affinée pour vous : artisans fromagers, producteurs locaux, AOP françaises. Du chèvre frais des fermes voisines au comté longuement affiné, en passant par la tomme bretonne, nos coups de cœur du moment.",
+        "image": "/images/fromage-comte.webp"
+      },
+      {
+        "id": "primeur",
+        "name": "Primeur",
+        "accroche": "Saisons respectées, valeurs environnementales en tête.",
+        "description": "Fruits et légumes de saison, choisis chaque semaine en respectant la production française et locale. Nous travaillons main dans la main avec des producteurs voisins, ce que vous voyez sur l'étal a souvent voyagé moins de 50 km.",
+        "image": "/images/photo-22.webp"
+      },
+      {
+        "id": "epicerie-cave",
+        "name": "Épicerie & Cave",
+        "accroche": "Pour accompagner, sublimer, partager.",
+        "description": "Épicerie fine, conserves de petits producteurs, condiments, accords vins et bières. Une cave pensée pour matcher avec votre côte de bœuf du week-end ou votre plateau de fromages, conseillée par l'équipe.",
+        "image": "/images/photo-25.webp"
+      }
+    ]
+  },
+  "distinction": {
+    "eyebrow": "Distinction · 26 juin 2026",
+    "title": "Dominique,",
+    "titleAccent": "Maître Artisan",
+    "image": {
+      "src": "/images/maitre-artisan.webp",
+      "alt": "Dominique reçoit le titre de Maître Artisan des mains de Michel Aoustin, président Bretagne de la Chambre de Métiers et de l'Artisanat, aux Artisans Modernes"
+    },
+    "seal": { "line1": "Maître", "line2": "Artisan", "year": "2026" },
+    "lead": {
+      "name": "Dominique Drouadaine",
+      "beforeTitle": " vient de recevoir le titre de ",
+      "title": "Maître Artisan Boucher",
+      "after": ", remis en main propre par Michel Aoustin, président Bretagne de la Chambre de Métiers et de l'Artisanat. Une reconnaissance qui récompense l'engagement, la transmission du savoir-faire et des années d'expérience sur le terrain, ici à Bain de Bretagne."
+    },
+    "body": "C'est lui qui dirige notre commerce au quotidien, avec cette rigueur et cette passion qu'on retrouve dans chaque produit qui sort de nos mains. Ceux qui le connaissent le savent : il a toujours travaillé dans l'ombre, à l'atelier comme derrière le comptoir, à former les uns et les autres sans jamais demander qu'on en parle.",
+    "outro": "Ce titre, c'est un peu le sien, mais c'est aussi celui de toute l'équipe qui avance avec lui. Bravo Dominique, et merci de nous transmettre tout ça chaque jour.",
+    "quote": "« Tu aimes travailler dans l'ombre, mais aujourd'hui ce titre te récompense, et toute l'équipe te félicite. »",
+    "cta": { "label": "Découvrir la distinction", "href": "/maitre-artisan" }
+  },
+  "drive": {
+    "eyebrow": "Boutique en ligne · Drive",
+    "title": "Commandez en ligne,",
+    "titleAccent": "récupérez en magasin",
+    "intro": "Ajoutez vos colis et pièces au panier, validez votre commande, recevez votre confirmation par mail sous 48h ouvrées.",
+    "cta": { "label": "Voir toute la boutique", "href": "/boutique" },
+    "colisTitle": "Les colis de la saison",
+    "colisNotice": "Prix indicatifs · ajustés au poids exact",
+    "piecesTitle": "Pièces entières",
+    "piecesNotice": "Les pièces en gros sont préparées à la commande. Confirmation par mail sous 48h ouvrées avec le prix exact selon le poids.",
+    "addLabel": "+ Ajouter au panier",
+    "addShortLabel": "+ Au panier",
+    "fallbackWeight": "Colis"
+  },
+  "plateaux": {
+    "eyebrow": "Plateaux maison à emporter",
+    "title": "Pour les moments",
+    "titleAccent": "qui se partagent",
+    "intro": "Apéro entre amis, repas de famille, brunch dominical ou comité d'entreprise : nos plateaux sont composés sur place, à la commande, avec ce que la maison fait de mieux.",
+    "images": [
+      { "src": "/images/photo-13.webp", "alt": "Plateau apéro charcuterie & fromage Les Artisans Modernes" },
+      { "src": "/images/photo-15.webp", "alt": "Plateau fromage maison" },
+      { "src": "/images/photo-14.webp", "alt": "Carpaccio revisité" }
+    ],
+    "cta": { "label": "Voir mon panier", "href": "/panier" },
+    "phoneCtaLabel": "Ou nous appeler · "
+  },
+  "producteurs": {
+    "eyebrow": "Producteurs locaux",
+    "title": "Nos",
+    "titleAccent": "partenaires",
+    "titleEnd": ", vos voisins.",
+    "intro": "Élevage, maraîchage, fromages, conserves : nous travaillons avec des producteurs de Bain de Bretagne et d'Ille-et-Vilaine que nous connaissons par leur prénom. Chaque produit a une histoire, chaque histoire a un nom, et c'est nous qui faisons le lien jusqu'à votre table.",
+    "points": [
+      "Viande race à viande",
+      "Origine France",
+      "Saison respectée",
+      "Lab indépendant",
+      "Sans additifs",
+      "Découpes minute"
+    ],
+    "cta": { "label": "Découvrir tous nos partenaires", "href": "/partenaires" },
+    "images": [
+      { "src": "/images/photo-22.webp", "alt": "Étal primeur : fruits et légumes de saison de producteurs locaux" },
+      { "src": "/images/fromage-comte.webp", "alt": "Fromages affinés sélectionnés par la maison" }
+    ]
+  },
+  "galerie": {
+    "eyebrow": "Galerie",
+    "title": "La maison",
+    "titleAccent": "en images",
+    "intro": "Quelques pièces signature, plats cuisinés, plateaux et coups de cœur du moment, telles qu'elles sortent du laboratoire, telles qu'elles arrivent sur l'étal.",
+    "photos": [
+      { "src": "/images/roti-beurre-aux-herbes.webp", "alt": "Rôti de bœuf farci au beurre d'herbes (fait maison)", "aspect": "tall" },
+      { "src": "/images/photo-19.webp", "alt": "Côte de bœuf décorée", "aspect": "tall" },
+      { "src": "/images/photo-14.webp", "alt": "Carpaccio revisité, recette signature", "aspect": "tall" },
+      { "src": "/images/decoupe-cote-boeuf.webp", "alt": "Découpe d'une côte de bœuf maturée par notre Maître Artisan Boucher", "aspect": "tall" },
+      { "src": "/images/photo-18.webp", "alt": "Tartare et accompagnement maison", "aspect": "wide" },
+      { "src": "/images/photo-17.webp", "alt": "Plat cuisiné maison (tajine de saison)", "aspect": "wide" },
+      { "src": "/images/photo-13.webp", "alt": "Plateau apéro charcuterie et fromage", "aspect": "tall" },
+      { "src": "/images/plateau-charcuterie.webp", "alt": "Plateau charcuterie maison Les Artisans Modernes", "aspect": "tall" },
+      { "src": "/images/photo-16.webp", "alt": "Plateau fromages, sélection de la maison", "aspect": "wide" },
+      { "src": "/images/photo-15.webp", "alt": "Plateau fromage 100% local préparé par la maison", "aspect": "wide" },
+      { "src": "/images/fromage-comte.webp", "alt": "Comté affiné et fromage de montagne", "aspect": "wide" },
+      { "src": "/images/photo-20.webp", "alt": "Spécialité boucherie", "aspect": "wide" },
+      { "src": "/images/photo-21.webp", "alt": "Pièce du boucher", "aspect": "wide" },
+      { "src": "/images/photo-23.webp", "alt": "Préparation maison", "aspect": "wide" },
+      { "src": "/images/photo-24.webp", "alt": "Spécialité du moment", "aspect": "wide" },
+      { "src": "/images/photo-25.webp", "alt": "Sélection épicerie & cave", "aspect": "wide" },
+      { "src": "/images/photo-26.webp", "alt": "Création de l'équipe Artisans Modernes", "aspect": "wide" },
+      { "src": "/images/photo-27.webp", "alt": "Charcuterie artisanale", "aspect": "wide" },
+      { "src": "/images/photo-22.webp", "alt": "Étal primeur, fruits et légumes de saison", "aspect": "wide" },
+      { "src": "/images/dominique-comptoir.webp", "alt": "Dominique Drouadaine, Maître Artisan Boucher, au comptoir de la boucherie", "aspect": "wide" },
+      { "src": "/images/dominique-charcuterie.webp", "alt": "Saucissons secs et charcuterie artisanale de la maison", "aspect": "tall" },
+      { "src": "/images/dominique-epicerie.webp", "alt": "Rayon épicerie fine, apéro et produits du moment", "aspect": "tall" },
+      { "src": "/images/dominique-cave.webp", "alt": "Accord côte de bœuf et sélection de la cave", "aspect": "tall" },
+      { "src": "/images/dominique-brochettes.webp", "alt": "Brochettes et grillades préparées maison", "aspect": "wide" }
+    ]
+  },
+  "signature": {
+    "eyebrow": "Le geste du Maître Artisan",
+    "title": "La viande,",
+    "titleAccent": "travaillée comme il faut",
+    "intro": "Race à viande, origine France, maturation respectée et découpes réalisées à la main, dans les règles de l'art. Le savoir-faire d'un Maître Artisan Boucher, au service de votre table à Bain de Bretagne.",
+    "image": {
+      "src": "/images/cote-de-boeuf-maturation.webp",
+      "alt": "Côte de bœuf maturée au persillé d'exception, travaillée par notre Maître Artisan Boucher"
+    },
+    "cta": { "label": "Commander en ligne", "href": "/boutique" }
+  },
+  "infos": {
+    "eyebrow": "Infos pratiques",
+    "title": "Venir nous voir",
+    "titleAccent": "à Bain de Bretagne",
+    "intro": "Notre magasin se trouve au cœur de la ZA Château Gaillard, parking gratuit devant la porte. N'hésitez pas à passer ou à appeler, nous sommes là pour conseiller, conseiller, et conseiller encore.",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "Email",
+    "mapCta": { "label": "Itinéraire Google Maps" },
+    "shopCta": { "label": "Voir la boutique", "href": "/boutique" },
+    "hoursTitle": "Horaires",
+    "hoursNote": "Heure locale (FR)",
+    "todayLabel": "aujourd'hui",
+    "visite": {
+      "href": "/visite-virtuelle",
+      "badge": "Visite virtuelle 360°",
+      "kicker": "Notre magasin",
+      "label": "Visiter en 360° →",
+      "image": {
+        "src": "/images/facade.webp",
+        "alt": "Façade du magasin Les Artisans Modernes, Bain de Bretagne"
+      }
+    }
+  },
+  "footer": {
+    "logo": { "line1": "Artisans Bouchers", "line2": "Modernes" },
+    "tagline": "Une équipe, une exigence, et l'envie partagée de bien manger sans se ruiner.",
+    "shopTitle": "Magasin",
+    "navTitle": "Naviguer",
+    "navItems": [
+      { "label": "Nos métiers", "href": "/#metiers" },
+      { "label": "L'équipe", "href": "/equipe" },
+      { "label": "Partenaires", "href": "/partenaires" },
+      { "label": "Boutique", "href": "/boutique" },
+      { "label": "Visite 360°", "href": "/visite-virtuelle" },
+      { "label": "Plateaux", "href": "/#plateaux" },
+      { "label": "Infos & horaires", "href": "/#infos" }
+    ],
+    "hoursTitle": "Horaires",
+    "hoursLines": [
+      "Mar – Jeu : 9h–12h30 · 14h30–19h",
+      "Ven – Sam : 8h30–19h en continu",
+      "Lun & Dim : fermé"
+    ],
+    "rights": "Tous droits réservés.",
+    "baseline": "Boucherie · Charcuterie · Fromagerie · Primeur · Épicerie & Cave"
+  },
+  "catalogue": {
+    "categories": [
+      {
+        "id": "colis",
+        "label": "Colis de saison",
+        "description": "Nos sélections complètes de viandes marinées, du barbeuc' à la plancha premium."
+      },
+      {
+        "id": "plateau",
+        "label": "Plateaux maison",
+        "description": "À emporter pour vos apéros, repas conviviaux et événements : préparé sur place."
+      },
+      {
+        "id": "piece",
+        "label": "Pièces en gros",
+        "description": "Pièces entières découpées sur mesure pour vos congélations et grandes tablées."
+      }
+    ],
+    "colis": [
+      {
+        "id": "colis-barbeuc",
+        "slug": "colis-barbeuc",
+        "name": "Colis BARBEUC'",
+        "price": 59,
+        "oldPrice": 90,
+        "perKg": 14.9,
+        "weight": "≈ 4 kg",
+        "items": [
+          "1 kg de cubes de bœuf marinés",
+          "1 kg de cubes de poulet marinés",
+          "1 kg de cubes de dinde marinés",
+          "1 kg de cubes de porc marinés"
+        ],
+        "shortDescription": "Le colis grillade pour une tablée joyeuse, 4 viandes marinées prêtes à griller.",
+        "image": "/images/photo-19.webp",
+        "notice": "Préparé à la commande · confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "colis-terrasse",
+        "slug": "colis-terrasse",
+        "name": "Colis TERRASSE",
+        "price": 67,
+        "oldPrice": 95,
+        "perKg": 16.95,
+        "weight": "≈ 4 kg",
+        "items": [
+          "1 kg de surprise de porc mariné",
+          "1 kg de pavé de bœuf mariné",
+          "1 kg de sucette d'agneau à griller",
+          "1 kg de cuisse de poulet marinée"
+        ],
+        "shortDescription": "Sélection raffinée pour soirées d'été, pavé de bœuf, sucettes d'agneau et compagnie.",
+        "image": "/images/photo-21.webp",
+        "notice": "Préparé à la commande · confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "colis-soleil",
+        "slug": "colis-soleil",
+        "name": "Colis SOLEIL",
+        "price": 55,
+        "oldPrice": 78,
+        "perKg": 13.9,
+        "weight": "≈ 4 kg",
+        "items": [
+          "1 kg de brochettes de poulet",
+          "1 kg de veau mariné",
+          "1 kg de côte de porc marinée",
+          "1 kg de poitrine de porc marinée"
+        ],
+        "shortDescription": "Le colis lumineux : brochettes, veau, porc, tout ce qu'il faut pour la plancha.",
+        "image": "/images/photo-23.webp",
+        "notice": "Préparé à la commande · confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "colis-saucisses",
+        "slug": "colis-saucisses",
+        "name": "Colis SAUCISSES",
+        "price": 49,
+        "oldPrice": 76,
+        "perKg": 9.99,
+        "weight": "≈ 5 kg",
+        "items": [
+          "1 kg de saucisses",
+          "1 kg de chipolatas",
+          "1 kg de merguez",
+          "1 kg de chorizettes",
+          "1 kg de chipos spéciales"
+        ],
+        "shortDescription": "Le grand assortiment de saucisses maison, pour barbecues sans fin.",
+        "image": "/images/photo-26.webp",
+        "notice": "Préparé à la commande · confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "colis-plancha",
+        "slug": "colis-plancha",
+        "name": "Colis PLANCHA",
+        "price": 71,
+        "oldPrice": 101,
+        "perKg": 17.9,
+        "weight": "≈ 4 kg",
+        "items": [
+          "1 kg de pavé aux échalotes",
+          "1 kg de mélange espagnol",
+          "1 kg de mélange volaille",
+          "1 kg d'aiguillettes de canard marinées"
+        ],
+        "shortDescription": "Le colis premium plancha : pavé, mélange espagnol, aiguillettes de canard.",
+        "image": "/images/photo-27.webp",
+        "notice": "Préparé à la commande · confirmation par mail sous 48h ouvrées."
+      }
+    ],
+    "plateaux": [
+      {
+        "id": "plateau-apero",
+        "slug": "planche-apero",
+        "name": "Planche apéro",
+        "price": 18,
+        "servings": "4 à 6 personnes",
+        "shortDescription": "Charcuterie maison, fromages, condiments. Tout ce qu'il faut pour bien commencer.",
+        "image": "/images/products/planche-apero.webp",
+        "notice": "Préparé sur place le jour J, à commander 48h à l'avance."
+      },
+      {
+        "id": "pierrade-nature",
+        "slug": "pierrade-nature",
+        "name": "Pierrade nature",
+        "price": 6.5,
+        "servings": "à partir de 4 parts",
+        "unitSuffix": " /pers.",
+        "shortDescription": "Sélection de viandes nature pour pierrade : bœuf, volaille, porc.",
+        "image": "/images/products/pierrade-nature.webp",
+        "notice": "Tarif par personne · 4 parts minimum."
+      },
+      {
+        "id": "pierrade-marinee",
+        "slug": "pierrade-marinee",
+        "name": "Pierrade marinée",
+        "price": 6.5,
+        "servings": "à partir de 4 parts",
+        "unitSuffix": " /pers.",
+        "shortDescription": "Pierrade signature, viandes marinées maison, herbes et épices fraîches.",
+        "image": "/images/products/pierrade-marinee.webp",
+        "notice": "Tarif par personne · 4 parts minimum."
+      },
+      {
+        "id": "planche-fromage",
+        "slug": "planche-fromage",
+        "name": "Planche fromage",
+        "price": 30,
+        "servings": "4 personnes",
+        "shortDescription": "Sélection de 6 à 8 fromages affinés : vache, chèvre, brebis, condiments.",
+        "image": "/images/products/planche-fromage.webp",
+        "notice": "Préparé sur place le jour J, à commander 48h à l'avance."
+      },
+      {
+        "id": "plateau-fromage-local",
+        "slug": "plateau-fromage-100-local",
+        "name": "Plateau fromage 100% local",
+        "price": 25,
+        "servings": "6 personnes",
+        "shortDescription": "Le plateau de la maison, uniquement des fromages de producteurs locaux d'Ille-et-Vilaine.",
+        "image": "/images/products/plateau-fromage-local.webp",
+        "notice": "Préparé sur place le jour J, à commander 48h à l'avance."
+      }
+    ],
+    "pieces": [
+      {
+        "id": "demi-cochon",
+        "slug": "demi-cochon",
+        "name": "Demi cochon",
+        "price": 171,
+        "perKg": 3.8,
+        "weight": "≈ 45 kg brut",
+        "unitSuffix": " indicatif",
+        "shortDescription": "Demi-cochon entier découpé selon vos préférences : à congeler, à fumer, à conserver.",
+        "icon": "pig",
+        "notice": "Prix selon poids exact (3,80 €/kg). Confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "demi-cuisse-boeuf",
+        "slug": "demi-cuisse-boeuf",
+        "name": "Demi cuisse de bœuf",
+        "price": 237.5,
+        "perKg": 9.5,
+        "weight": "≈ 25 kg brut",
+        "unitSuffix": " indicatif",
+        "shortDescription": "Demi-cuisse de bœuf race à viande française, découpée par nos bouchers.",
+        "icon": "beef-leg",
+        "notice": "Prix selon poids exact (9,50 €/kg). Confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "cuisse-boeuf-entiere",
+        "slug": "cuisse-de-boeuf-entiere",
+        "name": "Cuisse de bœuf entière",
+        "price": 495,
+        "perKg": 9.9,
+        "weight": "≈ 50 kg brut",
+        "unitSuffix": " indicatif",
+        "shortDescription": "Pièce entière, race à viande française. Découpe sur mesure (steaks, rôtis, bourguignon, hachée).",
+        "icon": "beef",
+        "notice": "Prix selon poids exact (9,90 €/kg). Confirmation par mail sous 48h ouvrées."
+      },
+      {
+        "id": "agneau-entier",
+        "slug": "agneau-entier",
+        "name": "Agneau entier",
+        "price": 278,
+        "perKg": 13.9,
+        "weight": "≈ 20 kg brut",
+        "unitSuffix": " indicatif",
+        "shortDescription": "Agneau entier français, découpé selon vos envies pour vos congélations.",
+        "icon": "lamb",
+        "notice": "Prix selon poids exact (13,90 €/kg). Confirmation par mail sous 48h ouvrées."
+      }
+    ],
+    "medaillons": {
+      "stamp": "FR · 35",
+      "types": {
+        "pig": { "label": "Porc", "sub": "Demi cochon", "origin": "Élevage français", "ornament": "leaf", "number": "01" },
+        "beef-leg": { "label": "Bœuf", "sub": "½ Cuisse", "origin": "Race à viande", "ornament": "star", "number": "02" },
+        "beef": { "label": "Bœuf", "sub": "Cuisse entière", "origin": "Race à viande", "ornament": "star", "number": "03" },
+        "lamb": { "label": "Agneau", "sub": "Pièce entière", "origin": "Origine France", "ornament": "wheat", "number": "04" }
+      }
+    }
+  },
+  "equipe": {
+    "membres": [
+      { "name": "Dominique", "role": "Boucher dirigeant · Maître Artisan", "image": "/images/team/dominique.webp" },
+      { "name": "Mélanie", "role": "Directrice générale", "image": "/images/team/melanie.webp" },
+      { "name": "Céline", "role": "Bouchère · Responsable magasin", "image": "/images/team/celine.webp" },
+      { "name": "Christèle", "role": "Vendeuse · Préparatrice", "image": "/images/team/christele.webp" },
+      { "name": "Jimmy", "role": "Boucher", "image": "/images/team/jimmy.webp" },
+      { "name": "Clémence", "role": "Vendeuse · Préparatrice", "image": "/images/team/avatar.webp" },
+      { "name": "Kyllian", "role": "Primeur & Fromager", "image": "/images/team/kyllian.webp" },
+      { "name": "Océane", "role": "Bouchère", "image": "/images/team/oceane.webp" },
+      { "name": "Neven", "role": "Apprenti boucher", "image": "/images/team/neven.webp" },
+      { "name": "Chrystèle Brulé", "role": "Assistante administrative", "image": "/images/team/avatar.webp" }
+    ]
+  },
+  "partenaires": {
+    "categories": [
+      {
+        "id": "viande",
+        "label": "Nos Viandes",
+        "description": "Porc, veau, volaille, bœuf. Race à viande française, partenaires sélectionnés pour la qualité de leurs élevages, dans le respect d'une agriculture raisonnée."
+      },
+      {
+        "id": "fromage",
+        "label": "Fromagerie",
+        "description": "Producteurs d'Ille-et-Vilaine et Loire-Atlantique. Fromages fermiers, affinage au plus près, transparence totale sur l'origine."
+      },
+      {
+        "id": "primeur",
+        "label": "Primeur",
+        "description": "Pour des fruits et légumes français de saison, qui respectent l'environnement."
+      },
+      {
+        "id": "epicerie",
+        "label": "Épicerie & Cave",
+        "description": "Miel, conserves, cidre, bière, vin. Petits producteurs qui composent notre rayon épicerie fine et nos accords cave."
+      }
+    ],
+    "groupes": {
+      "viande": [
+        {
+          "name": "Viandes Clermont",
+          "categoryLabel": "Porc",
+          "description": "Notre partenaire pour le porc. Élevage rigoureux, alimentation maîtrisée, traçabilité de bout en bout.",
+          "image": "/images/partners/clermont.webp"
+        },
+        {
+          "name": "Tendriade",
+          "categoryLabel": "Veau",
+          "description": "Veau français élevé sous la mère, qualité reconnue, savoir-faire d'éleveurs passionnés.",
+          "image": "/images/partners/tendriade.webp"
+        },
+        {
+          "name": "Les Fermes de Janzé",
+          "categoryLabel": "Volaille fermière",
+          "description": "Volailles fermières label rouge, élevées en plein air dans le pays de Janzé.",
+          "location": "Janzé · 35",
+          "image": "/images/partners/janze.webp"
+        },
+        {
+          "name": "Les Fermiers d'Ancenis",
+          "categoryLabel": "Volaille",
+          "description": "Coopérative d'éleveurs de volailles installée à Ancenis, en Loire-Atlantique.",
+          "location": "Ancenis · 44",
+          "image": "/images/partners/ancenis.webp"
+        },
+        {
+          "name": "Viande Bovine Française",
+          "categoryLabel": "Bœuf · Race à viande",
+          "description": "Uniquement de la race à viande, née élevée et abattue dans le grand Ouest. Charolaise, Limousine, Blonde d'Aquitaine, Rouge des Prés. Transparence et traçabilité en magasin.",
+          "image": "/images/partners/vbf.webp"
+        }
+      ],
+      "fromage": [
+        {
+          "name": "La Ferme du Claray",
+          "categoryLabel": "Fromages fermiers",
+          "description": "Fromages affinés à la ferme, lait de vache, sélection de tommes et frais.",
+          "location": "Sion-les-Mines · 44",
+          "image": "/images/partners/claray.webp"
+        },
+        {
+          "name": "Les Chèvres du P'tit Bout",
+          "categoryLabel": "Chèvre",
+          "description": "Crottins, frais aux herbes, bûches affinées. Fromages de chèvre fermiers.",
+          "location": "Saint-Malo-de-Phily · 35",
+          "image": "/images/partners/ptibout.webp"
+        },
+        {
+          "name": "Milky Breizh",
+          "categoryLabel": "Fromages bretons",
+          "description": "Petite fromagerie de Pancé, lait local, recettes maison.",
+          "location": "Pancé · 35",
+          "image": "/images/partners/milky.webp"
+        }
+      ],
+      "primeur": [
+        {
+          "name": "Subery Claude & Fils",
+          "categoryLabel": "Fruits & légumes",
+          "description": "Notre partenaire primeur. Sélection française et locale en priorité, saisons respectées. Pour les envies d'évasion, nous étendons nos approvisionnements tout en maintenant notre engagement local.",
+          "location": "Rennes · 35",
+          "image": "/images/partners/subery.webp"
+        }
+      ],
+      "epicerie": [
+        {
+          "name": "Miellerie des Vallons",
+          "categoryLabel": "Miels artisanaux",
+          "description": "Miels de fleurs, châtaignier, acacia. Apiculteurs des Vallons de Vilaine.",
+          "image": "/images/partners/ruche.webp"
+        },
+        {
+          "name": "SDP Rungis",
+          "categoryLabel": "Conserves & épicerie fine",
+          "description": "Notre approvisionnement Rungis pour les conserves de petits producteurs.",
+          "image": "/images/partners/sdp.webp"
+        },
+        {
+          "name": "Les Vergers de la Ferme",
+          "categoryLabel": "Cidre",
+          "description": "Cidre fermier de Bain-de-Bretagne, pommes du verger, fermentation lente.",
+          "location": "Bain-de-Bretagne · 35",
+          "image": "/images/partners/cidre.webp"
+        },
+        {
+          "name": "Brasserie Draenek",
+          "categoryLabel": "Bière bretonne",
+          "description": "Bières artisanales bretonnes, recettes originales et houblons sélectionnés.",
+          "image": "/images/partners/draenek.webp"
+        },
+        {
+          "name": "Domaine UBY",
+          "categoryLabel": "Vins",
+          "description": "Vins du Sud-Ouest, sélection cave de la maison.",
+          "image": "/images/partners/uby.webp"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "boutique": {
+      "seo": {
+        "title": "Boutique en ligne · Drive · Colis, plateaux & pièces en gros",
+        "description": "Commandez en ligne nos colis de saison (barbeuc', terrasse, soleil, saucisses, plancha), nos plateaux maison apéro & fromage, et nos pièces en gros. Retrait au magasin à Bain de Bretagne, confirmation sous 48h ouvrées.",
+        "keywords": [
+          "drive boucherie Bain de Bretagne",
+          "colis viande Bretagne",
+          "colis barbecue",
+          "plateau apéro charcuterie",
+          "plateau fromage",
+          "pierrade",
+          "demi cochon",
+          "cuisse de bœuf",
+          "agneau entier",
+          "commander viande en ligne 35"
+        ],
+        "image": {
+          "src": "/images/photo-19.webp",
+          "width": 1200,
+          "height": 1100,
+          "alt": "Côte de bœuf, boutique en ligne Les Artisans Modernes"
+        }
+      },
+      "catalogueName": "Catalogue Drive · Les Artisans Modernes",
+      "eyebrow": "Boutique en ligne · Drive",
+      "title": "Commandez en ligne,",
+      "titleAccent": "retirez en magasin",
+      "intro": "Tous nos colis de saison, nos plateaux maison et nos pièces en gros, disponibles à la commande. Confirmation par mail sous 48h ouvrées, retrait au 2 rue de Seine.",
+      "howItWorks": {
+        "eyebrow": "Comment ça marche",
+        "title": "Trois étapes,",
+        "titleAccent": "et c'est prêt",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Vous commandez",
+            "body": "Ajoutez vos colis, plateaux et pièces au panier. Précisez la date de retrait souhaitée à la validation."
+          },
+          {
+            "number": "02",
+            "title": "Nous confirmons",
+            "body": "Confirmation par mail sous 48 heures ouvrées avec le récap, le poids exact et le montant final."
+          },
+          {
+            "number": "03",
+            "title": "Vous retirez",
+            "body": "Retrait au magasin, 2 rue de Seine à Bain de Bretagne. Règlement en magasin à l'enlèvement."
+          }
+        ]
+      },
+      "addLabel": "+ Au panier",
+      "addedLabel": "Ajouté"
+    },
+    "equipe": {
+      "seo": {
+        "title": "L'équipe · Bouchers, charcutiers, primeur, fromager & vendeurs",
+        "description": "L'équipe des Artisans Modernes à Bain de Bretagne. Bouchers, charcutiers, primeur-fromager, vendeurs et apprentis. Passion, savoir-faire, transmission.",
+        "keywords": [
+          "équipe boucherie Bain de Bretagne",
+          "boucher Dominique",
+          "artisan boucher Ille-et-Vilaine",
+          "apprenti boucher 35",
+          "savoir-faire boucherie",
+          "Les Artisans Modernes équipe"
+        ],
+        "image": {
+          "src": "/images/team/bandeau.webp",
+          "width": 1200,
+          "height": 630,
+          "alt": "L'équipe des Artisans Bouchers Modernes au comptoir"
+        }
+      },
+      "breadcrumb": "L'équipe",
+      "eyebrow": "L'équipe",
+      "title": "OUI à la qualité,",
+      "titleAccent": "OUI à la convivialité.",
+      "intro": "L'équipe d'Les Artisans Modernes vous accueille à Bain de Bretagne. Nous réalisons tous nos métiers par passion, et nous sommes fiers de contribuer au « mangeons-mieux ».",
+      "image": {
+        "src": "/images/team/bandeau.webp",
+        "alt": "L'équipe des Artisans Bouchers Modernes au comptoir du magasin de Bain de Bretagne"
+      },
+      "philosophy": {
+        "eyebrow": "Transmettre, former",
+        "title": "Notre métier,",
+        "titleAccent": "notre passion",
+        "paragraphs": [
+          "Dans le but de transmettre notre savoir aux futures générations, les bouchers ont le plaisir de continuer à se former, et de former des apprentis au métier.",
+          "Retrouvez Kyllian, spécialisé sur la partie fromagerie et primeur, ainsi que tous les artisans qui composent notre maison : bouchers, charcutiers, vendeuses, préparatrices et personnel administratif. Chacun met son savoir-faire au service de la qualité.",
+          "Une équipe passionnée par son métier, fidèle au goût du travail bien fait, et attachée à transmettre le savoir-faire de la boucherie traditionnelle aux générations qui viennent."
+        ]
+      },
+      "listTitle": "Liste des membres de l'équipe",
+      "outro": {
+        "eyebrow": "N'attendons plus",
+        "title": "Mangeons-mieux,",
+        "titleAccent": "ensemble",
+        "body": "Une boucherie qui ne forme plus est une boucherie qui s'éteint. Chez Les Artisans Modernes, nous accueillons des apprentis chaque année, parce qu'un beau métier ne se transmet qu'en se penchant sur l'établi ensemble."
+      }
+    },
+    "partenaires": {
+      "seo": {
+        "title": "Nos partenaires · Producteurs locaux & filières françaises",
+        "description": "Découvrez les partenaires de votre artisan boucher à Bain de Bretagne. Race à viande française, fromages fermiers d'Ille-et-Vilaine, primeur de saison, miel, cidre breton, bières et vins.",
+        "keywords": [
+          "producteurs locaux Bain de Bretagne",
+          "viande race à viande française",
+          "Tendriade veau",
+          "Fermes de Janzé volaille",
+          "fromage Ille-et-Vilaine",
+          "cidre Bain de Bretagne",
+          "circuit court boucherie",
+          "Les Artisans Modernes partenaires"
+        ],
+        "image": {
+          "src": "/images/partners/producteurs.webp",
+          "width": 1200,
+          "height": 630,
+          "alt": "Producteurs partenaires des Artisans Bouchers Modernes"
+        }
+      },
+      "breadcrumb": "Partenaires",
+      "listName": "Producteurs partenaires des Artisans Bouchers Modernes",
+      "eyebrow": "Nos partenaires",
+      "title": "Découvrez les partenaires",
+      "titleAccent": "de votre artisan boucher",
+      "intro": "Nous proposons de la viande élevée sur une agriculture raisonnée en gage de qualité : race à viande, d'origine française et au maximum locale, respect des temps de maturation, bouchers formés. Nos fabrications artisanales sont sans colorant, ni conservateur. Découvrez ci-dessous nos partenaires français et essentiellement locaux.",
+      "image": {
+        "src": "/images/partners/producteurs.webp",
+        "alt": "Producteurs partenaires des Artisans Bouchers Modernes : race à viande, fromages fermiers, primeur"
+      },
+      "outro": {
+        "eyebrow": "Sourcing transparent",
+        "title": "Vous voulez en savoir plus",
+        "titleAccent": "sur un produit",
+        "body": "Demandez-nous en magasin : nous vous racontons d'où ça vient, qui l'a produit, et comment c'est fabriqué. La traçabilité, c'est la base."
+      }
+    },
+    "maitreArtisan": {
+      "seo": {
+        "title": "Maître Artisan Boucher · Dominique Drouadaine · Les Artisans Modernes",
+        "description": "Dominique Drouadaine a reçu le titre de Maître Artisan Boucher, décerné par la Chambre de Métiers et de l'Artisanat de Bretagne. Une distinction qui récompense le savoir-faire et l'excellence de notre boucherie artisanale à Bain de Bretagne (35).",
+        "keywords": [
+          "Maître Artisan Boucher",
+          "Maître Artisan Boucher Bain de Bretagne",
+          "Maître Artisan Boucher Bretagne",
+          "Dominique Drouadaine",
+          "meilleure boucherie Bain de Bretagne",
+          "boucherie artisanale Ille-et-Vilaine",
+          "Chambre de Métiers et de l'Artisanat",
+          "titre Maître Artisan"
+        ],
+        "image": {
+          "src": "/images/maitre-artisan-remise.webp",
+          "width": 1600,
+          "height": 900,
+          "alt": "Dominique Drouadaine reçoit le titre de Maître Artisan Boucher à Bain de Bretagne"
+        }
+      },
+      "breadcrumb": "Maître Artisan",
+      "homeLabel": "Accueil",
+      "eyebrow": "Distinction · 26 juin 2026",
+      "title": "Dominique Drouadaine,",
+      "titleAccent": "Maître Artisan Boucher",
+      "intro": "Un titre décerné par la Chambre de Métiers et de l'Artisanat de Bretagne, qui récompense l'engagement, la transmission du savoir-faire et l'excellence d'un métier exercé chaque jour à Bain de Bretagne.",
+      "image": {
+        "src": "/images/maitre-artisan-remise.webp",
+        "alt": "Dominique Drouadaine reçoit le titre de Maître Artisan Boucher des mains de Michel Aoustin, président Bretagne de la Chambre de Métiers et de l'Artisanat de Bretagne"
+      },
+      "recit": {
+        "eyebrow": "Il y a des jours qu'on a envie de marquer",
+        "title": "Un titre mérité,",
+        "titleAccent": "une fierté partagée",
+        "image": {
+          "src": "/images/maitre-artisan.webp",
+          "alt": "Dominique Drouadaine, Maître Artisan Boucher chez Les Artisans Modernes, avec son diplôme remis par la Chambre de Métiers et de l'Artisanat"
+        },
+        "paragraphs": [
+          "Le 26 juin 2026, Dominique Drouadaine a reçu le titre de Maître Artisan Boucher, remis en main propre par Michel Aoustin, président Bretagne de la Chambre de Métiers et de l'Artisanat de Bretagne. Une reconnaissance qui récompense l'engagement, la transmission du savoir-faire et des années d'expérience sur le terrain.",
+          "C'est lui qui dirige notre commerce au quotidien, avec cette rigueur et cette passion qu'on retrouve dans chaque produit qui sort de nos mains. Ceux qui le connaissent le savent : il n'a jamais cherché la lumière. Il a toujours travaillé dans l'ombre, à l'atelier comme derrière le comptoir, à former les uns et les autres, sans jamais demander qu'on en parle.",
+          "Ce titre récompense l'engagement, la transmission du savoir-faire, et des années à se lever tôt sans jamais en faire un sujet. Et derrière lui, il y a aussi celle qui l'a toujours soutenu, à l'atelier comme à la maison."
+        ],
+        "highlight": "Ce titre, c'est un peu le sien, mais c'est aussi celui de toute l'équipe qui avance avec lui. Bravo, et merci de nous transmettre tout ça chaque jour.",
+        "quote": "« Tu aimes travailler dans l'ombre, mais aujourd'hui ce titre te récompense, et toute l'équipe te félicite. »"
+      },
+      "definition": {
+        "eyebrow": "La distinction",
+        "title": "Qu'est-ce qu'un",
+        "titleAccent": "Maître Artisan",
+        "intro": "Le titre de Maître Artisan est la plus haute distinction décernée par les Chambres de Métiers et de l'Artisanat. Il reconnaît un professionnel confirmé, pour son haut niveau de qualification, son expérience et son engagement dans la transmission de son métier.",
+        "criteres": [
+          {
+            "title": "Le savoir-faire",
+            "body": "Une maîtrise complète du métier de boucher : sélection des bêtes, maturation, découpe et préparations, dans le respect de la tradition."
+          },
+          {
+            "title": "L'expérience",
+            "body": "Des années passées à l'atelier et derrière le comptoir, à exercer un métier exigeant chaque jour, au service de la qualité."
+          },
+          {
+            "title": "La transmission",
+            "body": "Former des apprentis et transmettre le geste juste aux générations qui viennent : un engagement au cœur du titre de Maître Artisan."
+          }
+        ]
+      },
+      "photosSection": {
+        "title": "La maison",
+        "titleAccent": "au quotidien",
+        "photos": [
+          {
+            "src": "/images/dominique-comptoir.webp",
+            "alt": "Dominique Drouadaine, Maître Artisan Boucher, au comptoir de la boucherie à Bain de Bretagne",
+            "position": "object-[70%_center]"
+          },
+          {
+            "src": "/images/dominique-cave.webp",
+            "alt": "Sélection de la cave, accords avec la côte de bœuf",
+            "position": "object-center"
+          },
+          {
+            "src": "/images/dominique-charcuterie.webp",
+            "alt": "Charcuterie artisanale et saucissons secs de la maison",
+            "position": "object-center"
+          },
+          {
+            "src": "/images/dominique-brochettes.webp",
+            "alt": "Dominique Drouadaine et ses brochettes maison, Maître Artisan Boucher",
+            "position": "object-right"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Le savoir-faire d'un Maître Artisan,",
+        "titleAccent": "dans votre assiette",
+        "body": "Retrouvez nos viandes, notre charcuterie maison et nos plateaux à Bain de Bretagne, ou commandez en ligne avec le drive.",
+        "primary": { "label": "Commander en ligne", "href": "/boutique" },
+        "secondary": { "label": "Découvrir l'équipe", "href": "/equipe" }
+      }
+    },
+    "visiteVirtuelle": {
+      "seo": {
+        "title": "Visite virtuelle 360° · Le magasin en immersion",
+        "description": "Visitez en 360° le magasin des Artisans Modernes à Bain de Bretagne : façade, comptoir boucherie, entrée et primeur. 4 panoramas immersifs, comme si vous y étiez.",
+        "keywords": [
+          "visite virtuelle 360 boucherie",
+          "tour 360 magasin Bain de Bretagne",
+          "visite immersive Les Artisans Modernes"
+        ],
+        "image": {
+          "src": "/images/facade.webp",
+          "width": 1200,
+          "height": 630,
+          "alt": "Façade du magasin Les Artisans Modernes, Bain de Bretagne"
+        }
+      },
+      "breadcrumb": "Visite virtuelle 360°",
+      "eyebrow": "Visite virtuelle 360°",
+      "title": "Le magasin",
+      "titleAccent": "comme si vous y étiez",
+      "intro": "Quatre vues à 360° pour vous balader dans la boucherie : façade, comptoir, entrée et rayon primeur. Cliquez et faites tourner la vue avec votre souris ou votre doigt.",
+      "tourUrl": "https://www.lesartisansmodernes.fr/360%20lesartisansmodernes/arisanmoderne.html",
+      "playerTitle": "Lecteur de la visite virtuelle 360°",
+      "frameTitle": "Visite virtuelle 360° · Les Artisans Modernes Bain de Bretagne",
+      "vues": [
+        { "title": "Extérieur", "body": "La façade et le parking." },
+        { "title": "Boucherie", "body": "Le comptoir et l'étal du jour." },
+        { "title": "Entrée", "body": "L'accueil et l'épicerie fine." },
+        { "title": "Primeur", "body": "Le rayon fruits & légumes." }
+      ],
+      "outro": {
+        "eyebrow": "Envie de venir en vrai ?",
+        "title": "Le 360° c'est bien,",
+        "titleAccent": "le comptoir c'est mieux",
+        "primary": { "label": "Voir horaires & accès", "href": "/#infos" },
+        "secondary": { "label": "Commander en ligne", "href": "/boutique" }
+      }
+    },
+    "panier": {
+      "seo": {
+        "title": "Mon panier",
+        "description": "Récapitulatif de votre panier. Finalisez votre commande pour retrait en magasin à Bain de Bretagne."
+      },
+      "eyebrow": "Votre commande",
+      "title": "Mon panier.",
+      "intro": "Vérifiez votre sélection, ajoutez vos coordonnées et la date de retrait souhaitée. Vous recevrez une confirmation par email sous 48h ouvrées.",
+      "listTitle": "Articles du panier et formulaire de commande",
+      "loading": "Chargement de votre panier…",
+      "empty": {
+        "title": "Votre panier est vide",
+        "body": "Découvrez nos colis de saison, plateaux maison et pièces en gros : préparé à la commande avec confirmation par mail sous 48h.",
+        "cta": { "label": "Voir la boutique", "href": "/boutique" }
+      },
+      "clearLabel": "← Vider le panier",
+      "summaryTitle": "Récapitulatif",
+      "subtotalLabel": "Sous-total estimé",
+      "priceNoticeBefore": "Les prix s'entendent ",
+      "priceNoticeStrong": "indicatifs",
+      "priceNoticeAfter": " : certains produits sont vendus au poids, le total final vous sera confirmé par mail sous 48h ouvrées.",
+      "fields": {
+        "name": "Nom complet",
+        "email": "Email",
+        "phone": "Téléphone",
+        "pickupDate": "Date de retrait souhaitée",
+        "pickupHint": "Sous 48h ouvrées · Mar-Sam selon horaires.",
+        "message": "Message (optionnel)",
+        "messagePlaceholder": "Précisions, allergies, découpes spécifiques…"
+      },
+      "submitLabel": "Envoyer ma commande",
+      "submittingLabel": "Préparation…",
+      "mailNoticeBefore": "Votre messagerie va s'ouvrir avec le récap pré-rempli. Il ne vous reste qu'à envoyer.",
+      "mailNoticeAfter": "Vous pouvez aussi nous appeler au "
+    }
+  }
+}

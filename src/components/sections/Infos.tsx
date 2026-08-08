@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { business } from "@/lib/business";
+import { content } from "@/lib/content";
+
+const section = content.infos;
 
 export function Infos() {
   const todayIdx = (new Date().getDay() + 6) % 7; // 0 = Monday
@@ -13,33 +16,32 @@ export function Infos() {
           <div className="lg:col-span-5">
             <p className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
-              Infos pratiques
+              {section.eyebrow}
             </p>
             <h2 id="infos-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
-              Venir nous voir
+              {section.title}
               <br />
               <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">
-                à Bain de Bretagne
+                {section.titleAccent}
               </em>
               .
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed">
-              Notre magasin se trouve au cœur de la ZA Château Gaillard, parking gratuit devant la porte.
-              N&apos;hésitez pas à passer ou à appeler, nous sommes là pour conseiller, conseiller, et conseiller encore.
+              {section.intro}
             </p>
 
             <dl className="mt-10 space-y-6">
-              <Fact label="Adresse">
+              <Fact label={section.addressLabel}>
                 {business.address.street}
                 <br />
                 {business.address.postalCode} {business.address.city}
               </Fact>
-              <Fact label="Téléphone">
+              <Fact label={section.phoneLabel}>
                 <a href={`tel:${business.phoneIntl}`} className="hover:text-[color:var(--color-bordeaux)] transition-colors">
                   {business.phone}
                 </a>
               </Fact>
-              <Fact label="Email">
+              <Fact label={section.emailLabel}>
                 <a href={`mailto:${business.email}`} className="hover:text-[color:var(--color-bordeaux)] transition-colors">
                   {business.email}
                 </a>
@@ -52,17 +54,17 @@ export function Infos() {
                   `${business.address.street}, ${business.address.postalCode} ${business.address.city}`
                 )}`}
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Itinéraire Google Maps
+                {section.mapCta.label}
                 <span aria-hidden>→</span>
               </a>
               <a
-                href="/boutique"
+                href={section.shopCta.href}
                 className="btn-ghost text-[color:var(--color-ink)]"
               >
-                Voir la boutique
+                {section.shopCta.label}
               </a>
             </div>
           </div>
@@ -71,15 +73,15 @@ export function Infos() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="card p-7 md:p-9">
               <div className="flex items-center justify-between mb-5">
-                <h3 className="font-display text-2xl md:text-3xl">Horaires</h3>
+                <h3 className="font-display text-2xl md:text-3xl">{section.hoursTitle}</h3>
                 <span className="text-xs uppercase tracking-[0.18em] text-[color:var(--color-stone-soft)]">
-                  Heure locale (FR)
+                  {section.hoursNote}
                 </span>
               </div>
               <ul className="divide-y divide-[color:var(--color-line)]">
                 {business.hours.map((h, i) => (
                   <li
-                    key={h.day}
+                    key={h.label}
                     className={`flex items-center justify-between py-3.5 text-[1.02rem] ${
                       i === todayIdx
                         ? "font-medium text-[color:var(--color-ink)]"
@@ -92,10 +94,10 @@ export function Infos() {
                       {i === todayIdx && (
                         <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[color:var(--color-bordeaux)] animate-pulse" />
                       )}
-                      {h.day}
+                      {h.label}
                       {i === todayIdx && (
                         <span className="text-xs uppercase tracking-[0.16em] text-[color:var(--color-bordeaux)]">
-                          aujourd&apos;hui
+                          {section.todayLabel}
                         </span>
                       )}
                     </span>
@@ -106,12 +108,12 @@ export function Infos() {
             </div>
 
             <Link
-              href="/visite-virtuelle"
+              href={section.visite.href}
               className="card overflow-hidden relative aspect-[16/10] block group"
             >
               <Image
-                src="/images/facade.webp"
-                alt="Façade du magasin Les Artisans Modernes, Bain de Bretagne"
+                src={section.visite.image.src}
+                alt={section.visite.image.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -121,7 +123,7 @@ export function Infos() {
               <div className="absolute top-5 left-5">
                 <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[color:var(--color-cream)]/95 backdrop-blur-sm text-[0.7rem] tracking-[0.18em] uppercase font-semibold text-[color:var(--color-bordeaux)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--color-bordeaux)] animate-pulse" />
-                  Visite virtuelle 360°
+                  {section.visite.badge}
                 </span>
               </div>
 
@@ -139,13 +141,13 @@ export function Infos() {
 
               <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-end justify-between gap-3 text-[color:var(--color-cream)]">
                 <div>
-                  <div className="text-xs uppercase tracking-[0.18em] opacity-80">Notre magasin</div>
+                  <div className="text-xs uppercase tracking-[0.18em] opacity-80">{section.visite.kicker}</div>
                   <div className="font-display text-2xl md:text-3xl">
-                    {business.address.street.split(",")[0]}
+                    {business.address.shortStreet}
                   </div>
                 </div>
                 <span className="text-xs uppercase tracking-[0.18em] underline underline-offset-4 group-hover:text-[color:var(--color-gold)] transition-colors">
-                  Visiter en 360° →
+                  {section.visite.label}
                 </span>
               </div>
             </Link>

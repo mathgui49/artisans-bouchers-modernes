@@ -11,6 +11,8 @@ import { SignatureBand } from "@/components/sections/SignatureBand";
 import { Producteurs } from "@/components/sections/Producteurs";
 import { Infos } from "@/components/sections/Infos";
 import { jsonLdScript, SITE_URL } from "@/lib/seo";
+import { business } from "@/lib/business";
+import { content } from "@/lib/content";
 
 export default function Home() {
   const homepageSchema = {
@@ -18,13 +20,12 @@ export default function Home() {
     "@type": "WebPage",
     "@id": `${SITE_URL}/#webpage`,
     url: SITE_URL,
-    name: "Accueil · Les Artisans Modernes",
+    name: `Accueil · ${business.name}`,
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#business` },
-    primaryImageOfPage: `${SITE_URL}/images/plateau-charcuterie.webp`,
+    primaryImageOfPage: `${SITE_URL}${content.seo.images[0].src}`,
     inLanguage: "fr-FR",
-    description:
-      "Boucherie-charcuterie artisanale, fromagerie, primeur, épicerie & cave à Bain de Bretagne. Drive en ligne, plateaux maison, viande française race à viande, partenaires locaux.",
+    description: content.seo.homeDescription,
   };
 
   return (

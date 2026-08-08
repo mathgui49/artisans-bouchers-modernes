@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { content } from "@/lib/content";
+
+const section = content.producteurs;
 
 export function Producteurs() {
   return (
@@ -9,36 +12,25 @@ export function Producteurs() {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <p className="eyebrow mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
-              Producteurs locaux
+              {section.eyebrow}
             </p>
             <h2 id="producteurs-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
-              Nos
-              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> partenaires</em>,
-              vos voisins.
+              {section.title}{" "}
+              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">{section.titleAccent}</em>{section.titleEnd}
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed max-w-xl text-justify hyphens-auto">
-              Élevage, maraîchage, fromages, conserves : nous travaillons avec des producteurs
-              de Bain de Bretagne et d&apos;Ille-et-Vilaine que nous connaissons par leur prénom.
-              Chaque produit a une histoire, chaque histoire a un nom, et c&apos;est nous qui
-              faisons le lien jusqu&apos;à votre table.
+              {section.intro}
             </p>
             <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 text-[color:var(--color-ink)] font-medium">
-              {[
-                "Viande race à viande",
-                "Origine France",
-                "Saison respectée",
-                "Lab indépendant",
-                "Sans additifs",
-                "Découpes minute",
-              ].map((tag) => (
+              {section.points.map((tag) => (
                 <li key={tag} className="flex items-center gap-2.5">
                   <span className="h-2 w-2 rotate-45 bg-[color:var(--color-bordeaux)]" aria-hidden />
                   <span>{tag}</span>
                 </li>
               ))}
             </ul>
-            <Link href="/partenaires" className="mt-8 inline-flex items-center gap-2 text-[color:var(--color-bordeaux)] font-medium hover:underline underline-offset-4">
-              Découvrir tous nos partenaires
+            <Link href={section.cta.href} className="mt-8 inline-flex items-center gap-2 text-[color:var(--color-bordeaux)] font-medium hover:underline underline-offset-4">
+              {section.cta.label}
               <span aria-hidden>→</span>
             </Link>
           </div>
@@ -47,8 +39,8 @@ export function Producteurs() {
             <div className="grid grid-cols-2 gap-3 md:gap-5">
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden mt-12">
                 <Image
-                  src="/images/photo-22.webp"
-                  alt="Étal primeur : fruits et légumes de saison de producteurs locaux"
+                  src={section.images[0].src}
+                  alt={section.images[0].alt}
                   fill
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
@@ -56,8 +48,8 @@ export function Producteurs() {
               </div>
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden">
                 <Image
-                  src="/images/fromage-comte.webp"
-                  alt="Fromages affinés sélectionnés par la maison"
+                  src={section.images[1].src}
+                  alt={section.images[1].alt}
                   fill
                   sizes="(max-width: 1024px) 50vw, 33vw"
                   className="object-cover"

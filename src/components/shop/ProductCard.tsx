@@ -4,7 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/products";
+import { content } from "@/lib/content";
 import { ProductIcon } from "@/components/shop/ProductIcon";
+
+const labels = content.pages.boutique;
 
 function formatPrice(n: number) {
   return n
@@ -106,10 +109,10 @@ export function ProductCard({ product }: { product: Product }) {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M20 6 9 17l-5-5" />
                 </svg>
-                Ajouté
+                {labels.addedLabel}
               </>
             ) : (
-              <>+ Au panier</>
+              <>{labels.addLabel}</>
             )}
           </button>
         </div>

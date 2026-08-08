@@ -1,8 +1,11 @@
+import type { CSSProperties } from "react";
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { business } from "@/lib/business";
+import { brandVars, content } from "@/lib/content";
 import { CartProvider } from "@/lib/cart";
+import { PreviewBridge } from "@/components/PreviewBridge";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -17,43 +20,26 @@ const inter = Inter({
   display: "swap",
 });
 
+const seo = content.seo;
 const SITE_URL = `https://${business.domain}`;
-const TITLE = `${business.name} · Boucherie · Charcuterie · Fromagerie · Primeur · ${business.address.city}`;
-const DESCRIPTION =
-  "Boucherie-charcuterie artisanale Maître Artisan Boucher à Bain de Bretagne (35). Viande française race à viande, charcuterie maison sans colorant ni conservateur, fromagerie et primeur locaux, drive et plateaux maison. Mardi au samedi.";
+const TITLE = seo.title;
+const DESCRIPTION = seo.description;
+const OG_IMAGES = seo.images.map((img) => ({
+  url: img.src,
+  width: img.width,
+  height: img.height,
+  alt: img.alt,
+}));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE,
-    template: `%s · ${business.name}`,
+    template: seo.titleTemplate,
   },
   description: DESCRIPTION,
   applicationName: business.name,
-  keywords: [
-    "boucherie Bain de Bretagne",
-    "meilleure boucherie Bain de Bretagne",
-    "meilleure boucherie Ille-et-Vilaine",
-    "Maître Artisan Boucher",
-    "Maître Artisan Boucher Bretagne",
-    "boucher artisan Bain de Bretagne",
-    "charcuterie Bain de Bretagne",
-    "charcuterie maison",
-    "fromagerie Bain de Bretagne",
-    "fromage producteur local",
-    "primeur Bain de Bretagne",
-    "viande française race à viande",
-    "colis de viande Bain de Bretagne",
-    "drive boucherie 35",
-    "plateau charcuterie",
-    "plateau fromage Ille-et-Vilaine",
-    "épicerie fine Bain de Bretagne",
-    "cave bière vin",
-    "Ille-et-Vilaine",
-    "Bretagne",
-    "35470",
-    "Les Artisans Modernes",
-  ],
+  keywords: [...seo.keywords],
   authors: [{ name: business.name, url: SITE_URL }],
   creator: business.name,
   publisher: business.name,
@@ -68,33 +54,14 @@ export const metadata: Metadata = {
     siteName: business.name,
     title: TITLE,
     description: DESCRIPTION,
-    images: [
-      {
-        url: "/images/plateau-charcuterie.webp",
-        width: 1200,
-        height: 1100,
-        alt: `${business.name}, plateau charcuterie maison`,
-      },
-      {
-        url: "/images/maitre-artisan-remise.webp",
-        width: 1600,
-        height: 900,
-        alt: `Dominique Drouadaine reçoit le titre de Maître Artisan Boucher chez ${business.name} à ${business.address.city}`,
-      },
-      {
-        url: "/images/facade.webp",
-        width: 825,
-        height: 578,
-        alt: `${business.name}, façade du magasin à ${business.address.city}`,
-      },
-    ],
+    images: OG_IMAGES,
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/plateau-charcuterie.webp"],
-    creator: "@artisans_bouchers_modernes",
+    images: [seo.images[0].src],
+    creator: seo.twitterCreator,
   },
   robots: {
     index: true,
@@ -191,7 +158,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       opens: s.open,
       closes: s.close,
     })),
-    sameAs: [business.socials.facebook, business.socials.instagram, business.socials.youtube],
+    sameAs: business.socials.map((s) => s.href),
     award: `${business.maitreArtisan.title} (${business.maitreArtisan.awardedBy}, ${business.maitreArtisan.year})`,
     founder: {
       "@type": "Person",
@@ -245,6 +212,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="fr-FR"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      style={brandVars() as CSSProperties}
     >
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -264,6 +232,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <CartProvider>{children}</CartProvider>
+        <PreviewBridge />
       </body>
     </html>
   );

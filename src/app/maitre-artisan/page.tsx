@@ -3,28 +3,21 @@ import Link from "next/link";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { business } from "@/lib/business";
+import { content } from "@/lib/content";
 import { breadcrumbsJsonLd, jsonLdScript, SITE_URL } from "@/lib/seo";
 import type { Metadata } from "next";
 
 const ma = business.maitreArtisan;
+const page = content.pages.maitreArtisan;
 
-const TITLE = `${ma.title} · ${ma.name} · ${business.name}`;
-const DESCRIPTION = `${ma.name} a reçu le titre de ${ma.title}, décerné par la ${ma.awardedBy}. Une distinction qui récompense le savoir-faire et l'excellence de notre boucherie artisanale à ${business.address.city} (35).`;
+const TITLE = page.seo.title;
+const DESCRIPTION = page.seo.description;
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: "/maitre-artisan" },
-  keywords: [
-    "Maître Artisan Boucher",
-    "Maître Artisan Boucher Bain de Bretagne",
-    "Maître Artisan Boucher Bretagne",
-    "Dominique Drouadaine",
-    "meilleure boucherie Bain de Bretagne",
-    "boucherie artisanale Ille-et-Vilaine",
-    "Chambre de Métiers et de l'Artisanat",
-    "titre Maître Artisan",
-  ],
+  keywords: [...page.seo.keywords],
   openGraph: {
     type: "article",
     title: TITLE,
@@ -32,10 +25,10 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/maitre-artisan`,
     images: [
       {
-        url: "/images/maitre-artisan-remise.webp",
-        width: 1600,
-        height: 900,
-        alt: `${ma.name} reçoit le titre de ${ma.title} à ${business.address.city}`,
+        url: page.seo.image.src,
+        width: page.seo.image.width,
+        height: page.seo.image.height,
+        alt: page.seo.image.alt,
       },
     ],
   },
@@ -43,21 +36,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/images/maitre-artisan-remise.webp"],
+    images: [page.seo.image.src],
   },
 };
 
-const photos = [
-  { src: "/images/dominique-comptoir.webp", alt: `${ma.name}, ${ma.title}, au comptoir de la boucherie à ${business.address.city}`, pos: "object-[70%_center]" },
-  { src: "/images/dominique-cave.webp", alt: "Sélection de la cave, accords avec la côte de bœuf", pos: "object-center" },
-  { src: "/images/dominique-charcuterie.webp", alt: "Charcuterie artisanale et saucissons secs de la maison", pos: "object-center" },
-  { src: "/images/dominique-brochettes.webp", alt: `${ma.name} et ses brochettes maison, ${ma.title}`, pos: "object-right" },
-];
+const photos = page.photosSection.photos;
 
 export default function MaitreArtisanPage() {
   const breadcrumbs = breadcrumbsJsonLd([
     { name: "Accueil", path: "/" },
-    { name: "Maître Artisan", path: "/maitre-artisan" },
+    { name: page.breadcrumb, path: "/maitre-artisan" },
   ]);
 
   const personSchema = {
@@ -66,7 +54,7 @@ export default function MaitreArtisanPage() {
     name: ma.name,
     jobTitle: ma.title,
     worksFor: { "@id": `${SITE_URL}/#business` },
-    image: `${SITE_URL}/images/maitre-artisan.webp`,
+    image: `${SITE_URL}${page.recit.image.src}`,
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       name: ma.title,
@@ -84,7 +72,7 @@ export default function MaitreArtisanPage() {
     "@type": "NewsArticle",
     headline: `${ma.name}, ${ma.title}`,
     datePublished: ma.date,
-    image: [`${SITE_URL}/images/maitre-artisan-remise.webp`, `${SITE_URL}/images/maitre-artisan.webp`],
+    image: [`${SITE_URL}${page.image.src}`, `${SITE_URL}${page.recit.image.src}`],
     author: { "@type": "Organization", name: business.legalName, url: SITE_URL },
     publisher: { "@id": `${SITE_URL}/#business` },
     mainEntityOfPage: `${SITE_URL}/maitre-artisan`,
@@ -102,8 +90,8 @@ export default function MaitreArtisanPage() {
         {/* Hero */}
         <section className="relative isolate overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-cream)]">
           <Image
-            src="/images/maitre-artisan-remise.webp"
-            alt={`${ma.name} reçoit le titre de ${ma.title} des mains de Michel Aoustin, président Bretagne de la ${ma.awardedBy}`}
+            src={page.image.src}
+            alt={page.image.alt}
             fill
             priority
             sizes="100vw"
@@ -112,27 +100,25 @@ export default function MaitreArtisanPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--color-ink)]/70 via-[color:var(--color-ink)]/55 to-[color:var(--color-ink)]/95" />
           <div className="container-x relative pt-28 md:pt-40 pb-24 md:pb-32">
             <nav aria-label="Fil d'Ariane" className="mb-6 text-sm text-[color:var(--color-cream)]/60">
-              <Link href="/" className="hover:text-[color:var(--color-gold)]">Accueil</Link>
+              <Link href="/" className="hover:text-[color:var(--color-gold)]">{page.homeLabel}</Link>
               <span className="mx-2">/</span>
-              <span className="text-[color:var(--color-cream)]/90">Maître Artisan</span>
+              <span className="text-[color:var(--color-cream)]/90">{page.breadcrumb}</span>
             </nav>
             <p className="flex items-center gap-3 mb-5">
               <span className="flag-bar"><span /><span /><span /></span>
               <span className="text-[0.78rem] tracking-[0.2em] uppercase font-semibold text-[color:var(--color-gold)]">
-                Distinction · 26 juin {ma.year}
+                {page.eyebrow}
               </span>
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.03] max-w-4xl">
-              {ma.name},
+              {page.title}
               <br />
               <em className="not-italic font-normal text-[color:var(--color-gold)]">
-                {ma.title}
+                {page.titleAccent}
               </em>.
             </h1>
             <p className="mt-7 text-lg md:text-xl text-[color:var(--color-cream)]/85 max-w-2xl leading-relaxed text-justify hyphens-auto">
-              Un titre décerné par la {ma.awardedBy}, qui récompense l&apos;engagement, la
-              transmission du savoir-faire et l&apos;excellence d&apos;un métier exercé chaque
-              jour à {business.address.city}.
+              {page.intro}
             </p>
           </div>
         </section>
@@ -143,8 +129,8 @@ export default function MaitreArtisanPage() {
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/5] rounded-[var(--radius-lg)] overflow-hidden bg-[color:var(--color-cream-deep)] lg:sticky lg:top-28">
                 <Image
-                  src="/images/maitre-artisan.webp"
-                  alt={`${ma.name}, ${ma.title} chez ${business.name}, avec son diplôme remis par la Chambre de Métiers et de l'Artisanat`}
+                  src={page.recit.image.src}
+                  alt={page.recit.image.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-top"
@@ -154,46 +140,26 @@ export default function MaitreArtisanPage() {
             <div className="lg:col-span-7">
               <p className="eyebrow mb-4">
                 <span className="flag-bar"><span /><span /><span /></span>
-                Il y a des jours qu&apos;on a envie de marquer
+                {page.recit.eyebrow}
               </p>
               <h2 id="recit" className="font-display text-3xl md:text-5xl tracking-tight">
-                Un titre mérité,
+                {page.recit.title}
                 <br />
                 <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">
-                  une fierté partagée
+                  {page.recit.titleAccent}
                 </em>.
               </h2>
               <div className="mt-7 space-y-5 text-[1.05rem] text-[color:var(--color-stone)] leading-[1.8] text-justify hyphens-auto">
-                <p>
-                  Le 26 juin {ma.year}, {ma.name} a reçu le titre de {ma.title}, remis en main
-                  propre par Michel Aoustin, président Bretagne de la {ma.awardedBy}. Une
-                  reconnaissance qui récompense l&apos;engagement, la transmission du
-                  savoir-faire et des années d&apos;expérience sur le terrain.
-                </p>
-                <p>
-                  C&apos;est lui qui dirige notre commerce au quotidien, avec cette rigueur et
-                  cette passion qu&apos;on retrouve dans chaque produit qui sort de nos mains.
-                  Ceux qui le connaissent le savent&nbsp;: il n&apos;a jamais cherché la
-                  lumière. Il a toujours travaillé dans l&apos;ombre, à l&apos;atelier comme
-                  derrière le comptoir, à former les uns et les autres, sans jamais demander
-                  qu&apos;on en parle.
-                </p>
-                <p>
-                  Ce titre récompense l&apos;engagement, la transmission du savoir-faire, et
-                  des années à se lever tôt sans jamais en faire un sujet. Et derrière lui, il
-                  y a aussi celle qui l&apos;a toujours soutenu, à l&apos;atelier comme à la
-                  maison.
-                </p>
+                {page.recit.paragraphs.map((paragraphe) => (
+                  <p key={paragraphe}>{paragraphe}</p>
+                ))}
                 <p className="text-[color:var(--color-ink)] font-medium">
-                  Ce titre, c&apos;est un peu le sien, mais c&apos;est aussi celui de toute
-                  l&apos;équipe qui avance avec lui. Bravo, et merci de nous transmettre tout
-                  ça chaque jour.
+                  {page.recit.highlight}
                 </p>
               </div>
 
               <blockquote className="mt-8 pl-5 border-l-2 border-[color:var(--color-gold)] font-display text-xl md:text-2xl italic text-[color:var(--color-ink)]">
-                « Tu aimes travailler dans l&apos;ombre, mais aujourd&apos;hui ce titre te
-                récompense, et toute l&apos;équipe te félicite. »
+                {page.recit.quote}
               </blockquote>
             </div>
           </div>
@@ -205,23 +171,20 @@ export default function MaitreArtisanPage() {
             <div className="max-w-3xl mb-12">
               <p className="eyebrow mb-4">
                 <span className="flag-bar"><span /><span /><span /></span>
-                La distinction
+                {page.definition.eyebrow}
               </p>
               <h2 id="definition" className="font-display text-3xl md:text-5xl tracking-tight">
-                Qu&apos;est-ce qu&apos;un
-                <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> Maître Artisan&nbsp;</em>?
+                {page.definition.title}
+                <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> {page.definition.titleAccent}&nbsp;</em>?
               </h2>
               <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify hyphens-auto">
-                Le titre de Maître Artisan est la plus haute distinction décernée par les
-                Chambres de Métiers et de l&apos;Artisanat. Il reconnaît un professionnel
-                confirmé, pour son haut niveau de qualification, son expérience et son
-                engagement dans la transmission de son métier.
+                {page.definition.intro}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Critere title="Le savoir-faire" body="Une maîtrise complète du métier de boucher : sélection des bêtes, maturation, découpe et préparations, dans le respect de la tradition." />
-              <Critere title="L'expérience" body="Des années passées à l'atelier et derrière le comptoir, à exercer un métier exigeant chaque jour, au service de la qualité." />
-              <Critere title="La transmission" body="Former des apprentis et transmettre le geste juste aux générations qui viennent : un engagement au cœur du titre de Maître Artisan." />
+              {page.definition.criteres.map((c) => (
+                <Critere key={c.title} title={c.title} body={c.body} />
+              ))}
             </div>
           </div>
         </section>
@@ -230,8 +193,8 @@ export default function MaitreArtisanPage() {
         <section className="py-20 md:py-28" aria-labelledby="photos">
           <div className="container-x">
             <h2 id="photos" className="font-display text-3xl md:text-5xl tracking-tight mb-12">
-              La maison
-              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> au quotidien</em>.
+              {page.photosSection.title}{" "}
+              <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">{page.photosSection.titleAccent}</em>.
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
               {photos.map((p) => (
@@ -241,7 +204,7 @@ export default function MaitreArtisanPage() {
                     alt={p.alt}
                     fill
                     sizes="(max-width: 1024px) 50vw, 25vw"
-                    className={`object-cover ${p.pos}`}
+                    className={`object-cover ${p.position}`}
                   />
                 </div>
               ))}
@@ -253,20 +216,19 @@ export default function MaitreArtisanPage() {
         <section className="py-20 md:py-28 bg-[color:var(--color-ink)] text-[color:var(--color-cream)]" aria-labelledby="cta">
           <div className="container-x text-center max-w-3xl mx-auto">
             <h2 id="cta" className="font-display text-3xl md:text-5xl tracking-tight">
-              Le savoir-faire d&apos;un Maître Artisan,
-              <em className="not-italic font-normal text-[color:var(--color-gold)]"> dans votre assiette</em>.
+              {page.cta.title}{" "}
+              <em className="not-italic font-normal text-[color:var(--color-gold)]">{page.cta.titleAccent}</em>.
             </h2>
             <p className="mt-6 text-lg text-[color:var(--color-cream)]/80 leading-relaxed">
-              Retrouvez nos viandes, notre charcuterie maison et nos plateaux à {business.address.city},
-              ou commandez en ligne avec le drive.
+              {page.cta.body}
             </p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/boutique" className="btn-primary !bg-[color:var(--color-gold)] !text-[color:var(--color-ink)] hover:!bg-[color:var(--color-cream)]">
-                Commander en ligne
+              <Link href={page.cta.primary.href} className="btn-primary !bg-[color:var(--color-gold)] !text-[color:var(--color-ink)] hover:!bg-[color:var(--color-cream)]">
+                {page.cta.primary.label}
                 <span aria-hidden>→</span>
               </Link>
-              <Link href="/equipe" className="btn-ghost text-[color:var(--color-cream)] hover:!bg-[color:var(--color-cream)]/10">
-                Découvrir l&apos;équipe
+              <Link href={page.cta.secondary.href} className="btn-ghost text-[color:var(--color-cream)] hover:!bg-[color:var(--color-cream)]/10">
+                {page.cta.secondary.label}
               </Link>
             </div>
           </div>

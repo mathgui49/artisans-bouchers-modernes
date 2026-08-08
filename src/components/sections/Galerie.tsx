@@ -1,31 +1,7 @@
 import Image from "next/image";
+import { content } from "@/lib/content";
 
-const photos = [
-  { src: "/images/roti-beurre-aux-herbes.webp", alt: "Rôti de bœuf farci au beurre d'herbes (fait maison)", aspect: "tall" },
-  { src: "/images/photo-19.webp", alt: "Côte de bœuf décorée", aspect: "tall" },
-  { src: "/images/photo-14.webp", alt: "Carpaccio revisité, recette signature", aspect: "tall" },
-  { src: "/images/decoupe-cote-boeuf.webp", alt: "Découpe d'une côte de bœuf maturée par notre Maître Artisan Boucher", aspect: "tall" },
-  { src: "/images/photo-18.webp", alt: "Tartare et accompagnement maison", aspect: "wide" },
-  { src: "/images/photo-17.webp", alt: "Plat cuisiné maison (tajine de saison)", aspect: "wide" },
-  { src: "/images/photo-13.webp", alt: "Plateau apéro charcuterie et fromage", aspect: "tall" },
-  { src: "/images/plateau-charcuterie.webp", alt: "Plateau charcuterie maison Les Artisans Modernes", aspect: "tall" },
-  { src: "/images/photo-16.webp", alt: "Plateau fromages, sélection de la maison", aspect: "wide" },
-  { src: "/images/photo-15.webp", alt: "Plateau fromage 100% local", aspect: "wide" },
-  { src: "/images/fromage-comte.webp", alt: "Comté affiné et fromage de montagne", aspect: "wide" },
-  { src: "/images/photo-20.webp", alt: "Spécialité boucherie", aspect: "wide" },
-  { src: "/images/photo-21.webp", alt: "Pièce du boucher", aspect: "wide" },
-  { src: "/images/photo-23.webp", alt: "Préparation maison", aspect: "wide" },
-  { src: "/images/photo-24.webp", alt: "Spécialité du moment", aspect: "wide" },
-  { src: "/images/photo-25.webp", alt: "Sélection épicerie & cave", aspect: "wide" },
-  { src: "/images/photo-26.webp", alt: "Création de l'équipe Artisans Modernes", aspect: "wide" },
-  { src: "/images/photo-27.webp", alt: "Charcuterie artisanale", aspect: "wide" },
-  { src: "/images/photo-22.webp", alt: "Étal primeur, fruits et légumes de saison", aspect: "wide" },
-  { src: "/images/dominique-comptoir.webp", alt: "Dominique Drouadaine, Maître Artisan Boucher, au comptoir de la boucherie", aspect: "wide" },
-  { src: "/images/dominique-charcuterie.webp", alt: "Saucissons secs et charcuterie artisanale de la maison", aspect: "tall" },
-  { src: "/images/dominique-epicerie.webp", alt: "Rayon épicerie fine, apéro et produits du moment", aspect: "tall" },
-  { src: "/images/dominique-cave.webp", alt: "Accord côte de bœuf et sélection de la cave", aspect: "tall" },
-  { src: "/images/dominique-brochettes.webp", alt: "Brochettes et grillades préparées maison", aspect: "wide" },
-] as const;
+const section = content.galerie;
 
 export function Galerie() {
   return (
@@ -34,20 +10,19 @@ export function Galerie() {
         <header className="max-w-3xl mb-12 md:mb-16">
           <p className="eyebrow mb-5">
             <span className="flag-bar"><span /><span /><span /></span>
-            Galerie
+            {section.eyebrow}
           </p>
           <h2 id="galerie-title" className="font-display text-4xl sm:text-5xl md:text-6xl tracking-tight">
-            La maison
-            <em className="not-italic font-normal text-[color:var(--color-bordeaux)]"> en images</em>.
+            {section.title}{" "}
+            <em className="not-italic font-normal text-[color:var(--color-bordeaux)]">{section.titleAccent}</em>.
           </h2>
           <p className="mt-6 text-lg text-[color:var(--color-stone)] leading-relaxed text-justify hyphens-auto">
-            Quelques pièces signature, plats cuisinés, plateaux et coups de cœur du moment,
-            telles qu&apos;elles sortent du laboratoire, telles qu&apos;elles arrivent sur l&apos;étal.
+            {section.intro}
           </p>
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-          {photos.map((p, i) => (
+          {section.photos.map((p, i) => (
             <figure
               key={p.src}
               className={`relative aspect-[4/3] overflow-hidden rounded-[var(--radius-lg)] bg-[color:var(--color-cream-deep)] group`}

@@ -4,16 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { business } from "@/lib/business";
+import { content } from "@/lib/content";
 import { CartButton } from "@/components/shop/CartButton";
 
-const links = [
-  { href: "/#metiers", label: "Nos métiers" },
-  { href: "/maitre-artisan", label: "Maître Artisan" },
-  { href: "/equipe", label: "L'équipe" },
-  { href: "/partenaires", label: "Partenaires" },
-  { href: "/#plateaux", label: "Plateaux" },
-  { href: "/#infos", label: "Infos" },
-];
+const nav = content.nav;
+const links = nav.items;
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,8 +49,8 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/logo.png"
-            alt={business.name}
+            src={nav.logo.src}
+            alt={nav.logo.alt}
             width={520}
             height={208}
             priority
@@ -79,8 +74,8 @@ export function Header() {
           <a href={`tel:${business.phoneIntl}`} className="text-sm font-medium text-[color:var(--color-stone)] hover:text-[color:var(--color-ink)] transition-colors">
             {business.phone}
           </a>
-          <Link href="/boutique" className="btn-primary !py-2.5 !px-5 text-sm">
-            Boutique
+          <Link href={nav.cta.href} className="btn-primary !py-2.5 !px-5 text-sm">
+            {nav.cta.label}
             <span aria-hidden>→</span>
           </Link>
           <CartButton />
@@ -90,7 +85,7 @@ export function Header() {
           <CartButton compact />
           <button
             type="button"
-            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={open ? nav.closeMenuLabel : nav.openMenuLabel}
             aria-expanded={open}
             className="h-11 w-11 flex flex-col items-center justify-center gap-1.5 rounded-full hover:bg-[color:var(--color-cream-deep)] transition-colors"
             onClick={() => setOpen((o) => !o)}
@@ -128,11 +123,11 @@ export function Header() {
             ☏ {business.phone}
           </a>
           <Link
-            href="/boutique"
+            href={nav.ctaMobile.href}
             className="btn-primary mt-4 w-full"
             onClick={() => setOpen(false)}
           >
-            Voir la boutique →
+            {nav.ctaMobile.label}
           </Link>
         </nav>
       </div>
