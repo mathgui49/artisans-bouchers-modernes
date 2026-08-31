@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { business } from "@/lib/business";
 import { content } from "@/lib/content";
+import { ScalenviaSignature } from "@/components/site/ScalenviaSignature";
 
 const footer = content.footer;
 
@@ -94,6 +95,10 @@ export function Footer() {
             <span className="flag-bar"><span /><span /><span /></span>
             {footer.baseline}
           </p>
+        </div>
+
+        <div className="pt-5 flex justify-center md:justify-start">
+          <ScalenviaSignature className="text-[color:var(--color-cream)]/45 hover:text-[color:var(--color-gold)]" />
         </div>
       </div>
     </footer>
